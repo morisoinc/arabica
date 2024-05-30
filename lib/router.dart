@@ -1,5 +1,5 @@
 import 'package:arabica/screens/home_screen.dart';
-import 'package:arabica/screens/coffee_selection_screen.dart';
+import 'package:arabica/screens/coffee_feed_screen.dart';
 import 'package:arabica/screens/favorites_screen.dart';
 import 'package:arabica/screens/initial_screen.dart';
 import 'package:go_router/go_router.dart';
@@ -7,7 +7,7 @@ import 'package:go_router/go_router.dart';
 final router = GoRouter(
   redirect: (context, state) {
     if (state.fullPath == InitialScreen.route) {
-      return CoffeeSelectionScreen.route;
+      return CoffeeFeedScreen.route;
     }
     return null;
   },
@@ -26,9 +26,9 @@ final router = GoRouter(
         StatefulShellBranch(
           routes: [
             GoRoute(
-              path: CoffeeSelectionScreen.route,
+              path: CoffeeFeedScreen.route,
               builder: (context, state) {
-                return const CoffeeSelectionScreen();
+                return const CoffeeFeedScreen();
               },
             ),
           ],
