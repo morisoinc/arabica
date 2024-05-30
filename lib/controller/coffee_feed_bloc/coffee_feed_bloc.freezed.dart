@@ -21,6 +21,7 @@ mixin _$CoffeeFeedEvent {
     required TResult Function() started,
     required TResult Function() fetchRandomCoffee,
     required TResult Function(Coffee coffee) onRandomCoffeeFetched,
+    required TResult Function(Coffee coffee) removeCoffee,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$CoffeeFeedEvent {
     TResult? Function()? started,
     TResult? Function()? fetchRandomCoffee,
     TResult? Function(Coffee coffee)? onRandomCoffeeFetched,
+    TResult? Function(Coffee coffee)? removeCoffee,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$CoffeeFeedEvent {
     TResult Function()? started,
     TResult Function()? fetchRandomCoffee,
     TResult Function(Coffee coffee)? onRandomCoffeeFetched,
+    TResult Function(Coffee coffee)? removeCoffee,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -44,6 +47,7 @@ mixin _$CoffeeFeedEvent {
     required TResult Function(_FetchRandomCoffee value) fetchRandomCoffee,
     required TResult Function(_OnRandomCoffeeFetched value)
         onRandomCoffeeFetched,
+    required TResult Function(_ClearCoffee value) removeCoffee,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -51,6 +55,7 @@ mixin _$CoffeeFeedEvent {
     TResult? Function(_Started value)? started,
     TResult? Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult? Function(_OnRandomCoffeeFetched value)? onRandomCoffeeFetched,
+    TResult? Function(_ClearCoffee value)? removeCoffee,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -58,6 +63,7 @@ mixin _$CoffeeFeedEvent {
     TResult Function(_Started value)? started,
     TResult Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult Function(_OnRandomCoffeeFetched value)? onRandomCoffeeFetched,
+    TResult Function(_ClearCoffee value)? removeCoffee,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -122,6 +128,7 @@ class _$StartedImpl implements _Started {
     required TResult Function() started,
     required TResult Function() fetchRandomCoffee,
     required TResult Function(Coffee coffee) onRandomCoffeeFetched,
+    required TResult Function(Coffee coffee) removeCoffee,
   }) {
     return started();
   }
@@ -132,6 +139,7 @@ class _$StartedImpl implements _Started {
     TResult? Function()? started,
     TResult? Function()? fetchRandomCoffee,
     TResult? Function(Coffee coffee)? onRandomCoffeeFetched,
+    TResult? Function(Coffee coffee)? removeCoffee,
   }) {
     return started?.call();
   }
@@ -142,6 +150,7 @@ class _$StartedImpl implements _Started {
     TResult Function()? started,
     TResult Function()? fetchRandomCoffee,
     TResult Function(Coffee coffee)? onRandomCoffeeFetched,
+    TResult Function(Coffee coffee)? removeCoffee,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -157,6 +166,7 @@ class _$StartedImpl implements _Started {
     required TResult Function(_FetchRandomCoffee value) fetchRandomCoffee,
     required TResult Function(_OnRandomCoffeeFetched value)
         onRandomCoffeeFetched,
+    required TResult Function(_ClearCoffee value) removeCoffee,
   }) {
     return started(this);
   }
@@ -167,6 +177,7 @@ class _$StartedImpl implements _Started {
     TResult? Function(_Started value)? started,
     TResult? Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult? Function(_OnRandomCoffeeFetched value)? onRandomCoffeeFetched,
+    TResult? Function(_ClearCoffee value)? removeCoffee,
   }) {
     return started?.call(this);
   }
@@ -177,6 +188,7 @@ class _$StartedImpl implements _Started {
     TResult Function(_Started value)? started,
     TResult Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult Function(_OnRandomCoffeeFetched value)? onRandomCoffeeFetched,
+    TResult Function(_ClearCoffee value)? removeCoffee,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -231,6 +243,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     required TResult Function() started,
     required TResult Function() fetchRandomCoffee,
     required TResult Function(Coffee coffee) onRandomCoffeeFetched,
+    required TResult Function(Coffee coffee) removeCoffee,
   }) {
     return fetchRandomCoffee();
   }
@@ -241,6 +254,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     TResult? Function()? started,
     TResult? Function()? fetchRandomCoffee,
     TResult? Function(Coffee coffee)? onRandomCoffeeFetched,
+    TResult? Function(Coffee coffee)? removeCoffee,
   }) {
     return fetchRandomCoffee?.call();
   }
@@ -251,6 +265,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     TResult Function()? started,
     TResult Function()? fetchRandomCoffee,
     TResult Function(Coffee coffee)? onRandomCoffeeFetched,
+    TResult Function(Coffee coffee)? removeCoffee,
     required TResult orElse(),
   }) {
     if (fetchRandomCoffee != null) {
@@ -266,6 +281,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     required TResult Function(_FetchRandomCoffee value) fetchRandomCoffee,
     required TResult Function(_OnRandomCoffeeFetched value)
         onRandomCoffeeFetched,
+    required TResult Function(_ClearCoffee value) removeCoffee,
   }) {
     return fetchRandomCoffee(this);
   }
@@ -276,6 +292,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     TResult? Function(_Started value)? started,
     TResult? Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult? Function(_OnRandomCoffeeFetched value)? onRandomCoffeeFetched,
+    TResult? Function(_ClearCoffee value)? removeCoffee,
   }) {
     return fetchRandomCoffee?.call(this);
   }
@@ -286,6 +303,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     TResult Function(_Started value)? started,
     TResult Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult Function(_OnRandomCoffeeFetched value)? onRandomCoffeeFetched,
+    TResult Function(_ClearCoffee value)? removeCoffee,
     required TResult orElse(),
   }) {
     if (fetchRandomCoffee != null) {
@@ -378,6 +396,7 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     required TResult Function() started,
     required TResult Function() fetchRandomCoffee,
     required TResult Function(Coffee coffee) onRandomCoffeeFetched,
+    required TResult Function(Coffee coffee) removeCoffee,
   }) {
     return onRandomCoffeeFetched(coffee);
   }
@@ -388,6 +407,7 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     TResult? Function()? started,
     TResult? Function()? fetchRandomCoffee,
     TResult? Function(Coffee coffee)? onRandomCoffeeFetched,
+    TResult? Function(Coffee coffee)? removeCoffee,
   }) {
     return onRandomCoffeeFetched?.call(coffee);
   }
@@ -398,6 +418,7 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     TResult Function()? started,
     TResult Function()? fetchRandomCoffee,
     TResult Function(Coffee coffee)? onRandomCoffeeFetched,
+    TResult Function(Coffee coffee)? removeCoffee,
     required TResult orElse(),
   }) {
     if (onRandomCoffeeFetched != null) {
@@ -413,6 +434,7 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     required TResult Function(_FetchRandomCoffee value) fetchRandomCoffee,
     required TResult Function(_OnRandomCoffeeFetched value)
         onRandomCoffeeFetched,
+    required TResult Function(_ClearCoffee value) removeCoffee,
   }) {
     return onRandomCoffeeFetched(this);
   }
@@ -423,6 +445,7 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     TResult? Function(_Started value)? started,
     TResult? Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult? Function(_OnRandomCoffeeFetched value)? onRandomCoffeeFetched,
+    TResult? Function(_ClearCoffee value)? removeCoffee,
   }) {
     return onRandomCoffeeFetched?.call(this);
   }
@@ -433,6 +456,7 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     TResult Function(_Started value)? started,
     TResult Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult Function(_OnRandomCoffeeFetched value)? onRandomCoffeeFetched,
+    TResult Function(_ClearCoffee value)? removeCoffee,
     required TResult orElse(),
   }) {
     if (onRandomCoffeeFetched != null) {
@@ -450,6 +474,162 @@ abstract class _OnRandomCoffeeFetched implements CoffeeFeedEvent {
   @JsonKey(ignore: true)
   _$$OnRandomCoffeeFetchedImplCopyWith<_$OnRandomCoffeeFetchedImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ClearCoffeeImplCopyWith<$Res> {
+  factory _$$ClearCoffeeImplCopyWith(
+          _$ClearCoffeeImpl value, $Res Function(_$ClearCoffeeImpl) then) =
+      __$$ClearCoffeeImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Coffee coffee});
+
+  $CoffeeCopyWith<$Res> get coffee;
+}
+
+/// @nodoc
+class __$$ClearCoffeeImplCopyWithImpl<$Res>
+    extends _$CoffeeFeedEventCopyWithImpl<$Res, _$ClearCoffeeImpl>
+    implements _$$ClearCoffeeImplCopyWith<$Res> {
+  __$$ClearCoffeeImplCopyWithImpl(
+      _$ClearCoffeeImpl _value, $Res Function(_$ClearCoffeeImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? coffee = null,
+  }) {
+    return _then(_$ClearCoffeeImpl(
+      null == coffee
+          ? _value.coffee
+          : coffee // ignore: cast_nullable_to_non_nullable
+              as Coffee,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CoffeeCopyWith<$Res> get coffee {
+    return $CoffeeCopyWith<$Res>(_value.coffee, (value) {
+      return _then(_value.copyWith(coffee: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$ClearCoffeeImpl implements _ClearCoffee {
+  const _$ClearCoffeeImpl(this.coffee);
+
+  @override
+  final Coffee coffee;
+
+  @override
+  String toString() {
+    return 'CoffeeFeedEvent.removeCoffee(coffee: $coffee)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ClearCoffeeImpl &&
+            (identical(other.coffee, coffee) || other.coffee == coffee));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, coffee);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ClearCoffeeImplCopyWith<_$ClearCoffeeImpl> get copyWith =>
+      __$$ClearCoffeeImplCopyWithImpl<_$ClearCoffeeImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() fetchRandomCoffee,
+    required TResult Function(Coffee coffee) onRandomCoffeeFetched,
+    required TResult Function(Coffee coffee) removeCoffee,
+  }) {
+    return removeCoffee(coffee);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? fetchRandomCoffee,
+    TResult? Function(Coffee coffee)? onRandomCoffeeFetched,
+    TResult? Function(Coffee coffee)? removeCoffee,
+  }) {
+    return removeCoffee?.call(coffee);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? fetchRandomCoffee,
+    TResult Function(Coffee coffee)? onRandomCoffeeFetched,
+    TResult Function(Coffee coffee)? removeCoffee,
+    required TResult orElse(),
+  }) {
+    if (removeCoffee != null) {
+      return removeCoffee(coffee);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_FetchRandomCoffee value) fetchRandomCoffee,
+    required TResult Function(_OnRandomCoffeeFetched value)
+        onRandomCoffeeFetched,
+    required TResult Function(_ClearCoffee value) removeCoffee,
+  }) {
+    return removeCoffee(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_FetchRandomCoffee value)? fetchRandomCoffee,
+    TResult? Function(_OnRandomCoffeeFetched value)? onRandomCoffeeFetched,
+    TResult? Function(_ClearCoffee value)? removeCoffee,
+  }) {
+    return removeCoffee?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_FetchRandomCoffee value)? fetchRandomCoffee,
+    TResult Function(_OnRandomCoffeeFetched value)? onRandomCoffeeFetched,
+    TResult Function(_ClearCoffee value)? removeCoffee,
+    required TResult orElse(),
+  }) {
+    if (removeCoffee != null) {
+      return removeCoffee(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ClearCoffee implements CoffeeFeedEvent {
+  const factory _ClearCoffee(final Coffee coffee) = _$ClearCoffeeImpl;
+
+  Coffee get coffee;
+  @JsonKey(ignore: true)
+  _$$ClearCoffeeImplCopyWith<_$ClearCoffeeImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc

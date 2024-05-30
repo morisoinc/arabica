@@ -6,4 +6,5 @@ class CoffeeFeedEvent with _$CoffeeFeedEvent {
   const factory CoffeeFeedEvent.fetchRandomCoffee() = _FetchRandomCoffee;
   const factory CoffeeFeedEvent.onRandomCoffeeFetched(Coffee coffee) =
       _OnRandomCoffeeFetched;
+  const factory CoffeeFeedEvent.removeCoffee(Coffee coffee) = _ClearCoffee;
 }

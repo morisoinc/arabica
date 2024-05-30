@@ -23,6 +23,11 @@ class CoffeeFeedBloc extends Bloc<CoffeeFeedEvent, CoffeeFeedState> {
           },
           onRandomCoffeeFetched: (coffee) {
             emit(state.copyWith(buffer: [...state.buffer, coffee]));
+          },
+          removeCoffee: (coffee) {
+            emit(state.copyWith(
+                buffer: state.buffer.where((c) => c != coffee).toList()));
+            add(const CoffeeFeedEvent.fetchRandomCoffee());
           });
     });
   }
