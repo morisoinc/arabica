@@ -1,4 +1,5 @@
 import 'package:arabica/controller/coffee_feed_bloc/coffee_feed_bloc.dart';
+import 'package:arabica/controller/favorites_bloc/favorites_bloc.dart';
 import 'package:arabica/data_sources/coffee_feed_ds.dart';
 import 'package:arabica/screens/home_screen.dart';
 import 'package:arabica/screens/coffee_feed_screen.dart';
@@ -24,21 +25,26 @@ final router = GoRouter(
     ),
     StatefulShellRoute.indexedStack(
       builder: (_, __, navigationShell) {
-        return HomeScreen(navigationShell: navigationShell);
+        return MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              create: (context) => CoffeeFeedBloc(
+                  coffeeFeedDs: CoffeeFeedDs(httpSingleton.client))
+                ..add(const CoffeeFeedEvent.fetchRandomCoffee()),
+            ),
+            BlocProvider(
+              create: (context) => FavoritesBloc(),
+            ),
+          ],
+          child: HomeScreen(navigationShell: navigationShell),
+        );
       },
       branches: [
         StatefulShellBranch(
           routes: [
             GoRoute(
               path: CoffeeFeedScreen.route,
-              builder: (context, state) {
-                return BlocProvider(
-                  create: (context) => CoffeeFeedBloc(
-                      coffeeFeedDs: CoffeeFeedDs(httpSingleton.client))
-                    ..add(const CoffeeFeedEvent.fetchRandomCoffee()),
-                  child: const CoffeeFeedScreen(),
-                );
-              },
+              builder: (context, state) => const CoffeeFeedScreen(),
             ),
           ],
         ),
@@ -46,9 +52,7 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: FavoritesScreen.route,
-              builder: (context, state) {
-                return const FavoritesScreen();
-              },
+              builder: (context, state) => const FavoritesScreen(),
             ),
           ],
         ),
