@@ -14,11 +14,17 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
+Coffee _$CoffeeFromJson(Map<String, dynamic> json) {
+  return _Coffee.fromJson(json);
+}
+
 /// @nodoc
 mixin _$Coffee {
   String get url => throw _privateConstructorUsedError;
+  @Uint8ListToStringConverter()
   Uint8List get image => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CoffeeCopyWith<Coffee> get copyWith => throw _privateConstructorUsedError;
 }
@@ -28,7 +34,7 @@ abstract class $CoffeeCopyWith<$Res> {
   factory $CoffeeCopyWith(Coffee value, $Res Function(Coffee) then) =
       _$CoffeeCopyWithImpl<$Res, Coffee>;
   @useResult
-  $Res call({String url, Uint8List image});
+  $Res call({String url, @Uint8ListToStringConverter() Uint8List image});
 }
 
 /// @nodoc
@@ -67,7 +73,7 @@ abstract class _$$CoffeeImplCopyWith<$Res> implements $CoffeeCopyWith<$Res> {
       __$$CoffeeImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String url, Uint8List image});
+  $Res call({String url, @Uint8ListToStringConverter() Uint8List image});
 }
 
 /// @nodoc
@@ -98,13 +104,18 @@ class __$$CoffeeImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$CoffeeImpl implements _Coffee {
-  const _$CoffeeImpl({required this.url, required this.image});
+  _$CoffeeImpl(
+      {required this.url, @Uint8ListToStringConverter() required this.image});
+
+  factory _$CoffeeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CoffeeImplFromJson(json);
 
   @override
   final String url;
   @override
+  @Uint8ListToStringConverter()
   final Uint8List image;
 
   @override
@@ -121,6 +132,7 @@ class _$CoffeeImpl implements _Coffee {
             const DeepCollectionEquality().equals(other.image, image));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, url, const DeepCollectionEquality().hash(image));
@@ -130,16 +142,27 @@ class _$CoffeeImpl implements _Coffee {
   @pragma('vm:prefer-inline')
   _$$CoffeeImplCopyWith<_$CoffeeImpl> get copyWith =>
       __$$CoffeeImplCopyWithImpl<_$CoffeeImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CoffeeImplToJson(
+      this,
+    );
+  }
 }
 
 abstract class _Coffee implements Coffee {
-  const factory _Coffee(
-      {required final String url,
-      required final Uint8List image}) = _$CoffeeImpl;
+  factory _Coffee(
+          {required final String url,
+          @Uint8ListToStringConverter() required final Uint8List image}) =
+      _$CoffeeImpl;
+
+  factory _Coffee.fromJson(Map<String, dynamic> json) = _$CoffeeImpl.fromJson;
 
   @override
   String get url;
   @override
+  @Uint8ListToStringConverter()
   Uint8List get image;
   @override
   @JsonKey(ignore: true)
