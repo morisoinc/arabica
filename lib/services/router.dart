@@ -1,7 +1,11 @@
+import 'package:arabica/controller/coffee_feed_bloc/coffee_feed_bloc.dart';
+import 'package:arabica/data_sources/coffee_feed_ds.dart';
 import 'package:arabica/screens/home_screen.dart';
 import 'package:arabica/screens/coffee_feed_screen.dart';
 import 'package:arabica/screens/favorites_screen.dart';
 import 'package:arabica/screens/initial_screen.dart';
+import 'package:arabica/services/http_singleton.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 final router = GoRouter(
@@ -28,7 +32,12 @@ final router = GoRouter(
             GoRoute(
               path: CoffeeFeedScreen.route,
               builder: (context, state) {
-                return const CoffeeFeedScreen();
+                return BlocProvider(
+                  create: (context) => CoffeeFeedBloc(
+                      coffeeFeedDs: CoffeeFeedDs(httpSingleton.client))
+                    ..add(const CoffeeFeedEvent.fetchRandomCoffee()),
+                  child: const CoffeeFeedScreen(),
+                );
               },
             ),
           ],

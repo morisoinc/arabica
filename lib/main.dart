@@ -1,4 +1,4 @@
-import 'package:arabica/router.dart';
+import 'package:arabica/services/router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
