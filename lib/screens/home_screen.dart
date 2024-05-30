@@ -23,6 +23,7 @@ class HomeScreen extends StatelessWidget {
             initialLocation: index == navigationShell.currentIndex,
           );
         },
+        currentIndex: navigationShell.currentIndex,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.coffee),
