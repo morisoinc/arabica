@@ -18,7 +18,10 @@ class CoffeeFeedDs extends BaseDs<http.Client> {
 
       final http.Response imageResponse = await client.get(Uri.parse(imageUrl));
 
-      return Coffee(url: imageUrl, image: imageResponse.bodyBytes);
+      return Coffee(
+        url: imageUrl,
+        encodedImage: base64Encode(imageResponse.bodyBytes),
+      );
     } catch (e) {
       // print(e);
     }

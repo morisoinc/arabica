@@ -17,7 +17,7 @@ class FavoritesScreen extends StatelessWidget {
           final favorite = state.favorites[index];
           return ListTile(
             title: Text(favorite.url),
-            leading: Image.memory(favorite.image),
+            leading: Image.memory(favorite.imageBytes),
             trailing: IconButton(
               icon: const Icon(Icons.delete),
               onPressed: () {

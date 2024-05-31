@@ -20,7 +20,7 @@ class CoffeeCard extends StatelessWidget {
           ),
         ],
       ),
-      child: Image.memory(coffee.image),
+      child: Image.memory(coffee.imageBytes),
     );
   }
 }
