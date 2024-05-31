@@ -20,6 +20,7 @@ FavoriteCoffee _$FavoriteCoffeeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FavoriteCoffee {
+  String get uid => throw _privateConstructorUsedError;
   Coffee get coffee => throw _privateConstructorUsedError;
   DateTime get createdAt => throw _privateConstructorUsedError;
 
@@ -35,7 +36,7 @@ abstract class $FavoriteCoffeeCopyWith<$Res> {
           FavoriteCoffee value, $Res Function(FavoriteCoffee) then) =
       _$FavoriteCoffeeCopyWithImpl<$Res, FavoriteCoffee>;
   @useResult
-  $Res call({Coffee coffee, DateTime createdAt});
+  $Res call({String uid, Coffee coffee, DateTime createdAt});
 
   $CoffeeCopyWith<$Res> get coffee;
 }
@@ -53,10 +54,15 @@ class _$FavoriteCoffeeCopyWithImpl<$Res, $Val extends FavoriteCoffee>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? uid = null,
     Object? coffee = null,
     Object? createdAt = null,
   }) {
     return _then(_value.copyWith(
+      uid: null == uid
+          ? _value.uid
+          : uid // ignore: cast_nullable_to_non_nullable
+              as String,
       coffee: null == coffee
           ? _value.coffee
           : coffee // ignore: cast_nullable_to_non_nullable
@@ -85,7 +91,7 @@ abstract class _$$FavoriteCoffeeImplCopyWith<$Res>
       __$$FavoriteCoffeeImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Coffee coffee, DateTime createdAt});
+  $Res call({String uid, Coffee coffee, DateTime createdAt});
 
   @override
   $CoffeeCopyWith<$Res> get coffee;
@@ -102,10 +108,15 @@ class __$$FavoriteCoffeeImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? uid = null,
     Object? coffee = null,
     Object? createdAt = null,
   }) {
     return _then(_$FavoriteCoffeeImpl(
+      uid: null == uid
+          ? _value.uid
+          : uid // ignore: cast_nullable_to_non_nullable
+              as String,
       coffee: null == coffee
           ? _value.coffee
           : coffee // ignore: cast_nullable_to_non_nullable
@@ -121,12 +132,15 @@ class __$$FavoriteCoffeeImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$FavoriteCoffeeImpl extends _FavoriteCoffee {
-  _$FavoriteCoffeeImpl({required this.coffee, required this.createdAt})
+  _$FavoriteCoffeeImpl(
+      {required this.uid, required this.coffee, required this.createdAt})
       : super._();
 
   factory _$FavoriteCoffeeImpl.fromJson(Map<String, dynamic> json) =>
       _$$FavoriteCoffeeImplFromJson(json);
 
+  @override
+  final String uid;
   @override
   final Coffee coffee;
   @override
@@ -134,7 +148,7 @@ class _$FavoriteCoffeeImpl extends _FavoriteCoffee {
 
   @override
   String toString() {
-    return 'FavoriteCoffee(coffee: $coffee, createdAt: $createdAt)';
+    return 'FavoriteCoffee(uid: $uid, coffee: $coffee, createdAt: $createdAt)';
   }
 
   @override
@@ -142,6 +156,7 @@ class _$FavoriteCoffeeImpl extends _FavoriteCoffee {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FavoriteCoffeeImpl &&
+            (identical(other.uid, uid) || other.uid == uid) &&
             (identical(other.coffee, coffee) || other.coffee == coffee) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt));
@@ -149,7 +164,7 @@ class _$FavoriteCoffeeImpl extends _FavoriteCoffee {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, coffee, createdAt);
+  int get hashCode => Object.hash(runtimeType, uid, coffee, createdAt);
 
   @JsonKey(ignore: true)
   @override
@@ -168,13 +183,16 @@ class _$FavoriteCoffeeImpl extends _FavoriteCoffee {
 
 abstract class _FavoriteCoffee extends FavoriteCoffee {
   factory _FavoriteCoffee(
-      {required final Coffee coffee,
+      {required final String uid,
+      required final Coffee coffee,
       required final DateTime createdAt}) = _$FavoriteCoffeeImpl;
   _FavoriteCoffee._() : super._();
 
   factory _FavoriteCoffee.fromJson(Map<String, dynamic> json) =
       _$FavoriteCoffeeImpl.fromJson;
 
+  @override
+  String get uid;
   @override
   Coffee get coffee;
   @override

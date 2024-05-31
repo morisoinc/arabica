@@ -27,6 +27,11 @@ const FavoriteCoffeeSchema = CollectionSchema(
       id: 1,
       name: r'createdAt',
       type: IsarType.dateTime,
+    ),
+    r'uid': PropertySchema(
+      id: 2,
+      name: r'uid',
+      type: IsarType.string,
     )
   },
   estimateSize: _favoriteCoffeeEstimateSize,
@@ -51,6 +56,7 @@ int _favoriteCoffeeEstimateSize(
   var bytesCount = offsets.last;
   bytesCount += 3 +
       CoffeeSchema.estimateSize(object.coffee, allOffsets[Coffee]!, allOffsets);
+  bytesCount += 3 + object.uid.length * 3;
   return bytesCount;
 }
 
@@ -67,6 +73,7 @@ void _favoriteCoffeeSerialize(
     object.coffee,
   );
   writer.writeDateTime(offsets[1], object.createdAt);
+  writer.writeString(offsets[2], object.uid);
 }
 
 FavoriteCoffee _favoriteCoffeeDeserialize(
@@ -83,6 +90,7 @@ FavoriteCoffee _favoriteCoffeeDeserialize(
         ) ??
         Coffee(),
     createdAt: reader.readDateTime(offsets[1]),
+    uid: reader.readString(offsets[2]),
   );
   return object;
 }
@@ -103,6 +111,8 @@ P _favoriteCoffeeDeserializeProp<P>(
           Coffee()) as P;
     case 1:
       return (reader.readDateTime(offset)) as P;
+    case 2:
+      return (reader.readString(offset)) as P;
     default:
       throw IsarError('Unknown property with id $propertyId');
   }
@@ -312,6 +322,142 @@ extension FavoriteCoffeeQueryFilter
       ));
     });
   }
+
+  QueryBuilder<FavoriteCoffee, FavoriteCoffee, QAfterFilterCondition>
+      uidEqualTo(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.equalTo(
+        property: r'uid',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<FavoriteCoffee, FavoriteCoffee, QAfterFilterCondition>
+      uidGreaterThan(
+    String value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.greaterThan(
+        include: include,
+        property: r'uid',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<FavoriteCoffee, FavoriteCoffee, QAfterFilterCondition>
+      uidLessThan(
+    String value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.lessThan(
+        include: include,
+        property: r'uid',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<FavoriteCoffee, FavoriteCoffee, QAfterFilterCondition>
+      uidBetween(
+    String lower,
+    String upper, {
+    bool includeLower = true,
+    bool includeUpper = true,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.between(
+        property: r'uid',
+        lower: lower,
+        includeLower: includeLower,
+        upper: upper,
+        includeUpper: includeUpper,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<FavoriteCoffee, FavoriteCoffee, QAfterFilterCondition>
+      uidStartsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.startsWith(
+        property: r'uid',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<FavoriteCoffee, FavoriteCoffee, QAfterFilterCondition>
+      uidEndsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.endsWith(
+        property: r'uid',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<FavoriteCoffee, FavoriteCoffee, QAfterFilterCondition>
+      uidContains(String value, {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.contains(
+        property: r'uid',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<FavoriteCoffee, FavoriteCoffee, QAfterFilterCondition>
+      uidMatches(String pattern, {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.matches(
+        property: r'uid',
+        wildcard: pattern,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<FavoriteCoffee, FavoriteCoffee, QAfterFilterCondition>
+      uidIsEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.equalTo(
+        property: r'uid',
+        value: '',
+      ));
+    });
+  }
+
+  QueryBuilder<FavoriteCoffee, FavoriteCoffee, QAfterFilterCondition>
+      uidIsNotEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.greaterThan(
+        property: r'uid',
+        value: '',
+      ));
+    });
+  }
 }
 
 extension FavoriteCoffeeQueryObject
@@ -339,6 +485,18 @@ extension FavoriteCoffeeQuerySortBy
       sortByCreatedAtDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'createdAt', Sort.desc);
+    });
+  }
+
+  QueryBuilder<FavoriteCoffee, FavoriteCoffee, QAfterSortBy> sortByUid() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'uid', Sort.asc);
+    });
+  }
+
+  QueryBuilder<FavoriteCoffee, FavoriteCoffee, QAfterSortBy> sortByUidDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'uid', Sort.desc);
     });
   }
 }
@@ -369,6 +527,18 @@ extension FavoriteCoffeeQuerySortThenBy
       return query.addSortBy(r'id', Sort.desc);
     });
   }
+
+  QueryBuilder<FavoriteCoffee, FavoriteCoffee, QAfterSortBy> thenByUid() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'uid', Sort.asc);
+    });
+  }
+
+  QueryBuilder<FavoriteCoffee, FavoriteCoffee, QAfterSortBy> thenByUidDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'uid', Sort.desc);
+    });
+  }
 }
 
 extension FavoriteCoffeeQueryWhereDistinct
@@ -377,6 +547,13 @@ extension FavoriteCoffeeQueryWhereDistinct
       distinctByCreatedAt() {
     return QueryBuilder.apply(this, (query) {
       return query.addDistinctBy(r'createdAt');
+    });
+  }
+
+  QueryBuilder<FavoriteCoffee, FavoriteCoffee, QDistinct> distinctByUid(
+      {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addDistinctBy(r'uid', caseSensitive: caseSensitive);
     });
   }
 }
@@ -400,6 +577,12 @@ extension FavoriteCoffeeQueryProperty
       return query.addPropertyName(r'createdAt');
     });
   }
+
+  QueryBuilder<FavoriteCoffee, String, QQueryOperations> uidProperty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addPropertyName(r'uid');
+    });
+  }
 }
 
 // **************************************************************************
@@ -408,6 +591,7 @@ extension FavoriteCoffeeQueryProperty
 
 _$FavoriteCoffeeImpl _$$FavoriteCoffeeImplFromJson(Map<String, dynamic> json) =>
     _$FavoriteCoffeeImpl(
+      uid: json['uid'] as String,
       coffee: Coffee.fromJson(json['coffee'] as Map<String, dynamic>),
       createdAt: DateTime.parse(json['createdAt'] as String),
     );
@@ -415,6 +599,7 @@ _$FavoriteCoffeeImpl _$$FavoriteCoffeeImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$FavoriteCoffeeImplToJson(
         _$FavoriteCoffeeImpl instance) =>
     <String, dynamic>{
+      'uid': instance.uid,
       'coffee': instance.coffee,
       'createdAt': instance.createdAt.toIso8601String(),
     };

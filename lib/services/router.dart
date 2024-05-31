@@ -33,7 +33,8 @@ final router = GoRouter(
                 ..add(const CoffeeFeedEvent.fetchRandomCoffee()),
             ),
             BlocProvider(
-              create: (context) => FavoritesBloc(),
+              create: (context) =>
+                  FavoritesBloc()..add(const FavoritesEvent.start()),
             ),
           ],
           child: HomeScreen(navigationShell: navigationShell),

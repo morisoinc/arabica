@@ -16,48 +16,61 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$FavoritesEvent {
-  Coffee get coffee => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() loadFavorites,
+    required TResult Function(List<FavoriteCoffee> favorites) favoritesLoaded,
     required TResult Function(Coffee coffee) addFavorite,
-    required TResult Function(Coffee coffee) removeFavorite,
+    required TResult Function(FavoriteCoffee favorite) removeFavorite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? loadFavorites,
+    TResult? Function(List<FavoriteCoffee> favorites)? favoritesLoaded,
     TResult? Function(Coffee coffee)? addFavorite,
-    TResult? Function(Coffee coffee)? removeFavorite,
+    TResult? Function(FavoriteCoffee favorite)? removeFavorite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? loadFavorites,
+    TResult Function(List<FavoriteCoffee> favorites)? favoritesLoaded,
     TResult Function(Coffee coffee)? addFavorite,
-    TResult Function(Coffee coffee)? removeFavorite,
+    TResult Function(FavoriteCoffee favorite)? removeFavorite,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Start value) start,
+    required TResult Function(_LoadFavorites value) loadFavorites,
+    required TResult Function(_FavoritesLoaded value) favoritesLoaded,
     required TResult Function(_AddFavorite value) addFavorite,
     required TResult Function(_RemoveFavorite value) removeFavorite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Start value)? start,
+    TResult? Function(_LoadFavorites value)? loadFavorites,
+    TResult? Function(_FavoritesLoaded value)? favoritesLoaded,
     TResult? Function(_AddFavorite value)? addFavorite,
     TResult? Function(_RemoveFavorite value)? removeFavorite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Start value)? start,
+    TResult Function(_LoadFavorites value)? loadFavorites,
+    TResult Function(_FavoritesLoaded value)? favoritesLoaded,
     TResult Function(_AddFavorite value)? addFavorite,
     TResult Function(_RemoveFavorite value)? removeFavorite,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $FavoritesEventCopyWith<FavoritesEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -66,10 +79,6 @@ abstract class $FavoritesEventCopyWith<$Res> {
   factory $FavoritesEventCopyWith(
           FavoritesEvent value, $Res Function(FavoritesEvent) then) =
       _$FavoritesEventCopyWithImpl<$Res, FavoritesEvent>;
-  @useResult
-  $Res call({Coffee coffee});
-
-  $CoffeeCopyWith<$Res> get coffee;
 }
 
 /// @nodoc
@@ -81,40 +90,417 @@ class _$FavoritesEventCopyWithImpl<$Res, $Val extends FavoritesEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+}
+
+/// @nodoc
+abstract class _$$StartImplCopyWith<$Res> {
+  factory _$$StartImplCopyWith(
+          _$StartImpl value, $Res Function(_$StartImpl) then) =
+      __$$StartImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$StartImplCopyWithImpl<$Res>
+    extends _$FavoritesEventCopyWithImpl<$Res, _$StartImpl>
+    implements _$$StartImplCopyWith<$Res> {
+  __$$StartImplCopyWithImpl(
+      _$StartImpl _value, $Res Function(_$StartImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$StartImpl implements _Start {
+  const _$StartImpl();
+
+  @override
+  String toString() {
+    return 'FavoritesEvent.start()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$StartImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() loadFavorites,
+    required TResult Function(List<FavoriteCoffee> favorites) favoritesLoaded,
+    required TResult Function(Coffee coffee) addFavorite,
+    required TResult Function(FavoriteCoffee favorite) removeFavorite,
+  }) {
+    return start();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? loadFavorites,
+    TResult? Function(List<FavoriteCoffee> favorites)? favoritesLoaded,
+    TResult? Function(Coffee coffee)? addFavorite,
+    TResult? Function(FavoriteCoffee favorite)? removeFavorite,
+  }) {
+    return start?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? loadFavorites,
+    TResult Function(List<FavoriteCoffee> favorites)? favoritesLoaded,
+    TResult Function(Coffee coffee)? addFavorite,
+    TResult Function(FavoriteCoffee favorite)? removeFavorite,
+    required TResult orElse(),
+  }) {
+    if (start != null) {
+      return start();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Start value) start,
+    required TResult Function(_LoadFavorites value) loadFavorites,
+    required TResult Function(_FavoritesLoaded value) favoritesLoaded,
+    required TResult Function(_AddFavorite value) addFavorite,
+    required TResult Function(_RemoveFavorite value) removeFavorite,
+  }) {
+    return start(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Start value)? start,
+    TResult? Function(_LoadFavorites value)? loadFavorites,
+    TResult? Function(_FavoritesLoaded value)? favoritesLoaded,
+    TResult? Function(_AddFavorite value)? addFavorite,
+    TResult? Function(_RemoveFavorite value)? removeFavorite,
+  }) {
+    return start?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Start value)? start,
+    TResult Function(_LoadFavorites value)? loadFavorites,
+    TResult Function(_FavoritesLoaded value)? favoritesLoaded,
+    TResult Function(_AddFavorite value)? addFavorite,
+    TResult Function(_RemoveFavorite value)? removeFavorite,
+    required TResult orElse(),
+  }) {
+    if (start != null) {
+      return start(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Start implements FavoritesEvent {
+  const factory _Start() = _$StartImpl;
+}
+
+/// @nodoc
+abstract class _$$LoadFavoritesImplCopyWith<$Res> {
+  factory _$$LoadFavoritesImplCopyWith(
+          _$LoadFavoritesImpl value, $Res Function(_$LoadFavoritesImpl) then) =
+      __$$LoadFavoritesImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoadFavoritesImplCopyWithImpl<$Res>
+    extends _$FavoritesEventCopyWithImpl<$Res, _$LoadFavoritesImpl>
+    implements _$$LoadFavoritesImplCopyWith<$Res> {
+  __$$LoadFavoritesImplCopyWithImpl(
+      _$LoadFavoritesImpl _value, $Res Function(_$LoadFavoritesImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoadFavoritesImpl implements _LoadFavorites {
+  const _$LoadFavoritesImpl();
+
+  @override
+  String toString() {
+    return 'FavoritesEvent.loadFavorites()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoadFavoritesImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() loadFavorites,
+    required TResult Function(List<FavoriteCoffee> favorites) favoritesLoaded,
+    required TResult Function(Coffee coffee) addFavorite,
+    required TResult Function(FavoriteCoffee favorite) removeFavorite,
+  }) {
+    return loadFavorites();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? loadFavorites,
+    TResult? Function(List<FavoriteCoffee> favorites)? favoritesLoaded,
+    TResult? Function(Coffee coffee)? addFavorite,
+    TResult? Function(FavoriteCoffee favorite)? removeFavorite,
+  }) {
+    return loadFavorites?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? loadFavorites,
+    TResult Function(List<FavoriteCoffee> favorites)? favoritesLoaded,
+    TResult Function(Coffee coffee)? addFavorite,
+    TResult Function(FavoriteCoffee favorite)? removeFavorite,
+    required TResult orElse(),
+  }) {
+    if (loadFavorites != null) {
+      return loadFavorites();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Start value) start,
+    required TResult Function(_LoadFavorites value) loadFavorites,
+    required TResult Function(_FavoritesLoaded value) favoritesLoaded,
+    required TResult Function(_AddFavorite value) addFavorite,
+    required TResult Function(_RemoveFavorite value) removeFavorite,
+  }) {
+    return loadFavorites(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Start value)? start,
+    TResult? Function(_LoadFavorites value)? loadFavorites,
+    TResult? Function(_FavoritesLoaded value)? favoritesLoaded,
+    TResult? Function(_AddFavorite value)? addFavorite,
+    TResult? Function(_RemoveFavorite value)? removeFavorite,
+  }) {
+    return loadFavorites?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Start value)? start,
+    TResult Function(_LoadFavorites value)? loadFavorites,
+    TResult Function(_FavoritesLoaded value)? favoritesLoaded,
+    TResult Function(_AddFavorite value)? addFavorite,
+    TResult Function(_RemoveFavorite value)? removeFavorite,
+    required TResult orElse(),
+  }) {
+    if (loadFavorites != null) {
+      return loadFavorites(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadFavorites implements FavoritesEvent {
+  const factory _LoadFavorites() = _$LoadFavoritesImpl;
+}
+
+/// @nodoc
+abstract class _$$FavoritesLoadedImplCopyWith<$Res> {
+  factory _$$FavoritesLoadedImplCopyWith(_$FavoritesLoadedImpl value,
+          $Res Function(_$FavoritesLoadedImpl) then) =
+      __$$FavoritesLoadedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<FavoriteCoffee> favorites});
+}
+
+/// @nodoc
+class __$$FavoritesLoadedImplCopyWithImpl<$Res>
+    extends _$FavoritesEventCopyWithImpl<$Res, _$FavoritesLoadedImpl>
+    implements _$$FavoritesLoadedImplCopyWith<$Res> {
+  __$$FavoritesLoadedImplCopyWithImpl(
+      _$FavoritesLoadedImpl _value, $Res Function(_$FavoritesLoadedImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? coffee = null,
+    Object? favorites = null,
   }) {
-    return _then(_value.copyWith(
-      coffee: null == coffee
-          ? _value.coffee
-          : coffee // ignore: cast_nullable_to_non_nullable
-              as Coffee,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CoffeeCopyWith<$Res> get coffee {
-    return $CoffeeCopyWith<$Res>(_value.coffee, (value) {
-      return _then(_value.copyWith(coffee: value) as $Val);
-    });
+    return _then(_$FavoritesLoadedImpl(
+      null == favorites
+          ? _value._favorites
+          : favorites // ignore: cast_nullable_to_non_nullable
+              as List<FavoriteCoffee>,
+    ));
   }
 }
 
 /// @nodoc
-abstract class _$$AddFavoriteImplCopyWith<$Res>
-    implements $FavoritesEventCopyWith<$Res> {
+
+class _$FavoritesLoadedImpl implements _FavoritesLoaded {
+  const _$FavoritesLoadedImpl(final List<FavoriteCoffee> favorites)
+      : _favorites = favorites;
+
+  final List<FavoriteCoffee> _favorites;
+  @override
+  List<FavoriteCoffee> get favorites {
+    if (_favorites is EqualUnmodifiableListView) return _favorites;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_favorites);
+  }
+
+  @override
+  String toString() {
+    return 'FavoritesEvent.favoritesLoaded(favorites: $favorites)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FavoritesLoadedImpl &&
+            const DeepCollectionEquality()
+                .equals(other._favorites, _favorites));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_favorites));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FavoritesLoadedImplCopyWith<_$FavoritesLoadedImpl> get copyWith =>
+      __$$FavoritesLoadedImplCopyWithImpl<_$FavoritesLoadedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() loadFavorites,
+    required TResult Function(List<FavoriteCoffee> favorites) favoritesLoaded,
+    required TResult Function(Coffee coffee) addFavorite,
+    required TResult Function(FavoriteCoffee favorite) removeFavorite,
+  }) {
+    return favoritesLoaded(favorites);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? loadFavorites,
+    TResult? Function(List<FavoriteCoffee> favorites)? favoritesLoaded,
+    TResult? Function(Coffee coffee)? addFavorite,
+    TResult? Function(FavoriteCoffee favorite)? removeFavorite,
+  }) {
+    return favoritesLoaded?.call(favorites);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? loadFavorites,
+    TResult Function(List<FavoriteCoffee> favorites)? favoritesLoaded,
+    TResult Function(Coffee coffee)? addFavorite,
+    TResult Function(FavoriteCoffee favorite)? removeFavorite,
+    required TResult orElse(),
+  }) {
+    if (favoritesLoaded != null) {
+      return favoritesLoaded(favorites);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Start value) start,
+    required TResult Function(_LoadFavorites value) loadFavorites,
+    required TResult Function(_FavoritesLoaded value) favoritesLoaded,
+    required TResult Function(_AddFavorite value) addFavorite,
+    required TResult Function(_RemoveFavorite value) removeFavorite,
+  }) {
+    return favoritesLoaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Start value)? start,
+    TResult? Function(_LoadFavorites value)? loadFavorites,
+    TResult? Function(_FavoritesLoaded value)? favoritesLoaded,
+    TResult? Function(_AddFavorite value)? addFavorite,
+    TResult? Function(_RemoveFavorite value)? removeFavorite,
+  }) {
+    return favoritesLoaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Start value)? start,
+    TResult Function(_LoadFavorites value)? loadFavorites,
+    TResult Function(_FavoritesLoaded value)? favoritesLoaded,
+    TResult Function(_AddFavorite value)? addFavorite,
+    TResult Function(_RemoveFavorite value)? removeFavorite,
+    required TResult orElse(),
+  }) {
+    if (favoritesLoaded != null) {
+      return favoritesLoaded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FavoritesLoaded implements FavoritesEvent {
+  const factory _FavoritesLoaded(final List<FavoriteCoffee> favorites) =
+      _$FavoritesLoadedImpl;
+
+  List<FavoriteCoffee> get favorites;
+  @JsonKey(ignore: true)
+  _$$FavoritesLoadedImplCopyWith<_$FavoritesLoadedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddFavoriteImplCopyWith<$Res> {
   factory _$$AddFavoriteImplCopyWith(
           _$AddFavoriteImpl value, $Res Function(_$AddFavoriteImpl) then) =
       __$$AddFavoriteImplCopyWithImpl<$Res>;
-  @override
   @useResult
   $Res call({Coffee coffee});
 
-  @override
   $CoffeeCopyWith<$Res> get coffee;
 }
 
@@ -137,6 +523,14 @@ class __$$AddFavoriteImplCopyWithImpl<$Res>
           : coffee // ignore: cast_nullable_to_non_nullable
               as Coffee,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CoffeeCopyWith<$Res> get coffee {
+    return $CoffeeCopyWith<$Res>(_value.coffee, (value) {
+      return _then(_value.copyWith(coffee: value));
+    });
   }
 }
 
@@ -173,8 +567,11 @@ class _$AddFavoriteImpl implements _AddFavorite {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() loadFavorites,
+    required TResult Function(List<FavoriteCoffee> favorites) favoritesLoaded,
     required TResult Function(Coffee coffee) addFavorite,
-    required TResult Function(Coffee coffee) removeFavorite,
+    required TResult Function(FavoriteCoffee favorite) removeFavorite,
   }) {
     return addFavorite(coffee);
   }
@@ -182,8 +579,11 @@ class _$AddFavoriteImpl implements _AddFavorite {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? loadFavorites,
+    TResult? Function(List<FavoriteCoffee> favorites)? favoritesLoaded,
     TResult? Function(Coffee coffee)? addFavorite,
-    TResult? Function(Coffee coffee)? removeFavorite,
+    TResult? Function(FavoriteCoffee favorite)? removeFavorite,
   }) {
     return addFavorite?.call(coffee);
   }
@@ -191,8 +591,11 @@ class _$AddFavoriteImpl implements _AddFavorite {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? loadFavorites,
+    TResult Function(List<FavoriteCoffee> favorites)? favoritesLoaded,
     TResult Function(Coffee coffee)? addFavorite,
-    TResult Function(Coffee coffee)? removeFavorite,
+    TResult Function(FavoriteCoffee favorite)? removeFavorite,
     required TResult orElse(),
   }) {
     if (addFavorite != null) {
@@ -204,6 +607,9 @@ class _$AddFavoriteImpl implements _AddFavorite {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Start value) start,
+    required TResult Function(_LoadFavorites value) loadFavorites,
+    required TResult Function(_FavoritesLoaded value) favoritesLoaded,
     required TResult Function(_AddFavorite value) addFavorite,
     required TResult Function(_RemoveFavorite value) removeFavorite,
   }) {
@@ -213,6 +619,9 @@ class _$AddFavoriteImpl implements _AddFavorite {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Start value)? start,
+    TResult? Function(_LoadFavorites value)? loadFavorites,
+    TResult? Function(_FavoritesLoaded value)? favoritesLoaded,
     TResult? Function(_AddFavorite value)? addFavorite,
     TResult? Function(_RemoveFavorite value)? removeFavorite,
   }) {
@@ -222,6 +631,9 @@ class _$AddFavoriteImpl implements _AddFavorite {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Start value)? start,
+    TResult Function(_LoadFavorites value)? loadFavorites,
+    TResult Function(_FavoritesLoaded value)? favoritesLoaded,
     TResult Function(_AddFavorite value)? addFavorite,
     TResult Function(_RemoveFavorite value)? removeFavorite,
     required TResult orElse(),
@@ -236,26 +648,21 @@ class _$AddFavoriteImpl implements _AddFavorite {
 abstract class _AddFavorite implements FavoritesEvent {
   const factory _AddFavorite(final Coffee coffee) = _$AddFavoriteImpl;
 
-  @override
   Coffee get coffee;
-  @override
   @JsonKey(ignore: true)
   _$$AddFavoriteImplCopyWith<_$AddFavoriteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$RemoveFavoriteImplCopyWith<$Res>
-    implements $FavoritesEventCopyWith<$Res> {
+abstract class _$$RemoveFavoriteImplCopyWith<$Res> {
   factory _$$RemoveFavoriteImplCopyWith(_$RemoveFavoriteImpl value,
           $Res Function(_$RemoveFavoriteImpl) then) =
       __$$RemoveFavoriteImplCopyWithImpl<$Res>;
-  @override
   @useResult
-  $Res call({Coffee coffee});
+  $Res call({FavoriteCoffee favorite});
 
-  @override
-  $CoffeeCopyWith<$Res> get coffee;
+  $FavoriteCoffeeCopyWith<$Res> get favorite;
 }
 
 /// @nodoc
@@ -269,28 +676,36 @@ class __$$RemoveFavoriteImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? coffee = null,
+    Object? favorite = null,
   }) {
     return _then(_$RemoveFavoriteImpl(
-      null == coffee
-          ? _value.coffee
-          : coffee // ignore: cast_nullable_to_non_nullable
-              as Coffee,
+      null == favorite
+          ? _value.favorite
+          : favorite // ignore: cast_nullable_to_non_nullable
+              as FavoriteCoffee,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $FavoriteCoffeeCopyWith<$Res> get favorite {
+    return $FavoriteCoffeeCopyWith<$Res>(_value.favorite, (value) {
+      return _then(_value.copyWith(favorite: value));
+    });
   }
 }
 
 /// @nodoc
 
 class _$RemoveFavoriteImpl implements _RemoveFavorite {
-  const _$RemoveFavoriteImpl(this.coffee);
+  const _$RemoveFavoriteImpl(this.favorite);
 
   @override
-  final Coffee coffee;
+  final FavoriteCoffee favorite;
 
   @override
   String toString() {
-    return 'FavoritesEvent.removeFavorite(coffee: $coffee)';
+    return 'FavoritesEvent.removeFavorite(favorite: $favorite)';
   }
 
   @override
@@ -298,11 +713,12 @@ class _$RemoveFavoriteImpl implements _RemoveFavorite {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RemoveFavoriteImpl &&
-            (identical(other.coffee, coffee) || other.coffee == coffee));
+            (identical(other.favorite, favorite) ||
+                other.favorite == favorite));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, coffee);
+  int get hashCode => Object.hash(runtimeType, favorite);
 
   @JsonKey(ignore: true)
   @override
@@ -314,30 +730,39 @@ class _$RemoveFavoriteImpl implements _RemoveFavorite {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() loadFavorites,
+    required TResult Function(List<FavoriteCoffee> favorites) favoritesLoaded,
     required TResult Function(Coffee coffee) addFavorite,
-    required TResult Function(Coffee coffee) removeFavorite,
+    required TResult Function(FavoriteCoffee favorite) removeFavorite,
   }) {
-    return removeFavorite(coffee);
+    return removeFavorite(favorite);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? loadFavorites,
+    TResult? Function(List<FavoriteCoffee> favorites)? favoritesLoaded,
     TResult? Function(Coffee coffee)? addFavorite,
-    TResult? Function(Coffee coffee)? removeFavorite,
+    TResult? Function(FavoriteCoffee favorite)? removeFavorite,
   }) {
-    return removeFavorite?.call(coffee);
+    return removeFavorite?.call(favorite);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? loadFavorites,
+    TResult Function(List<FavoriteCoffee> favorites)? favoritesLoaded,
     TResult Function(Coffee coffee)? addFavorite,
-    TResult Function(Coffee coffee)? removeFavorite,
+    TResult Function(FavoriteCoffee favorite)? removeFavorite,
     required TResult orElse(),
   }) {
     if (removeFavorite != null) {
-      return removeFavorite(coffee);
+      return removeFavorite(favorite);
     }
     return orElse();
   }
@@ -345,6 +770,9 @@ class _$RemoveFavoriteImpl implements _RemoveFavorite {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Start value) start,
+    required TResult Function(_LoadFavorites value) loadFavorites,
+    required TResult Function(_FavoritesLoaded value) favoritesLoaded,
     required TResult Function(_AddFavorite value) addFavorite,
     required TResult Function(_RemoveFavorite value) removeFavorite,
   }) {
@@ -354,6 +782,9 @@ class _$RemoveFavoriteImpl implements _RemoveFavorite {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Start value)? start,
+    TResult? Function(_LoadFavorites value)? loadFavorites,
+    TResult? Function(_FavoritesLoaded value)? favoritesLoaded,
     TResult? Function(_AddFavorite value)? addFavorite,
     TResult? Function(_RemoveFavorite value)? removeFavorite,
   }) {
@@ -363,6 +794,9 @@ class _$RemoveFavoriteImpl implements _RemoveFavorite {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Start value)? start,
+    TResult Function(_LoadFavorites value)? loadFavorites,
+    TResult Function(_FavoritesLoaded value)? favoritesLoaded,
     TResult Function(_AddFavorite value)? addFavorite,
     TResult Function(_RemoveFavorite value)? removeFavorite,
     required TResult orElse(),
@@ -375,11 +809,10 @@ class _$RemoveFavoriteImpl implements _RemoveFavorite {
 }
 
 abstract class _RemoveFavorite implements FavoritesEvent {
-  const factory _RemoveFavorite(final Coffee coffee) = _$RemoveFavoriteImpl;
+  const factory _RemoveFavorite(final FavoriteCoffee favorite) =
+      _$RemoveFavoriteImpl;
 
-  @override
-  Coffee get coffee;
-  @override
+  FavoriteCoffee get favorite;
   @JsonKey(ignore: true)
   _$$RemoveFavoriteImplCopyWith<_$RemoveFavoriteImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -391,7 +824,7 @@ FavoritesState _$FavoritesStateFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FavoritesState {
-  List<Coffee> get favorites => throw _privateConstructorUsedError;
+  List<FavoriteCoffee> get favorites => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -405,7 +838,7 @@ abstract class $FavoritesStateCopyWith<$Res> {
           FavoritesState value, $Res Function(FavoritesState) then) =
       _$FavoritesStateCopyWithImpl<$Res, FavoritesState>;
   @useResult
-  $Res call({List<Coffee> favorites});
+  $Res call({List<FavoriteCoffee> favorites});
 }
 
 /// @nodoc
@@ -427,7 +860,7 @@ class _$FavoritesStateCopyWithImpl<$Res, $Val extends FavoritesState>
       favorites: null == favorites
           ? _value.favorites
           : favorites // ignore: cast_nullable_to_non_nullable
-              as List<Coffee>,
+              as List<FavoriteCoffee>,
     ) as $Val);
   }
 }
@@ -440,7 +873,7 @@ abstract class _$$FavoritesStateImplCopyWith<$Res>
       __$$FavoritesStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Coffee> favorites});
+  $Res call({List<FavoriteCoffee> favorites});
 }
 
 /// @nodoc
@@ -460,7 +893,7 @@ class __$$FavoritesStateImplCopyWithImpl<$Res>
       favorites: null == favorites
           ? _value._favorites
           : favorites // ignore: cast_nullable_to_non_nullable
-              as List<Coffee>,
+              as List<FavoriteCoffee>,
     ));
   }
 }
@@ -468,16 +901,16 @@ class __$$FavoritesStateImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$FavoritesStateImpl implements _FavoritesState {
-  const _$FavoritesStateImpl({final List<Coffee> favorites = const []})
+  const _$FavoritesStateImpl({final List<FavoriteCoffee> favorites = const []})
       : _favorites = favorites;
 
   factory _$FavoritesStateImpl.fromJson(Map<String, dynamic> json) =>
       _$$FavoritesStateImplFromJson(json);
 
-  final List<Coffee> _favorites;
+  final List<FavoriteCoffee> _favorites;
   @override
   @JsonKey()
-  List<Coffee> get favorites {
+  List<FavoriteCoffee> get favorites {
     if (_favorites is EqualUnmodifiableListView) return _favorites;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_favorites);
@@ -518,14 +951,14 @@ class _$FavoritesStateImpl implements _FavoritesState {
 }
 
 abstract class _FavoritesState implements FavoritesState {
-  const factory _FavoritesState({final List<Coffee> favorites}) =
+  const factory _FavoritesState({final List<FavoriteCoffee> favorites}) =
       _$FavoritesStateImpl;
 
   factory _FavoritesState.fromJson(Map<String, dynamic> json) =
       _$FavoritesStateImpl.fromJson;
 
   @override
-  List<Coffee> get favorites;
+  List<FavoriteCoffee> get favorites;
   @override
   @JsonKey(ignore: true)
   _$$FavoritesStateImplCopyWith<_$FavoritesStateImpl> get copyWith =>

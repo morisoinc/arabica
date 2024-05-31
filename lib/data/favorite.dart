@@ -9,6 +9,7 @@ part 'favorite.g.dart';
 @Collection(ignore: {'copyWith'})
 class FavoriteCoffee with _$FavoriteCoffee {
   factory FavoriteCoffee({
+    required String uid,
     required Coffee coffee,
     required DateTime createdAt,
   }) = _FavoriteCoffee;
