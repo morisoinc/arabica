@@ -10,25 +10,59 @@ part 'coffee_feed_bloc.freezed.dart';
 class CoffeeFeedBloc extends Bloc<CoffeeFeedEvent, CoffeeFeedState> {
   final CoffeeFeedDs coffeeFeedDs;
 
+  final bufferSize = 10;
+
   CoffeeFeedBloc({required this.coffeeFeedDs})
       : super((const _CoffeeFeedState())) {
     on<CoffeeFeedEvent>((event, emit) {
       event.when(
-          started: () {},
-          fetchRandomCoffee: () async {
-            final coffee = await coffeeFeedDs.fetchCoffee();
-            if (coffee != null) {
-              add(CoffeeFeedEvent.onRandomCoffeeFetched(coffee));
-            }
-          },
-          onRandomCoffeeFetched: (coffee) {
-            emit(state.copyWith(buffer: [...state.buffer, coffee]));
-          },
-          removeCoffee: (coffee) {
-            emit(state.copyWith(
-                buffer: state.buffer.where((c) => c != coffee).toList()));
-            add(const CoffeeFeedEvent.fetchRandomCoffee());
+        started: () {
+          add(const CoffeeFeedEvent.fillBuffer());
+        },
+        fillBuffer: () {
+          print("filling buffer... size is ${state.buffer.length}");
+          add(CoffeeFeedEvent.fetchRandomCoffee(
+              amount: bufferSize - state.buffer.length));
+        },
+        fetchRandomCoffee: (amount) async {
+          if (amount == 0) return;
+          Future.wait(List.generate(amount, (_) => coffeeFeedDs.fetchCoffee()))
+              .then((coffees) {
+            final nonNullCoffees = coffees.whereType<Coffee>().toList();
+            add(CoffeeFeedEvent.onRandomCoffeeFetched(nonNullCoffees));
           });
+        },
+        onRandomCoffeeFetched: (coffees) {
+          emit(state.copyWith(buffer: [...coffees, ...state.buffer]));
+          add(const CoffeeFeedEvent.filterCoffees());
+        },
+        removeCoffee: (coffee) {
+          emit(state.copyWith(
+              buffer: state.buffer.where((c) => c != coffee).toList()));
+          add(const CoffeeFeedEvent.fillBuffer());
+        },
+        overrideBlacklist: (blacklistedCoffees) {
+          emit(state.copyWith(blacklistedCoffees: blacklistedCoffees));
+        },
+        addCoffeeToBlacklist: (coffee) {
+          emit(state.copyWith(
+              blacklistedCoffees: [...state.blacklistedCoffees, coffee]));
+          add(const CoffeeFeedEvent.filterCoffees());
+        },
+        removeCoffeeFromBlacklist: (coffee) {
+          emit(state.copyWith(
+              blacklistedCoffees:
+                  state.blacklistedCoffees.where((c) => c != coffee).toList()));
+          add(const CoffeeFeedEvent.filterCoffees());
+        },
+        filterCoffees: () {
+          final filteredCoffees = state.buffer
+              .where((coffee) => !state.blacklistedCoffees.contains(coffee))
+              .toList();
+          emit(state.copyWith(buffer: filteredCoffees));
+          add(const CoffeeFeedEvent.fillBuffer());
+        },
+      );
     });
   }
 }

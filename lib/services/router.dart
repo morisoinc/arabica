@@ -30,7 +30,7 @@ final router = GoRouter(
             BlocProvider(
               create: (context) => CoffeeFeedBloc(
                   coffeeFeedDs: CoffeeFeedDs(httpSingleton.client))
-                ..add(const CoffeeFeedEvent.fetchRandomCoffee()),
+                ..add(const CoffeeFeedEvent.started()),
             ),
             BlocProvider(
               create: (context) =>

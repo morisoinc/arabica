@@ -54,8 +54,7 @@ class CoffeeFeedScreen extends StatelessWidget {
                       .read<FavoritesBloc>()
                       .add(FavoritesEvent.addFavorite(state.buffer.last));
                   context.read<CoffeeFeedBloc>().add(
-                        CoffeeFeedEvent.removeCoffee(state.buffer.last),
-                      );
+                      CoffeeFeedEvent.addCoffeeToBlacklist(state.buffer.last));
                 },
                 child: const Text('Favorite Coffee'),
               ),
