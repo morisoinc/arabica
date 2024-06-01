@@ -13,27 +13,53 @@ class FavoritesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<FavoritesBloc, FavoritesState>(
-        builder: (context, state) {
-      return ListView.builder(
-        itemCount: state.favorites.length,
-        itemBuilder: (context, index) {
-          final favorite = state.favorites[index];
-          return ListTile(
-            title: Text(favorite.coffee.url),
-            leading: Image.memory(favorite.coffee.imageBytes == null
-                ? Uint8List.fromList(base64Decode(favorite.coffee.encodedImage))
-                : favorite.coffee.imageBytes!),
-            trailing: IconButton(
-              icon: const Icon(Icons.delete),
-              onPressed: () {
-                context
-                    .read<FavoritesBloc>()
-                    .add(FavoritesEvent.removeFavorite(favorite));
-              },
-            ),
-          );
-        },
-      );
-    });
+      builder: (favoriteScreenContext, state) {
+        return ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 840),
+          child: GridView.builder(
+            itemCount: state.favorites.length,
+            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                maxCrossAxisExtent: 250),
+            itemBuilder: (context, index) {
+              final favorite = state.favorites[index];
+              return GestureDetector(
+                onLongPress: () {
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: const Text('Remove favorite?'),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                favoriteScreenContext.read<FavoritesBloc>().add(
+                                    FavoritesEvent.removeFavorite(favorite));
+                                Navigator.of(context).pop();
+                              },
+                              child: const Text('Yes'),
+                            ),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: const Text('No'),
+                            ),
+                          ],
+                        );
+                      });
+                },
+                child: Image.memory(
+                  favorite.coffee.imageBytes == null
+                      ? Uint8List.fromList(
+                          base64Decode(favorite.coffee.encodedImage))
+                      : favorite.coffee.imageBytes!,
+                  fit: BoxFit.cover,
+                ),
+              );
+            },
+          ),
+        );
+      },
+    );
   }
 }

@@ -33,21 +33,19 @@ class CoffeeFeedScreen extends StatelessWidget {
                 backCardOffset: Offset.zero,
                 numberOfCardsDisplayed: 3,
                 onSwipe: (previousIndex, currentIndex, direction) {
+                  final coffee = state.buffer[previousIndex];
                   switch (direction) {
-                    case CardSwiperDirection.left:
-                      context.read<CoffeeFeedBloc>().add(
-                            CoffeeFeedEvent.removeCoffee(state.buffer.last),
-                          );
-                      return true;
                     case CardSwiperDirection.right:
                       context.read<FavoritesBloc>().add(
-                            FavoritesEvent.addFavorite(state.buffer.last),
+                            FavoritesEvent.addFavorite(coffee),
                           );
                       context.read<CoffeeFeedBloc>().add(
                             CoffeeFeedEvent.addCoffeeToBlacklist(
-                              state.buffer.last,
+                              coffee,
                             ),
                           );
+                      return true;
+                    case CardSwiperDirection.left:
                       return true;
                     case CardSwiperDirection.none:
                     case CardSwiperDirection.top:

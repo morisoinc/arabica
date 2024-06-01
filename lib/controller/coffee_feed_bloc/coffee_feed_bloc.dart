@@ -50,7 +50,7 @@ class CoffeeFeedBloc extends Bloc<CoffeeFeedEvent, CoffeeFeedState> {
         addCoffeeToBlacklist: (coffee) {
           emit(state.copyWith(
               blacklistedCoffees: [...state.blacklistedCoffees, coffee]));
-          add(const CoffeeFeedEvent.filterCoffees());
+          // add(const CoffeeFeedEvent.filterCoffees());
         },
         removeCoffeeFromBlacklist: (coffee) {
           emit(state.copyWith(
