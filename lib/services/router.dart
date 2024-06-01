@@ -45,7 +45,7 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: CoffeeFeedScreen.route,
-              builder: (context, state) => const CoffeeFeedScreen(),
+              builder: (context, state) => CoffeeFeedScreen(),
             ),
           ],
         ),

@@ -349,10 +349,26 @@ extension CoffeeQueryObject on QueryBuilder<Coffee, Coffee, QFilterCondition> {}
 _$CoffeeImpl _$$CoffeeImplFromJson(Map<String, dynamic> json) => _$CoffeeImpl(
       url: json['url'] as String? ?? "",
       encodedImage: json['encodedImage'] as String? ?? "",
+      imageBytes: _$JsonConverterFromJson<String, Uint8List>(
+          json['imageBytes'], const Uint8ListToStringConverter().fromJson),
     );
 
 Map<String, dynamic> _$$CoffeeImplToJson(_$CoffeeImpl instance) =>
     <String, dynamic>{
       'url': instance.url,
       'encodedImage': instance.encodedImage,
+      'imageBytes': _$JsonConverterToJson<String, Uint8List>(
+          instance.imageBytes, const Uint8ListToStringConverter().toJson),
     };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);

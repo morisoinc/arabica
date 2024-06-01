@@ -25,7 +25,7 @@ class CoffeeFeedBloc extends Bloc<CoffeeFeedEvent, CoffeeFeedState> {
               amount: bufferSize - state.buffer.length));
         },
         fetchRandomCoffee: (amount) async {
-          if (amount == 0) return;
+          if (amount <= 0) return;
           Future.wait(List.generate(amount, (_) => coffeeFeedDs.fetchCoffee()))
               .then((coffees) {
             final nonNullCoffees = coffees.whereType<Coffee>().toList();
@@ -33,7 +33,10 @@ class CoffeeFeedBloc extends Bloc<CoffeeFeedEvent, CoffeeFeedState> {
           });
         },
         onRandomCoffeeFetched: (coffees) {
-          emit(state.copyWith(buffer: [...coffees, ...state.buffer]));
+          emit(state.copyWith(buffer: [
+            ...state.buffer,
+            ...coffees,
+          ]));
           add(const CoffeeFeedEvent.filterCoffees());
         },
         removeCoffee: (coffee) {

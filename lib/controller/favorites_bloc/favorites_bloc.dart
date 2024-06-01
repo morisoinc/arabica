@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:arabica/data/coffee.dart';
@@ -32,7 +33,22 @@ class FavoritesBloc extends HydratedBloc<FavoritesEvent, FavoritesState> {
           add(FavoritesEvent.favoritesLoaded(favorites));
         },
         favoritesLoaded: (favorites) {
-          emit(state.copyWith(favorites: favorites));
+          for (var favorite in favorites) {
+            if (favorite.coffee.imageBytes == null) {
+              favorite = favorite.copyWith(
+                  coffee: favorite.coffee.copyWith(
+                      imageBytes: base64Decode(favorite.coffee.encodedImage)));
+            }
+
+            emit(
+              state.copyWith(
+                favorites: [
+                  ...state.favorites,
+                  favorite,
+                ],
+              ),
+            );
+          }
         },
         addFavorite: (coffee) {
           final favorite = FavoriteCoffee(

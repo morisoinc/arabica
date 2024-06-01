@@ -57,6 +57,7 @@ dependencies:
     hosted: https://pub.isar-community.dev/
   path_provider: ^2.1.3
   uuid: ^4.4.0
+  flutter_card_swiper: ^7.0.1
 
 dev_dependencies:
   flutter_test:

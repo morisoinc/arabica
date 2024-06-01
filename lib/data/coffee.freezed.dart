@@ -22,6 +22,9 @@ Coffee _$CoffeeFromJson(Map<String, dynamic> json) {
 mixin _$Coffee {
   String get url => throw _privateConstructorUsedError;
   String get encodedImage => throw _privateConstructorUsedError;
+  @ignore
+  @Uint8ListToStringConverter()
+  Uint8List? get imageBytes => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -33,7 +36,10 @@ abstract class $CoffeeCopyWith<$Res> {
   factory $CoffeeCopyWith(Coffee value, $Res Function(Coffee) then) =
       _$CoffeeCopyWithImpl<$Res, Coffee>;
   @useResult
-  $Res call({String url, String encodedImage});
+  $Res call(
+      {String url,
+      String encodedImage,
+      @ignore @Uint8ListToStringConverter() Uint8List? imageBytes});
 }
 
 /// @nodoc
@@ -51,6 +57,7 @@ class _$CoffeeCopyWithImpl<$Res, $Val extends Coffee>
   $Res call({
     Object? url = null,
     Object? encodedImage = null,
+    Object? imageBytes = freezed,
   }) {
     return _then(_value.copyWith(
       url: null == url
@@ -61,6 +68,10 @@ class _$CoffeeCopyWithImpl<$Res, $Val extends Coffee>
           ? _value.encodedImage
           : encodedImage // ignore: cast_nullable_to_non_nullable
               as String,
+      imageBytes: freezed == imageBytes
+          ? _value.imageBytes
+          : imageBytes // ignore: cast_nullable_to_non_nullable
+              as Uint8List?,
     ) as $Val);
   }
 }
@@ -72,7 +83,10 @@ abstract class _$$CoffeeImplCopyWith<$Res> implements $CoffeeCopyWith<$Res> {
       __$$CoffeeImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String url, String encodedImage});
+  $Res call(
+      {String url,
+      String encodedImage,
+      @ignore @Uint8ListToStringConverter() Uint8List? imageBytes});
 }
 
 /// @nodoc
@@ -88,6 +102,7 @@ class __$$CoffeeImplCopyWithImpl<$Res>
   $Res call({
     Object? url = null,
     Object? encodedImage = null,
+    Object? imageBytes = freezed,
   }) {
     return _then(_$CoffeeImpl(
       url: null == url
@@ -98,6 +113,10 @@ class __$$CoffeeImplCopyWithImpl<$Res>
           ? _value.encodedImage
           : encodedImage // ignore: cast_nullable_to_non_nullable
               as String,
+      imageBytes: freezed == imageBytes
+          ? _value.imageBytes
+          : imageBytes // ignore: cast_nullable_to_non_nullable
+              as Uint8List?,
     ));
   }
 }
@@ -105,7 +124,11 @@ class __$$CoffeeImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$CoffeeImpl extends _Coffee {
-  _$CoffeeImpl({this.url = "", this.encodedImage = ""}) : super._();
+  _$CoffeeImpl(
+      {this.url = "",
+      this.encodedImage = "",
+      @ignore @Uint8ListToStringConverter() this.imageBytes})
+      : super._();
 
   factory _$CoffeeImpl.fromJson(Map<String, dynamic> json) =>
       _$$CoffeeImplFromJson(json);
@@ -116,10 +139,14 @@ class _$CoffeeImpl extends _Coffee {
   @override
   @JsonKey()
   final String encodedImage;
+  @override
+  @ignore
+  @Uint8ListToStringConverter()
+  final Uint8List? imageBytes;
 
   @override
   String toString() {
-    return 'Coffee(url: $url, encodedImage: $encodedImage)';
+    return 'Coffee(url: $url, encodedImage: $encodedImage, imageBytes: $imageBytes)';
   }
 
   @override
@@ -129,12 +156,15 @@ class _$CoffeeImpl extends _Coffee {
             other is _$CoffeeImpl &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.encodedImage, encodedImage) ||
-                other.encodedImage == encodedImage));
+                other.encodedImage == encodedImage) &&
+            const DeepCollectionEquality()
+                .equals(other.imageBytes, imageBytes));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, url, encodedImage);
+  int get hashCode => Object.hash(runtimeType, url, encodedImage,
+      const DeepCollectionEquality().hash(imageBytes));
 
   @JsonKey(ignore: true)
   @override
@@ -151,7 +181,11 @@ class _$CoffeeImpl extends _Coffee {
 }
 
 abstract class _Coffee extends Coffee {
-  factory _Coffee({final String url, final String encodedImage}) = _$CoffeeImpl;
+  factory _Coffee(
+          {final String url,
+          final String encodedImage,
+          @ignore @Uint8ListToStringConverter() final Uint8List? imageBytes}) =
+      _$CoffeeImpl;
   _Coffee._() : super._();
 
   factory _Coffee.fromJson(Map<String, dynamic> json) = _$CoffeeImpl.fromJson;
@@ -160,6 +194,10 @@ abstract class _Coffee extends Coffee {
   String get url;
   @override
   String get encodedImage;
+  @override
+  @ignore
+  @Uint8ListToStringConverter()
+  Uint8List? get imageBytes;
   @override
   @JsonKey(ignore: true)
   _$$CoffeeImplCopyWith<_$CoffeeImpl> get copyWith =>

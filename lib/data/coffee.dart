@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
+import 'package:arabica/services/converters.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:isar/isar.dart';
 
@@ -13,10 +14,8 @@ class Coffee with _$Coffee {
   factory Coffee({
     @Default("") String url,
     @Default("") String encodedImage,
+    @ignore @Uint8ListToStringConverter() Uint8List? imageBytes,
   }) = _Coffee;
-
-  @ignore
-  Uint8List get imageBytes => Uint8List.fromList(base64Decode(encodedImage));
 
   factory Coffee.fromJson(Map<String, dynamic> json) => _$CoffeeFromJson(json);
 
