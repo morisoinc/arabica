@@ -56,6 +56,11 @@ class FavoritesBloc extends HydratedBloc<FavoritesEvent, FavoritesState> {
             coffee: coffee,
             createdAt: DateTime.now(),
           );
+
+          if (state.favorites.any((c) => c.coffee.url == coffee.url)) {
+            return;
+          }
+
           emit(state.copyWith(favorites: [...state.favorites, favorite]));
           isar?.writeTxn(() async {
             await isar!.favoriteCoffees.put(favorite);
