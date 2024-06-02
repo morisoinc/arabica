@@ -1,6 +1,7 @@
 import 'package:arabica/controller/coffee_feed_bloc/coffee_feed_bloc.dart';
 import 'package:arabica/controller/favorites_bloc/favorites_bloc.dart';
 import 'package:arabica/widgets/coffee_card.dart';
+import 'package:arabica/widgets/left_right_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
@@ -95,22 +96,11 @@ class _CoffeeFeedScreenState extends State<CoffeeFeedScreen> {
                   },
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      cardController.swipe(CardSwiperDirection.left);
-                    },
-                    child: const Text('Remove Coffee'),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      cardController.swipe(CardSwiperDirection.right);
-                    },
-                    child: const Text('Favorite Coffee'),
-                  ),
-                ],
+              LeftRightButtons(
+                onLeftPressed: () =>
+                    cardController.swipe(CardSwiperDirection.left),
+                onRightPressed: () =>
+                    cardController.swipe(CardSwiperDirection.right),
               ),
             ],
           );
