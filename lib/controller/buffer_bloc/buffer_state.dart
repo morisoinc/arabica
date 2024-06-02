@@ -8,4 +8,7 @@ class BufferState with _$BufferState {
     @Default(0) int currentDownloadAmount,
     @Default(false) bool coffeesAreReady,
   }) = _BufferState;
+
+  factory BufferState.fromJson(Map<String, dynamic> json) =>
+      _$BufferStateFromJson(json);
 }

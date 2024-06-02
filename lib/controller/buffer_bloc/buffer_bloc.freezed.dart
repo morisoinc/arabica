@@ -1957,6 +1957,10 @@ abstract class _UpdateDownloadAmount implements BufferEvent {
       get copyWith => throw _privateConstructorUsedError;
 }
 
+BufferState _$BufferStateFromJson(Map<String, dynamic> json) {
+  return _BufferState.fromJson(json);
+}
+
 /// @nodoc
 mixin _$BufferState {
   List<Coffee> get buffer => throw _privateConstructorUsedError;
@@ -1964,6 +1968,7 @@ mixin _$BufferState {
   int get currentDownloadAmount => throw _privateConstructorUsedError;
   bool get coffeesAreReady => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $BufferStateCopyWith<BufferState> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2074,7 +2079,7 @@ class __$$BufferStateImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$BufferStateImpl implements _BufferState {
   const _$BufferStateImpl(
       {final List<Coffee> buffer = const [],
@@ -2083,6 +2088,9 @@ class _$BufferStateImpl implements _BufferState {
       this.coffeesAreReady = false})
       : _buffer = buffer,
         _blacklistedCoffees = blacklistedCoffees;
+
+  factory _$BufferStateImpl.fromJson(Map<String, dynamic> json) =>
+      _$$BufferStateImplFromJson(json);
 
   final List<Coffee> _buffer;
   @override
@@ -2129,6 +2137,7 @@ class _$BufferStateImpl implements _BufferState {
                 other.coffeesAreReady == coffeesAreReady));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2142,6 +2151,13 @@ class _$BufferStateImpl implements _BufferState {
   @pragma('vm:prefer-inline')
   _$$BufferStateImplCopyWith<_$BufferStateImpl> get copyWith =>
       __$$BufferStateImplCopyWithImpl<_$BufferStateImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$BufferStateImplToJson(
+      this,
+    );
+  }
 }
 
 abstract class _BufferState implements BufferState {
@@ -2150,6 +2166,9 @@ abstract class _BufferState implements BufferState {
       final List<Coffee> blacklistedCoffees,
       final int currentDownloadAmount,
       final bool coffeesAreReady}) = _$BufferStateImpl;
+
+  factory _BufferState.fromJson(Map<String, dynamic> json) =
+      _$BufferStateImpl.fromJson;
 
   @override
   List<Coffee> get buffer;

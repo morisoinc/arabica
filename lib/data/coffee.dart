@@ -1,3 +1,5 @@
+// ignore_for_file: invalid_annotation_target
+
 import 'dart:typed_data';
 
 import 'package:arabica/services/converters.dart';
@@ -13,7 +15,6 @@ class Coffee with _$Coffee {
   factory Coffee({
     @Default("") String url,
     @Default("") String encodedImage,
-    // ignore: invalid_annotation_target
     @ignore @Uint8ListToStringConverter() Uint8List? imageBytes,
   }) = _Coffee;
 

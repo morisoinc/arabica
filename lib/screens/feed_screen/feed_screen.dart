@@ -20,7 +20,6 @@ class FeedScreen extends StatefulWidget {
 class _FeedScreenState extends State<FeedScreen> {
   final cardController = CardSwiperController();
   var firstBuild = true;
-  var swipeKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +39,6 @@ class _FeedScreenState extends State<FeedScreen> {
               return const Center(child: CircularProgressIndicator());
             case FeedStage.swipe:
               return SwipeScreen(
-                swipeKey: swipeKey,
                 coffees: state.coffees,
                 onSwipeLeft: (coffee) {
                   context.read<BufferBloc>().add(
@@ -65,16 +63,15 @@ class _FeedScreenState extends State<FeedScreen> {
                 },
               );
             case FeedStage.intermission:
-              final newCoffees = context.read<BufferBloc>().state.buffer;
               return IntermissionScreen(
                 mainMessage: state.mainMessage,
                 cancelMessage: state.cancelMessage,
                 confirmMessage: state.confirmMessage,
                 onCancelPressed: () =>
                     context.read<FeedBloc>().add(const FeedEvent.onFinish()),
-                onConfirmPressed: () => context
-                    .read<FeedBloc>()
-                    .add(FeedEvent.onNewRound(newCoffees)),
+                onConfirmPressed: () => context.read<FeedBloc>().add(
+                    FeedEvent.onNewRound(
+                        context.read<BufferBloc>().state.buffer)),
               );
             case FeedStage.end:
               return EndScreen(message: state.mainMessage);

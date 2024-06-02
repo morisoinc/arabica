@@ -7,14 +7,12 @@ import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 class SwipeScreen extends StatelessWidget {
   SwipeScreen({
     super.key,
-    required this.swipeKey,
     required this.coffees,
     required this.onSwipeLeft,
     required this.onSwipeRight,
     required this.onEnd,
   });
 
-  final Key swipeKey;
   final List<Coffee> coffees;
   final Function(Coffee coffee) onSwipeLeft;
   final Function(Coffee coffee) onSwipeRight;
@@ -28,7 +26,6 @@ class SwipeScreen extends StatelessWidget {
       children: [
         Flexible(
           child: CardSwiper(
-            key: swipeKey,
             cardsCount: coffees.length,
             controller: cardController,
             allowedSwipeDirection: const AllowedSwipeDirection.only(

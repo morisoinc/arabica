@@ -2,12 +2,14 @@ import 'package:arabica/data/coffee.dart';
 import 'package:arabica/data_sources/coffee_ds.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
 
 part 'buffer_bloc.freezed.dart';
+part 'buffer_bloc.g.dart';
 part 'buffer_event.dart';
 part 'buffer_state.dart';
 
-class BufferBloc extends Bloc<BufferEvent, BufferState> {
+class BufferBloc extends HydratedBloc<BufferEvent, BufferState> {
   final CoffeeDs coffeeDs;
 
   final bufferSize = 10;
@@ -85,5 +87,15 @@ class BufferBloc extends Bloc<BufferEvent, BufferState> {
         },
       );
     });
+  }
+
+  @override
+  BufferState? fromJson(Map<String, dynamic> json) {
+    return BufferState.fromJson(json);
+  }
+
+  @override
+  Map<String, dynamic>? toJson(BufferState state) {
+    return state.toJson();
   }
 }
