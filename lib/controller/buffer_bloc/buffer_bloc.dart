@@ -3,21 +3,20 @@ import 'package:arabica/data_sources/coffee_ds.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'coffee_buffer_bloc.freezed.dart';
-part 'coffee_buffer_event.dart';
-part 'coffee_buffer_state.dart';
+part 'buffer_bloc.freezed.dart';
+part 'buffer_event.dart';
+part 'buffer_state.dart';
 
-class CoffeeBufferBloc extends Bloc<CoffeeBufferEvent, CoffeeBufferState> {
+class BufferBloc extends Bloc<BufferEvent, BufferState> {
   final CoffeeDs coffeeDs;
 
   final bufferSize = 10;
 
-  CoffeeBufferBloc({required this.coffeeDs})
-      : super((const _CoffeeBufferState())) {
-    on<CoffeeBufferEvent>((event, emit) {
+  BufferBloc({required this.coffeeDs}) : super((const _BufferState())) {
+    on<BufferEvent>((event, emit) {
       event.when(
         started: () {
-          add(const CoffeeBufferEvent.fillBuffer());
+          add(const BufferEvent.fillBuffer());
         },
         fillBuffer: () {
           emit(
@@ -27,7 +26,7 @@ class CoffeeBufferBloc extends Bloc<CoffeeBufferEvent, CoffeeBufferState> {
           );
 
           add(
-            CoffeeBufferEvent.fetchRandomCoffee(
+            BufferEvent.fetchRandomCoffee(
               amount: bufferSize -
                   state.buffer.length -
                   state.currentDownloadAmount,
@@ -45,13 +44,13 @@ class CoffeeBufferBloc extends Bloc<CoffeeBufferEvent, CoffeeBufferState> {
         },
         fetchRandomCoffee: (amount) async {
           if (amount <= 0) return;
-          add(CoffeeBufferEvent.updateDownloadAmount(amount));
+          add(BufferEvent.updateDownloadAmount(amount));
           Future.wait(List.generate(amount, (_) => coffeeDs.fetchCoffee()))
               .then((coffees) {
-            add(CoffeeBufferEvent.updateDownloadAmount(-amount));
+            add(BufferEvent.updateDownloadAmount(-amount));
 
             final nonNullCoffees = coffees.whereType<Coffee>().toList();
-            add(CoffeeBufferEvent.onRandomCoffeeFetched(nonNullCoffees));
+            add(BufferEvent.onRandomCoffeeFetched(nonNullCoffees));
           });
         },
         onRandomCoffeeFetched: (coffees) {
@@ -63,12 +62,12 @@ class CoffeeBufferBloc extends Bloc<CoffeeBufferEvent, CoffeeBufferState> {
               ],
             ),
           );
-          add(const CoffeeBufferEvent.filterCoffees());
+          add(const BufferEvent.filterCoffees());
         },
         removeCoffee: (coffee) {
           emit(state.copyWith(
               buffer: state.buffer.where((c) => c != coffee).toList()));
-          add(const CoffeeBufferEvent.fillBuffer());
+          add(const BufferEvent.fillBuffer());
         },
         overrideBlacklist: (blacklistedCoffees) {
           emit(state.copyWith(blacklistedCoffees: blacklistedCoffees));
@@ -87,7 +86,7 @@ class CoffeeBufferBloc extends Bloc<CoffeeBufferEvent, CoffeeBufferState> {
               .where((coffee) => !state.blacklistedCoffees.contains(coffee))
               .toList();
           emit(state.copyWith(buffer: filteredCoffees));
-          add(const CoffeeBufferEvent.fillBuffer());
+          add(const BufferEvent.fillBuffer());
         },
       );
     });

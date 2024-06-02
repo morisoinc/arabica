@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'coffee_buffer_bloc.dart';
+part of 'buffer_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$CoffeeBufferEvent {
+mixin _$BufferEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
@@ -116,16 +116,16 @@ mixin _$CoffeeBufferEvent {
 }
 
 /// @nodoc
-abstract class $CoffeeBufferEventCopyWith<$Res> {
-  factory $CoffeeBufferEventCopyWith(
-          CoffeeBufferEvent value, $Res Function(CoffeeBufferEvent) then) =
-      _$CoffeeBufferEventCopyWithImpl<$Res, CoffeeBufferEvent>;
+abstract class $BufferEventCopyWith<$Res> {
+  factory $BufferEventCopyWith(
+          BufferEvent value, $Res Function(BufferEvent) then) =
+      _$BufferEventCopyWithImpl<$Res, BufferEvent>;
 }
 
 /// @nodoc
-class _$CoffeeBufferEventCopyWithImpl<$Res, $Val extends CoffeeBufferEvent>
-    implements $CoffeeBufferEventCopyWith<$Res> {
-  _$CoffeeBufferEventCopyWithImpl(this._value, this._then);
+class _$BufferEventCopyWithImpl<$Res, $Val extends BufferEvent>
+    implements $BufferEventCopyWith<$Res> {
+  _$BufferEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -142,7 +142,7 @@ abstract class _$$StartedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$StartedImplCopyWithImpl<$Res>
-    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$StartedImpl>
+    extends _$BufferEventCopyWithImpl<$Res, _$StartedImpl>
     implements _$$StartedImplCopyWith<$Res> {
   __$$StartedImplCopyWithImpl(
       _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
@@ -156,7 +156,7 @@ class _$StartedImpl implements _Started {
 
   @override
   String toString() {
-    return 'CoffeeBufferEvent.started()';
+    return 'BufferEvent.started()';
   }
 
   @override
@@ -290,7 +290,7 @@ class _$StartedImpl implements _Started {
   }
 }
 
-abstract class _Started implements CoffeeBufferEvent {
+abstract class _Started implements BufferEvent {
   const factory _Started() = _$StartedImpl;
 }
 
@@ -305,7 +305,7 @@ abstract class _$$FetchRandomCoffeeImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$FetchRandomCoffeeImplCopyWithImpl<$Res>
-    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$FetchRandomCoffeeImpl>
+    extends _$BufferEventCopyWithImpl<$Res, _$FetchRandomCoffeeImpl>
     implements _$$FetchRandomCoffeeImplCopyWith<$Res> {
   __$$FetchRandomCoffeeImplCopyWithImpl(_$FetchRandomCoffeeImpl _value,
       $Res Function(_$FetchRandomCoffeeImpl) _then)
@@ -335,7 +335,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
 
   @override
   String toString() {
-    return 'CoffeeBufferEvent.fetchRandomCoffee(amount: $amount)';
+    return 'BufferEvent.fetchRandomCoffee(amount: $amount)';
   }
 
   @override
@@ -478,7 +478,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
   }
 }
 
-abstract class _FetchRandomCoffee implements CoffeeBufferEvent {
+abstract class _FetchRandomCoffee implements BufferEvent {
   const factory _FetchRandomCoffee({required final int amount}) =
       _$FetchRandomCoffeeImpl;
 
@@ -500,7 +500,7 @@ abstract class _$$OnRandomCoffeeFetchedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$OnRandomCoffeeFetchedImplCopyWithImpl<$Res>
-    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$OnRandomCoffeeFetchedImpl>
+    extends _$BufferEventCopyWithImpl<$Res, _$OnRandomCoffeeFetchedImpl>
     implements _$$OnRandomCoffeeFetchedImplCopyWith<$Res> {
   __$$OnRandomCoffeeFetchedImplCopyWithImpl(_$OnRandomCoffeeFetchedImpl _value,
       $Res Function(_$OnRandomCoffeeFetchedImpl) _then)
@@ -536,7 +536,7 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
 
   @override
   String toString() {
-    return 'CoffeeBufferEvent.onRandomCoffeeFetched(coffee: $coffee)';
+    return 'BufferEvent.onRandomCoffeeFetched(coffee: $coffee)';
   }
 
   @override
@@ -680,7 +680,7 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
   }
 }
 
-abstract class _OnRandomCoffeeFetched implements CoffeeBufferEvent {
+abstract class _OnRandomCoffeeFetched implements BufferEvent {
   const factory _OnRandomCoffeeFetched(final List<Coffee> coffee) =
       _$OnRandomCoffeeFetchedImpl;
 
@@ -703,7 +703,7 @@ abstract class _$$ClearCoffeeImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ClearCoffeeImplCopyWithImpl<$Res>
-    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$ClearCoffeeImpl>
+    extends _$BufferEventCopyWithImpl<$Res, _$ClearCoffeeImpl>
     implements _$$ClearCoffeeImplCopyWith<$Res> {
   __$$ClearCoffeeImplCopyWithImpl(
       _$ClearCoffeeImpl _value, $Res Function(_$ClearCoffeeImpl) _then)
@@ -741,7 +741,7 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
 
   @override
   String toString() {
-    return 'CoffeeBufferEvent.removeCoffee(coffee: $coffee)';
+    return 'BufferEvent.removeCoffee(coffee: $coffee)';
   }
 
   @override
@@ -883,7 +883,7 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
   }
 }
 
-abstract class _ClearCoffee implements CoffeeBufferEvent {
+abstract class _ClearCoffee implements BufferEvent {
   const factory _ClearCoffee(final Coffee coffee) = _$ClearCoffeeImpl;
 
   Coffee get coffee;
@@ -903,7 +903,7 @@ abstract class _$$OverrideBlacklistImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$OverrideBlacklistImplCopyWithImpl<$Res>
-    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$OverrideBlacklistImpl>
+    extends _$BufferEventCopyWithImpl<$Res, _$OverrideBlacklistImpl>
     implements _$$OverrideBlacklistImplCopyWith<$Res> {
   __$$OverrideBlacklistImplCopyWithImpl(_$OverrideBlacklistImpl _value,
       $Res Function(_$OverrideBlacklistImpl) _then)
@@ -940,7 +940,7 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
 
   @override
   String toString() {
-    return 'CoffeeBufferEvent.overrideBlacklist(blacklistedCoffees: $blacklistedCoffees)';
+    return 'BufferEvent.overrideBlacklist(blacklistedCoffees: $blacklistedCoffees)';
   }
 
   @override
@@ -1085,7 +1085,7 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
   }
 }
 
-abstract class _OverrideBlacklist implements CoffeeBufferEvent {
+abstract class _OverrideBlacklist implements BufferEvent {
   const factory _OverrideBlacklist(final List<Coffee> blacklistedCoffees) =
       _$OverrideBlacklistImpl;
 
@@ -1108,7 +1108,7 @@ abstract class _$$AddCoffeeToBlacklistImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$AddCoffeeToBlacklistImplCopyWithImpl<$Res>
-    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$AddCoffeeToBlacklistImpl>
+    extends _$BufferEventCopyWithImpl<$Res, _$AddCoffeeToBlacklistImpl>
     implements _$$AddCoffeeToBlacklistImplCopyWith<$Res> {
   __$$AddCoffeeToBlacklistImplCopyWithImpl(_$AddCoffeeToBlacklistImpl _value,
       $Res Function(_$AddCoffeeToBlacklistImpl) _then)
@@ -1146,7 +1146,7 @@ class _$AddCoffeeToBlacklistImpl implements _AddCoffeeToBlacklist {
 
   @override
   String toString() {
-    return 'CoffeeBufferEvent.addCoffeeToBlacklist(coffee: $coffee)';
+    return 'BufferEvent.addCoffeeToBlacklist(coffee: $coffee)';
   }
 
   @override
@@ -1290,7 +1290,7 @@ class _$AddCoffeeToBlacklistImpl implements _AddCoffeeToBlacklist {
   }
 }
 
-abstract class _AddCoffeeToBlacklist implements CoffeeBufferEvent {
+abstract class _AddCoffeeToBlacklist implements BufferEvent {
   const factory _AddCoffeeToBlacklist(final Coffee coffee) =
       _$AddCoffeeToBlacklistImpl;
 
@@ -1314,8 +1314,7 @@ abstract class _$$RemoveCoffeeFromBlacklistImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$RemoveCoffeeFromBlacklistImplCopyWithImpl<$Res>
-    extends _$CoffeeBufferEventCopyWithImpl<$Res,
-        _$RemoveCoffeeFromBlacklistImpl>
+    extends _$BufferEventCopyWithImpl<$Res, _$RemoveCoffeeFromBlacklistImpl>
     implements _$$RemoveCoffeeFromBlacklistImplCopyWith<$Res> {
   __$$RemoveCoffeeFromBlacklistImplCopyWithImpl(
       _$RemoveCoffeeFromBlacklistImpl _value,
@@ -1354,7 +1353,7 @@ class _$RemoveCoffeeFromBlacklistImpl implements _RemoveCoffeeFromBlacklist {
 
   @override
   String toString() {
-    return 'CoffeeBufferEvent.removeCoffeeFromBlacklist(coffee: $coffee)';
+    return 'BufferEvent.removeCoffeeFromBlacklist(coffee: $coffee)';
   }
 
   @override
@@ -1497,7 +1496,7 @@ class _$RemoveCoffeeFromBlacklistImpl implements _RemoveCoffeeFromBlacklist {
   }
 }
 
-abstract class _RemoveCoffeeFromBlacklist implements CoffeeBufferEvent {
+abstract class _RemoveCoffeeFromBlacklist implements BufferEvent {
   const factory _RemoveCoffeeFromBlacklist(final Coffee coffee) =
       _$RemoveCoffeeFromBlacklistImpl;
 
@@ -1516,7 +1515,7 @@ abstract class _$$FilterCoffeesImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$FilterCoffeesImplCopyWithImpl<$Res>
-    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$FilterCoffeesImpl>
+    extends _$BufferEventCopyWithImpl<$Res, _$FilterCoffeesImpl>
     implements _$$FilterCoffeesImplCopyWith<$Res> {
   __$$FilterCoffeesImplCopyWithImpl(
       _$FilterCoffeesImpl _value, $Res Function(_$FilterCoffeesImpl) _then)
@@ -1530,7 +1529,7 @@ class _$FilterCoffeesImpl implements _FilterCoffees {
 
   @override
   String toString() {
-    return 'CoffeeBufferEvent.filterCoffees()';
+    return 'BufferEvent.filterCoffees()';
   }
 
   @override
@@ -1664,7 +1663,7 @@ class _$FilterCoffeesImpl implements _FilterCoffees {
   }
 }
 
-abstract class _FilterCoffees implements CoffeeBufferEvent {
+abstract class _FilterCoffees implements BufferEvent {
   const factory _FilterCoffees() = _$FilterCoffeesImpl;
 }
 
@@ -1677,7 +1676,7 @@ abstract class _$$FillBufferImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$FillBufferImplCopyWithImpl<$Res>
-    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$FillBufferImpl>
+    extends _$BufferEventCopyWithImpl<$Res, _$FillBufferImpl>
     implements _$$FillBufferImplCopyWith<$Res> {
   __$$FillBufferImplCopyWithImpl(
       _$FillBufferImpl _value, $Res Function(_$FillBufferImpl) _then)
@@ -1691,7 +1690,7 @@ class _$FillBufferImpl implements _FillBuffer {
 
   @override
   String toString() {
-    return 'CoffeeBufferEvent.fillBuffer()';
+    return 'BufferEvent.fillBuffer()';
   }
 
   @override
@@ -1825,7 +1824,7 @@ class _$FillBufferImpl implements _FillBuffer {
   }
 }
 
-abstract class _FillBuffer implements CoffeeBufferEvent {
+abstract class _FillBuffer implements BufferEvent {
   const factory _FillBuffer() = _$FillBufferImpl;
 }
 
@@ -1840,7 +1839,7 @@ abstract class _$$UpdateDownloadAmountImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$UpdateDownloadAmountImplCopyWithImpl<$Res>
-    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$UpdateDownloadAmountImpl>
+    extends _$BufferEventCopyWithImpl<$Res, _$UpdateDownloadAmountImpl>
     implements _$$UpdateDownloadAmountImplCopyWith<$Res> {
   __$$UpdateDownloadAmountImplCopyWithImpl(_$UpdateDownloadAmountImpl _value,
       $Res Function(_$UpdateDownloadAmountImpl) _then)
@@ -1870,7 +1869,7 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
 
   @override
   String toString() {
-    return 'CoffeeBufferEvent.updateDownloadAmount(amount: $amount)';
+    return 'BufferEvent.updateDownloadAmount(amount: $amount)';
   }
 
   @override
@@ -2014,7 +2013,7 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
   }
 }
 
-abstract class _UpdateDownloadAmount implements CoffeeBufferEvent {
+abstract class _UpdateDownloadAmount implements BufferEvent {
   const factory _UpdateDownloadAmount(final int amount) =
       _$UpdateDownloadAmountImpl;
 
@@ -2033,7 +2032,7 @@ abstract class _$$FillUiReadyCoffeesImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$FillUiReadyCoffeesImplCopyWithImpl<$Res>
-    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$FillUiReadyCoffeesImpl>
+    extends _$BufferEventCopyWithImpl<$Res, _$FillUiReadyCoffeesImpl>
     implements _$$FillUiReadyCoffeesImplCopyWith<$Res> {
   __$$FillUiReadyCoffeesImplCopyWithImpl(_$FillUiReadyCoffeesImpl _value,
       $Res Function(_$FillUiReadyCoffeesImpl) _then)
@@ -2047,7 +2046,7 @@ class _$FillUiReadyCoffeesImpl implements _FillUiReadyCoffees {
 
   @override
   String toString() {
-    return 'CoffeeBufferEvent.fillUiReadyCoffees()';
+    return 'BufferEvent.fillUiReadyCoffees()';
   }
 
   @override
@@ -2181,12 +2180,12 @@ class _$FillUiReadyCoffeesImpl implements _FillUiReadyCoffees {
   }
 }
 
-abstract class _FillUiReadyCoffees implements CoffeeBufferEvent {
+abstract class _FillUiReadyCoffees implements BufferEvent {
   const factory _FillUiReadyCoffees() = _$FillUiReadyCoffeesImpl;
 }
 
 /// @nodoc
-mixin _$CoffeeBufferState {
+mixin _$BufferState {
   List<Coffee> get buffer => throw _privateConstructorUsedError;
   List<Coffee> get blacklistedCoffees => throw _privateConstructorUsedError;
   int get currentDownloadAmount => throw _privateConstructorUsedError;
@@ -2194,15 +2193,15 @@ mixin _$CoffeeBufferState {
   bool get coffeesAreReady => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $CoffeeBufferStateCopyWith<CoffeeBufferState> get copyWith =>
+  $BufferStateCopyWith<BufferState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CoffeeBufferStateCopyWith<$Res> {
-  factory $CoffeeBufferStateCopyWith(
-          CoffeeBufferState value, $Res Function(CoffeeBufferState) then) =
-      _$CoffeeBufferStateCopyWithImpl<$Res, CoffeeBufferState>;
+abstract class $BufferStateCopyWith<$Res> {
+  factory $BufferStateCopyWith(
+          BufferState value, $Res Function(BufferState) then) =
+      _$BufferStateCopyWithImpl<$Res, BufferState>;
   @useResult
   $Res call(
       {List<Coffee> buffer,
@@ -2213,9 +2212,9 @@ abstract class $CoffeeBufferStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CoffeeBufferStateCopyWithImpl<$Res, $Val extends CoffeeBufferState>
-    implements $CoffeeBufferStateCopyWith<$Res> {
-  _$CoffeeBufferStateCopyWithImpl(this._value, this._then);
+class _$BufferStateCopyWithImpl<$Res, $Val extends BufferState>
+    implements $BufferStateCopyWith<$Res> {
+  _$BufferStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -2257,11 +2256,11 @@ class _$CoffeeBufferStateCopyWithImpl<$Res, $Val extends CoffeeBufferState>
 }
 
 /// @nodoc
-abstract class _$$CoffeeBufferStateImplCopyWith<$Res>
-    implements $CoffeeBufferStateCopyWith<$Res> {
-  factory _$$CoffeeBufferStateImplCopyWith(_$CoffeeBufferStateImpl value,
-          $Res Function(_$CoffeeBufferStateImpl) then) =
-      __$$CoffeeBufferStateImplCopyWithImpl<$Res>;
+abstract class _$$BufferStateImplCopyWith<$Res>
+    implements $BufferStateCopyWith<$Res> {
+  factory _$$BufferStateImplCopyWith(
+          _$BufferStateImpl value, $Res Function(_$BufferStateImpl) then) =
+      __$$BufferStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2273,11 +2272,11 @@ abstract class _$$CoffeeBufferStateImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CoffeeBufferStateImplCopyWithImpl<$Res>
-    extends _$CoffeeBufferStateCopyWithImpl<$Res, _$CoffeeBufferStateImpl>
-    implements _$$CoffeeBufferStateImplCopyWith<$Res> {
-  __$$CoffeeBufferStateImplCopyWithImpl(_$CoffeeBufferStateImpl _value,
-      $Res Function(_$CoffeeBufferStateImpl) _then)
+class __$$BufferStateImplCopyWithImpl<$Res>
+    extends _$BufferStateCopyWithImpl<$Res, _$BufferStateImpl>
+    implements _$$BufferStateImplCopyWith<$Res> {
+  __$$BufferStateImplCopyWithImpl(
+      _$BufferStateImpl _value, $Res Function(_$BufferStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2289,7 +2288,7 @@ class __$$CoffeeBufferStateImplCopyWithImpl<$Res>
     Object? uiReadyCoffees = null,
     Object? coffeesAreReady = null,
   }) {
-    return _then(_$CoffeeBufferStateImpl(
+    return _then(_$BufferStateImpl(
       buffer: null == buffer
           ? _value._buffer
           : buffer // ignore: cast_nullable_to_non_nullable
@@ -2316,8 +2315,8 @@ class __$$CoffeeBufferStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CoffeeBufferStateImpl implements _CoffeeBufferState {
-  const _$CoffeeBufferStateImpl(
+class _$BufferStateImpl implements _BufferState {
+  const _$BufferStateImpl(
       {final List<Coffee> buffer = const [],
       final List<Coffee> blacklistedCoffees = const [],
       this.currentDownloadAmount = 0,
@@ -2364,14 +2363,14 @@ class _$CoffeeBufferStateImpl implements _CoffeeBufferState {
 
   @override
   String toString() {
-    return 'CoffeeBufferState(buffer: $buffer, blacklistedCoffees: $blacklistedCoffees, currentDownloadAmount: $currentDownloadAmount, uiReadyCoffees: $uiReadyCoffees, coffeesAreReady: $coffeesAreReady)';
+    return 'BufferState(buffer: $buffer, blacklistedCoffees: $blacklistedCoffees, currentDownloadAmount: $currentDownloadAmount, uiReadyCoffees: $uiReadyCoffees, coffeesAreReady: $coffeesAreReady)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CoffeeBufferStateImpl &&
+            other is _$BufferStateImpl &&
             const DeepCollectionEquality().equals(other._buffer, _buffer) &&
             const DeepCollectionEquality()
                 .equals(other._blacklistedCoffees, _blacklistedCoffees) &&
@@ -2395,18 +2394,17 @@ class _$CoffeeBufferStateImpl implements _CoffeeBufferState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CoffeeBufferStateImplCopyWith<_$CoffeeBufferStateImpl> get copyWith =>
-      __$$CoffeeBufferStateImplCopyWithImpl<_$CoffeeBufferStateImpl>(
-          this, _$identity);
+  _$$BufferStateImplCopyWith<_$BufferStateImpl> get copyWith =>
+      __$$BufferStateImplCopyWithImpl<_$BufferStateImpl>(this, _$identity);
 }
 
-abstract class _CoffeeBufferState implements CoffeeBufferState {
-  const factory _CoffeeBufferState(
+abstract class _BufferState implements BufferState {
+  const factory _BufferState(
       {final List<Coffee> buffer,
       final List<Coffee> blacklistedCoffees,
       final int currentDownloadAmount,
       final List<Coffee> uiReadyCoffees,
-      final bool coffeesAreReady}) = _$CoffeeBufferStateImpl;
+      final bool coffeesAreReady}) = _$BufferStateImpl;
 
   @override
   List<Coffee> get buffer;
@@ -2420,6 +2418,6 @@ abstract class _CoffeeBufferState implements CoffeeBufferState {
   bool get coffeesAreReady;
   @override
   @JsonKey(ignore: true)
-  _$$CoffeeBufferStateImplCopyWith<_$CoffeeBufferStateImpl> get copyWith =>
+  _$$BufferStateImplCopyWith<_$BufferStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
