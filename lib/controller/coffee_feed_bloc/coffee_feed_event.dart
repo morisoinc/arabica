@@ -16,4 +16,7 @@ class CoffeeFeedEvent with _$CoffeeFeedEvent {
       _RemoveCoffeeFromBlacklist;
   const factory CoffeeFeedEvent.filterCoffees() = _FilterCoffees;
   const factory CoffeeFeedEvent.fillBuffer() = _FillBuffer;
+  const factory CoffeeFeedEvent.updateDownloadAmount(int amount) =
+      _UpdateDownloadAmount;
+  const factory CoffeeFeedEvent.fillUiReadyCoffees() = _FillUiReadyCoffees;
 }

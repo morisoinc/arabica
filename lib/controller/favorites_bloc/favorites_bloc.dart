@@ -14,7 +14,10 @@ part 'favorites_state.dart';
 part 'favorites_bloc.freezed.dart';
 part 'favorites_bloc.g.dart';
 
-class FavoritesBloc extends HydratedBloc<FavoritesEvent, FavoritesState> {
+class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
+  Directory? dir;
+  Isar? isar;
+
   FavoritesBloc() : super(const _FavoritesState()) {
     on<FavoritesEvent>((event, emit) {
       event.when(
@@ -80,18 +83,5 @@ class FavoritesBloc extends HydratedBloc<FavoritesEvent, FavoritesState> {
         },
       );
     });
-  }
-
-  Directory? dir;
-  Isar? isar;
-
-  @override
-  FavoritesState? fromJson(Map<String, dynamic> json) {
-    return FavoritesState.fromJson(json);
-  }
-
-  @override
-  Map<String, dynamic>? toJson(FavoritesState state) {
-    return state.toJson();
   }
 }
