@@ -21,7 +21,8 @@ Coffee _$CoffeeFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Coffee {
   String get url => throw _privateConstructorUsedError;
-  String get encodedImage => throw _privateConstructorUsedError;
+  String get encodedImage =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @ignore
   @Uint8ListToStringConverter()
   Uint8List? get imageBytes => throw _privateConstructorUsedError;
@@ -139,6 +140,7 @@ class _$CoffeeImpl extends _Coffee {
   @override
   @JsonKey()
   final String encodedImage;
+// ignore: invalid_annotation_target
   @override
   @ignore
   @Uint8ListToStringConverter()
@@ -194,7 +196,7 @@ abstract class _Coffee extends Coffee {
   String get url;
   @override
   String get encodedImage;
-  @override
+  @override // ignore: invalid_annotation_target
   @ignore
   @Uint8ListToStringConverter()
   Uint8List? get imageBytes;

@@ -1,4 +1,4 @@
-import 'package:arabica/controller/coffee_feed_bloc/coffee_feed_bloc.dart';
+import 'package:arabica/controller/coffee_buffer_bloc/coffee_buffer_bloc.dart';
 import 'package:arabica/controller/favorites_bloc/favorites_bloc.dart';
 import 'package:arabica/widgets/coffee_card.dart';
 import 'package:arabica/widgets/left_right_buttons.dart';
@@ -22,15 +22,15 @@ class _CoffeeFeedScreenState extends State<CoffeeFeedScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<CoffeeFeedBloc, CoffeeFeedState>(
+    return BlocConsumer<CoffeeBufferBloc, CoffeeBufferState>(
       listener: (context, state) {
         if (state.coffeesAreReady && readyForNewCoffees) {
           setState(() {
             readyForNewCoffees = false;
             cardSwipeKey = GlobalKey();
           });
-          context.read<CoffeeFeedBloc>().add(
-                const CoffeeFeedEvent.fillUiReadyCoffees(),
+          context.read<CoffeeBufferBloc>().add(
+                const CoffeeBufferEvent.fillUiReadyCoffees(),
               );
         }
       },
@@ -66,18 +66,18 @@ class _CoffeeFeedScreenState extends State<CoffeeFeedScreen> {
                         context.read<FavoritesBloc>().add(
                               FavoritesEvent.addFavorite(coffee),
                             );
-                        context.read<CoffeeFeedBloc>().add(
-                              CoffeeFeedEvent.addCoffeeToBlacklist(
+                        context.read<CoffeeBufferBloc>().add(
+                              CoffeeBufferEvent.addCoffeeToBlacklist(
                                 coffee,
                               ),
                             );
-                        context.read<CoffeeFeedBloc>().add(
-                              CoffeeFeedEvent.removeCoffee(coffee),
+                        context.read<CoffeeBufferBloc>().add(
+                              CoffeeBufferEvent.removeCoffee(coffee),
                             );
                         return true;
                       case CardSwiperDirection.left:
-                        context.read<CoffeeFeedBloc>().add(
-                              CoffeeFeedEvent.removeCoffee(coffee),
+                        context.read<CoffeeBufferBloc>().add(
+                              CoffeeBufferEvent.removeCoffee(coffee),
                             );
                         return true;
                       case CardSwiperDirection.none:

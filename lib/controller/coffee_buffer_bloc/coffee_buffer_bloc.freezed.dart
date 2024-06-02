@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'coffee_feed_bloc.dart';
+part of 'coffee_buffer_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$CoffeeFeedEvent {
+mixin _$CoffeeBufferEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
@@ -29,7 +29,7 @@ mixin _$CoffeeFeedEvent {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffeed,
+    required TResult Function() fillUiReadyCoffees,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,7 +44,7 @@ mixin _$CoffeeFeedEvent {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffeed,
+    TResult? Function()? fillUiReadyCoffees,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,7 +59,7 @@ mixin _$CoffeeFeedEvent {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffeed,
+    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -77,7 +77,7 @@ mixin _$CoffeeFeedEvent {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffeed,
+    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -93,7 +93,7 @@ mixin _$CoffeeFeedEvent {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -109,23 +109,23 @@ mixin _$CoffeeFeedEvent {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CoffeeFeedEventCopyWith<$Res> {
-  factory $CoffeeFeedEventCopyWith(
-          CoffeeFeedEvent value, $Res Function(CoffeeFeedEvent) then) =
-      _$CoffeeFeedEventCopyWithImpl<$Res, CoffeeFeedEvent>;
+abstract class $CoffeeBufferEventCopyWith<$Res> {
+  factory $CoffeeBufferEventCopyWith(
+          CoffeeBufferEvent value, $Res Function(CoffeeBufferEvent) then) =
+      _$CoffeeBufferEventCopyWithImpl<$Res, CoffeeBufferEvent>;
 }
 
 /// @nodoc
-class _$CoffeeFeedEventCopyWithImpl<$Res, $Val extends CoffeeFeedEvent>
-    implements $CoffeeFeedEventCopyWith<$Res> {
-  _$CoffeeFeedEventCopyWithImpl(this._value, this._then);
+class _$CoffeeBufferEventCopyWithImpl<$Res, $Val extends CoffeeBufferEvent>
+    implements $CoffeeBufferEventCopyWith<$Res> {
+  _$CoffeeBufferEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -142,7 +142,7 @@ abstract class _$$StartedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$StartedImplCopyWithImpl<$Res>
-    extends _$CoffeeFeedEventCopyWithImpl<$Res, _$StartedImpl>
+    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$StartedImpl>
     implements _$$StartedImplCopyWith<$Res> {
   __$$StartedImplCopyWithImpl(
       _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
@@ -156,7 +156,7 @@ class _$StartedImpl implements _Started {
 
   @override
   String toString() {
-    return 'CoffeeFeedEvent.started()';
+    return 'CoffeeBufferEvent.started()';
   }
 
   @override
@@ -182,7 +182,7 @@ class _$StartedImpl implements _Started {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffeed,
+    required TResult Function() fillUiReadyCoffees,
   }) {
     return started();
   }
@@ -200,7 +200,7 @@ class _$StartedImpl implements _Started {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffeed,
+    TResult? Function()? fillUiReadyCoffees,
   }) {
     return started?.call();
   }
@@ -218,7 +218,7 @@ class _$StartedImpl implements _Started {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffeed,
+    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -242,7 +242,7 @@ class _$StartedImpl implements _Started {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffeed,
+    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return started(this);
   }
@@ -261,7 +261,7 @@ class _$StartedImpl implements _Started {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return started?.call(this);
   }
@@ -280,7 +280,7 @@ class _$StartedImpl implements _Started {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -290,7 +290,7 @@ class _$StartedImpl implements _Started {
   }
 }
 
-abstract class _Started implements CoffeeFeedEvent {
+abstract class _Started implements CoffeeBufferEvent {
   const factory _Started() = _$StartedImpl;
 }
 
@@ -305,7 +305,7 @@ abstract class _$$FetchRandomCoffeeImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$FetchRandomCoffeeImplCopyWithImpl<$Res>
-    extends _$CoffeeFeedEventCopyWithImpl<$Res, _$FetchRandomCoffeeImpl>
+    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$FetchRandomCoffeeImpl>
     implements _$$FetchRandomCoffeeImplCopyWith<$Res> {
   __$$FetchRandomCoffeeImplCopyWithImpl(_$FetchRandomCoffeeImpl _value,
       $Res Function(_$FetchRandomCoffeeImpl) _then)
@@ -335,7 +335,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
 
   @override
   String toString() {
-    return 'CoffeeFeedEvent.fetchRandomCoffee(amount: $amount)';
+    return 'CoffeeBufferEvent.fetchRandomCoffee(amount: $amount)';
   }
 
   @override
@@ -370,7 +370,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffeed,
+    required TResult Function() fillUiReadyCoffees,
   }) {
     return fetchRandomCoffee(amount);
   }
@@ -388,7 +388,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffeed,
+    TResult? Function()? fillUiReadyCoffees,
   }) {
     return fetchRandomCoffee?.call(amount);
   }
@@ -406,7 +406,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffeed,
+    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (fetchRandomCoffee != null) {
@@ -430,7 +430,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffeed,
+    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return fetchRandomCoffee(this);
   }
@@ -449,7 +449,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return fetchRandomCoffee?.call(this);
   }
@@ -468,7 +468,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (fetchRandomCoffee != null) {
@@ -478,7 +478,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
   }
 }
 
-abstract class _FetchRandomCoffee implements CoffeeFeedEvent {
+abstract class _FetchRandomCoffee implements CoffeeBufferEvent {
   const factory _FetchRandomCoffee({required final int amount}) =
       _$FetchRandomCoffeeImpl;
 
@@ -500,7 +500,7 @@ abstract class _$$OnRandomCoffeeFetchedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$OnRandomCoffeeFetchedImplCopyWithImpl<$Res>
-    extends _$CoffeeFeedEventCopyWithImpl<$Res, _$OnRandomCoffeeFetchedImpl>
+    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$OnRandomCoffeeFetchedImpl>
     implements _$$OnRandomCoffeeFetchedImplCopyWith<$Res> {
   __$$OnRandomCoffeeFetchedImplCopyWithImpl(_$OnRandomCoffeeFetchedImpl _value,
       $Res Function(_$OnRandomCoffeeFetchedImpl) _then)
@@ -536,7 +536,7 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
 
   @override
   String toString() {
-    return 'CoffeeFeedEvent.onRandomCoffeeFetched(coffee: $coffee)';
+    return 'CoffeeBufferEvent.onRandomCoffeeFetched(coffee: $coffee)';
   }
 
   @override
@@ -572,7 +572,7 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffeed,
+    required TResult Function() fillUiReadyCoffees,
   }) {
     return onRandomCoffeeFetched(coffee);
   }
@@ -590,7 +590,7 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffeed,
+    TResult? Function()? fillUiReadyCoffees,
   }) {
     return onRandomCoffeeFetched?.call(coffee);
   }
@@ -608,7 +608,7 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffeed,
+    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (onRandomCoffeeFetched != null) {
@@ -632,7 +632,7 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffeed,
+    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return onRandomCoffeeFetched(this);
   }
@@ -651,7 +651,7 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return onRandomCoffeeFetched?.call(this);
   }
@@ -670,7 +670,7 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (onRandomCoffeeFetched != null) {
@@ -680,7 +680,7 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
   }
 }
 
-abstract class _OnRandomCoffeeFetched implements CoffeeFeedEvent {
+abstract class _OnRandomCoffeeFetched implements CoffeeBufferEvent {
   const factory _OnRandomCoffeeFetched(final List<Coffee> coffee) =
       _$OnRandomCoffeeFetchedImpl;
 
@@ -703,7 +703,7 @@ abstract class _$$ClearCoffeeImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ClearCoffeeImplCopyWithImpl<$Res>
-    extends _$CoffeeFeedEventCopyWithImpl<$Res, _$ClearCoffeeImpl>
+    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$ClearCoffeeImpl>
     implements _$$ClearCoffeeImplCopyWith<$Res> {
   __$$ClearCoffeeImplCopyWithImpl(
       _$ClearCoffeeImpl _value, $Res Function(_$ClearCoffeeImpl) _then)
@@ -741,7 +741,7 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
 
   @override
   String toString() {
-    return 'CoffeeFeedEvent.removeCoffee(coffee: $coffee)';
+    return 'CoffeeBufferEvent.removeCoffee(coffee: $coffee)';
   }
 
   @override
@@ -775,7 +775,7 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffeed,
+    required TResult Function() fillUiReadyCoffees,
   }) {
     return removeCoffee(coffee);
   }
@@ -793,7 +793,7 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffeed,
+    TResult? Function()? fillUiReadyCoffees,
   }) {
     return removeCoffee?.call(coffee);
   }
@@ -811,7 +811,7 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffeed,
+    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (removeCoffee != null) {
@@ -835,7 +835,7 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffeed,
+    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return removeCoffee(this);
   }
@@ -854,7 +854,7 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return removeCoffee?.call(this);
   }
@@ -873,7 +873,7 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (removeCoffee != null) {
@@ -883,7 +883,7 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
   }
 }
 
-abstract class _ClearCoffee implements CoffeeFeedEvent {
+abstract class _ClearCoffee implements CoffeeBufferEvent {
   const factory _ClearCoffee(final Coffee coffee) = _$ClearCoffeeImpl;
 
   Coffee get coffee;
@@ -903,7 +903,7 @@ abstract class _$$OverrideBlacklistImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$OverrideBlacklistImplCopyWithImpl<$Res>
-    extends _$CoffeeFeedEventCopyWithImpl<$Res, _$OverrideBlacklistImpl>
+    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$OverrideBlacklistImpl>
     implements _$$OverrideBlacklistImplCopyWith<$Res> {
   __$$OverrideBlacklistImplCopyWithImpl(_$OverrideBlacklistImpl _value,
       $Res Function(_$OverrideBlacklistImpl) _then)
@@ -940,7 +940,7 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
 
   @override
   String toString() {
-    return 'CoffeeFeedEvent.overrideBlacklist(blacklistedCoffees: $blacklistedCoffees)';
+    return 'CoffeeBufferEvent.overrideBlacklist(blacklistedCoffees: $blacklistedCoffees)';
   }
 
   @override
@@ -977,7 +977,7 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffeed,
+    required TResult Function() fillUiReadyCoffees,
   }) {
     return overrideBlacklist(blacklistedCoffees);
   }
@@ -995,7 +995,7 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffeed,
+    TResult? Function()? fillUiReadyCoffees,
   }) {
     return overrideBlacklist?.call(blacklistedCoffees);
   }
@@ -1013,7 +1013,7 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffeed,
+    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (overrideBlacklist != null) {
@@ -1037,7 +1037,7 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffeed,
+    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return overrideBlacklist(this);
   }
@@ -1056,7 +1056,7 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return overrideBlacklist?.call(this);
   }
@@ -1075,7 +1075,7 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (overrideBlacklist != null) {
@@ -1085,7 +1085,7 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
   }
 }
 
-abstract class _OverrideBlacklist implements CoffeeFeedEvent {
+abstract class _OverrideBlacklist implements CoffeeBufferEvent {
   const factory _OverrideBlacklist(final List<Coffee> blacklistedCoffees) =
       _$OverrideBlacklistImpl;
 
@@ -1108,7 +1108,7 @@ abstract class _$$AddCoffeeToBlacklistImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$AddCoffeeToBlacklistImplCopyWithImpl<$Res>
-    extends _$CoffeeFeedEventCopyWithImpl<$Res, _$AddCoffeeToBlacklistImpl>
+    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$AddCoffeeToBlacklistImpl>
     implements _$$AddCoffeeToBlacklistImplCopyWith<$Res> {
   __$$AddCoffeeToBlacklistImplCopyWithImpl(_$AddCoffeeToBlacklistImpl _value,
       $Res Function(_$AddCoffeeToBlacklistImpl) _then)
@@ -1146,7 +1146,7 @@ class _$AddCoffeeToBlacklistImpl implements _AddCoffeeToBlacklist {
 
   @override
   String toString() {
-    return 'CoffeeFeedEvent.addCoffeeToBlacklist(coffee: $coffee)';
+    return 'CoffeeBufferEvent.addCoffeeToBlacklist(coffee: $coffee)';
   }
 
   @override
@@ -1182,7 +1182,7 @@ class _$AddCoffeeToBlacklistImpl implements _AddCoffeeToBlacklist {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffeed,
+    required TResult Function() fillUiReadyCoffees,
   }) {
     return addCoffeeToBlacklist(coffee);
   }
@@ -1200,7 +1200,7 @@ class _$AddCoffeeToBlacklistImpl implements _AddCoffeeToBlacklist {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffeed,
+    TResult? Function()? fillUiReadyCoffees,
   }) {
     return addCoffeeToBlacklist?.call(coffee);
   }
@@ -1218,7 +1218,7 @@ class _$AddCoffeeToBlacklistImpl implements _AddCoffeeToBlacklist {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffeed,
+    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (addCoffeeToBlacklist != null) {
@@ -1242,7 +1242,7 @@ class _$AddCoffeeToBlacklistImpl implements _AddCoffeeToBlacklist {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffeed,
+    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return addCoffeeToBlacklist(this);
   }
@@ -1261,7 +1261,7 @@ class _$AddCoffeeToBlacklistImpl implements _AddCoffeeToBlacklist {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return addCoffeeToBlacklist?.call(this);
   }
@@ -1280,7 +1280,7 @@ class _$AddCoffeeToBlacklistImpl implements _AddCoffeeToBlacklist {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (addCoffeeToBlacklist != null) {
@@ -1290,7 +1290,7 @@ class _$AddCoffeeToBlacklistImpl implements _AddCoffeeToBlacklist {
   }
 }
 
-abstract class _AddCoffeeToBlacklist implements CoffeeFeedEvent {
+abstract class _AddCoffeeToBlacklist implements CoffeeBufferEvent {
   const factory _AddCoffeeToBlacklist(final Coffee coffee) =
       _$AddCoffeeToBlacklistImpl;
 
@@ -1314,7 +1314,8 @@ abstract class _$$RemoveCoffeeFromBlacklistImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$RemoveCoffeeFromBlacklistImplCopyWithImpl<$Res>
-    extends _$CoffeeFeedEventCopyWithImpl<$Res, _$RemoveCoffeeFromBlacklistImpl>
+    extends _$CoffeeBufferEventCopyWithImpl<$Res,
+        _$RemoveCoffeeFromBlacklistImpl>
     implements _$$RemoveCoffeeFromBlacklistImplCopyWith<$Res> {
   __$$RemoveCoffeeFromBlacklistImplCopyWithImpl(
       _$RemoveCoffeeFromBlacklistImpl _value,
@@ -1353,7 +1354,7 @@ class _$RemoveCoffeeFromBlacklistImpl implements _RemoveCoffeeFromBlacklist {
 
   @override
   String toString() {
-    return 'CoffeeFeedEvent.removeCoffeeFromBlacklist(coffee: $coffee)';
+    return 'CoffeeBufferEvent.removeCoffeeFromBlacklist(coffee: $coffee)';
   }
 
   @override
@@ -1388,7 +1389,7 @@ class _$RemoveCoffeeFromBlacklistImpl implements _RemoveCoffeeFromBlacklist {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffeed,
+    required TResult Function() fillUiReadyCoffees,
   }) {
     return removeCoffeeFromBlacklist(coffee);
   }
@@ -1406,7 +1407,7 @@ class _$RemoveCoffeeFromBlacklistImpl implements _RemoveCoffeeFromBlacklist {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffeed,
+    TResult? Function()? fillUiReadyCoffees,
   }) {
     return removeCoffeeFromBlacklist?.call(coffee);
   }
@@ -1424,7 +1425,7 @@ class _$RemoveCoffeeFromBlacklistImpl implements _RemoveCoffeeFromBlacklist {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffeed,
+    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (removeCoffeeFromBlacklist != null) {
@@ -1448,7 +1449,7 @@ class _$RemoveCoffeeFromBlacklistImpl implements _RemoveCoffeeFromBlacklist {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffeed,
+    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return removeCoffeeFromBlacklist(this);
   }
@@ -1467,7 +1468,7 @@ class _$RemoveCoffeeFromBlacklistImpl implements _RemoveCoffeeFromBlacklist {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return removeCoffeeFromBlacklist?.call(this);
   }
@@ -1486,7 +1487,7 @@ class _$RemoveCoffeeFromBlacklistImpl implements _RemoveCoffeeFromBlacklist {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (removeCoffeeFromBlacklist != null) {
@@ -1496,7 +1497,7 @@ class _$RemoveCoffeeFromBlacklistImpl implements _RemoveCoffeeFromBlacklist {
   }
 }
 
-abstract class _RemoveCoffeeFromBlacklist implements CoffeeFeedEvent {
+abstract class _RemoveCoffeeFromBlacklist implements CoffeeBufferEvent {
   const factory _RemoveCoffeeFromBlacklist(final Coffee coffee) =
       _$RemoveCoffeeFromBlacklistImpl;
 
@@ -1515,7 +1516,7 @@ abstract class _$$FilterCoffeesImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$FilterCoffeesImplCopyWithImpl<$Res>
-    extends _$CoffeeFeedEventCopyWithImpl<$Res, _$FilterCoffeesImpl>
+    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$FilterCoffeesImpl>
     implements _$$FilterCoffeesImplCopyWith<$Res> {
   __$$FilterCoffeesImplCopyWithImpl(
       _$FilterCoffeesImpl _value, $Res Function(_$FilterCoffeesImpl) _then)
@@ -1529,7 +1530,7 @@ class _$FilterCoffeesImpl implements _FilterCoffees {
 
   @override
   String toString() {
-    return 'CoffeeFeedEvent.filterCoffees()';
+    return 'CoffeeBufferEvent.filterCoffees()';
   }
 
   @override
@@ -1555,7 +1556,7 @@ class _$FilterCoffeesImpl implements _FilterCoffees {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffeed,
+    required TResult Function() fillUiReadyCoffees,
   }) {
     return filterCoffees();
   }
@@ -1573,7 +1574,7 @@ class _$FilterCoffeesImpl implements _FilterCoffees {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffeed,
+    TResult? Function()? fillUiReadyCoffees,
   }) {
     return filterCoffees?.call();
   }
@@ -1591,7 +1592,7 @@ class _$FilterCoffeesImpl implements _FilterCoffees {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffeed,
+    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (filterCoffees != null) {
@@ -1615,7 +1616,7 @@ class _$FilterCoffeesImpl implements _FilterCoffees {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffeed,
+    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return filterCoffees(this);
   }
@@ -1634,7 +1635,7 @@ class _$FilterCoffeesImpl implements _FilterCoffees {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return filterCoffees?.call(this);
   }
@@ -1653,7 +1654,7 @@ class _$FilterCoffeesImpl implements _FilterCoffees {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (filterCoffees != null) {
@@ -1663,7 +1664,7 @@ class _$FilterCoffeesImpl implements _FilterCoffees {
   }
 }
 
-abstract class _FilterCoffees implements CoffeeFeedEvent {
+abstract class _FilterCoffees implements CoffeeBufferEvent {
   const factory _FilterCoffees() = _$FilterCoffeesImpl;
 }
 
@@ -1676,7 +1677,7 @@ abstract class _$$FillBufferImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$FillBufferImplCopyWithImpl<$Res>
-    extends _$CoffeeFeedEventCopyWithImpl<$Res, _$FillBufferImpl>
+    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$FillBufferImpl>
     implements _$$FillBufferImplCopyWith<$Res> {
   __$$FillBufferImplCopyWithImpl(
       _$FillBufferImpl _value, $Res Function(_$FillBufferImpl) _then)
@@ -1690,7 +1691,7 @@ class _$FillBufferImpl implements _FillBuffer {
 
   @override
   String toString() {
-    return 'CoffeeFeedEvent.fillBuffer()';
+    return 'CoffeeBufferEvent.fillBuffer()';
   }
 
   @override
@@ -1716,7 +1717,7 @@ class _$FillBufferImpl implements _FillBuffer {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffeed,
+    required TResult Function() fillUiReadyCoffees,
   }) {
     return fillBuffer();
   }
@@ -1734,7 +1735,7 @@ class _$FillBufferImpl implements _FillBuffer {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffeed,
+    TResult? Function()? fillUiReadyCoffees,
   }) {
     return fillBuffer?.call();
   }
@@ -1752,7 +1753,7 @@ class _$FillBufferImpl implements _FillBuffer {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffeed,
+    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (fillBuffer != null) {
@@ -1776,7 +1777,7 @@ class _$FillBufferImpl implements _FillBuffer {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffeed,
+    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return fillBuffer(this);
   }
@@ -1795,7 +1796,7 @@ class _$FillBufferImpl implements _FillBuffer {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return fillBuffer?.call(this);
   }
@@ -1814,7 +1815,7 @@ class _$FillBufferImpl implements _FillBuffer {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (fillBuffer != null) {
@@ -1824,7 +1825,7 @@ class _$FillBufferImpl implements _FillBuffer {
   }
 }
 
-abstract class _FillBuffer implements CoffeeFeedEvent {
+abstract class _FillBuffer implements CoffeeBufferEvent {
   const factory _FillBuffer() = _$FillBufferImpl;
 }
 
@@ -1839,7 +1840,7 @@ abstract class _$$UpdateDownloadAmountImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$UpdateDownloadAmountImplCopyWithImpl<$Res>
-    extends _$CoffeeFeedEventCopyWithImpl<$Res, _$UpdateDownloadAmountImpl>
+    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$UpdateDownloadAmountImpl>
     implements _$$UpdateDownloadAmountImplCopyWith<$Res> {
   __$$UpdateDownloadAmountImplCopyWithImpl(_$UpdateDownloadAmountImpl _value,
       $Res Function(_$UpdateDownloadAmountImpl) _then)
@@ -1869,7 +1870,7 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
 
   @override
   String toString() {
-    return 'CoffeeFeedEvent.updateDownloadAmount(amount: $amount)';
+    return 'CoffeeBufferEvent.updateDownloadAmount(amount: $amount)';
   }
 
   @override
@@ -1905,7 +1906,7 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffeed,
+    required TResult Function() fillUiReadyCoffees,
   }) {
     return updateDownloadAmount(amount);
   }
@@ -1923,7 +1924,7 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffeed,
+    TResult? Function()? fillUiReadyCoffees,
   }) {
     return updateDownloadAmount?.call(amount);
   }
@@ -1941,7 +1942,7 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffeed,
+    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (updateDownloadAmount != null) {
@@ -1965,7 +1966,7 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffeed,
+    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return updateDownloadAmount(this);
   }
@@ -1984,7 +1985,7 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return updateDownloadAmount?.call(this);
   }
@@ -2003,7 +2004,7 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (updateDownloadAmount != null) {
@@ -2013,7 +2014,7 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
   }
 }
 
-abstract class _UpdateDownloadAmount implements CoffeeFeedEvent {
+abstract class _UpdateDownloadAmount implements CoffeeBufferEvent {
   const factory _UpdateDownloadAmount(final int amount) =
       _$UpdateDownloadAmountImpl;
 
@@ -2032,7 +2033,7 @@ abstract class _$$FillUiReadyCoffeesImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$FillUiReadyCoffeesImplCopyWithImpl<$Res>
-    extends _$CoffeeFeedEventCopyWithImpl<$Res, _$FillUiReadyCoffeesImpl>
+    extends _$CoffeeBufferEventCopyWithImpl<$Res, _$FillUiReadyCoffeesImpl>
     implements _$$FillUiReadyCoffeesImplCopyWith<$Res> {
   __$$FillUiReadyCoffeesImplCopyWithImpl(_$FillUiReadyCoffeesImpl _value,
       $Res Function(_$FillUiReadyCoffeesImpl) _then)
@@ -2046,7 +2047,7 @@ class _$FillUiReadyCoffeesImpl implements _FillUiReadyCoffees {
 
   @override
   String toString() {
-    return 'CoffeeFeedEvent.fillUiReadyCoffeed()';
+    return 'CoffeeBufferEvent.fillUiReadyCoffees()';
   }
 
   @override
@@ -2072,9 +2073,9 @@ class _$FillUiReadyCoffeesImpl implements _FillUiReadyCoffees {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffeed,
+    required TResult Function() fillUiReadyCoffees,
   }) {
-    return fillUiReadyCoffeed();
+    return fillUiReadyCoffees();
   }
 
   @override
@@ -2090,9 +2091,9 @@ class _$FillUiReadyCoffeesImpl implements _FillUiReadyCoffees {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffeed,
+    TResult? Function()? fillUiReadyCoffees,
   }) {
-    return fillUiReadyCoffeed?.call();
+    return fillUiReadyCoffees?.call();
   }
 
   @override
@@ -2108,11 +2109,11 @@ class _$FillUiReadyCoffeesImpl implements _FillUiReadyCoffees {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffeed,
+    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
-    if (fillUiReadyCoffeed != null) {
-      return fillUiReadyCoffeed();
+    if (fillUiReadyCoffees != null) {
+      return fillUiReadyCoffees();
     }
     return orElse();
   }
@@ -2132,9 +2133,9 @@ class _$FillUiReadyCoffeesImpl implements _FillUiReadyCoffees {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffeed,
+    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
-    return fillUiReadyCoffeed(this);
+    return fillUiReadyCoffees(this);
   }
 
   @override
@@ -2151,9 +2152,9 @@ class _$FillUiReadyCoffeesImpl implements _FillUiReadyCoffees {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
-    return fillUiReadyCoffeed?.call(this);
+    return fillUiReadyCoffees?.call(this);
   }
 
   @override
@@ -2170,22 +2171,22 @@ class _$FillUiReadyCoffeesImpl implements _FillUiReadyCoffees {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffeed,
+    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
-    if (fillUiReadyCoffeed != null) {
-      return fillUiReadyCoffeed(this);
+    if (fillUiReadyCoffees != null) {
+      return fillUiReadyCoffees(this);
     }
     return orElse();
   }
 }
 
-abstract class _FillUiReadyCoffees implements CoffeeFeedEvent {
+abstract class _FillUiReadyCoffees implements CoffeeBufferEvent {
   const factory _FillUiReadyCoffees() = _$FillUiReadyCoffeesImpl;
 }
 
 /// @nodoc
-mixin _$CoffeeFeedState {
+mixin _$CoffeeBufferState {
   List<Coffee> get buffer => throw _privateConstructorUsedError;
   List<Coffee> get blacklistedCoffees => throw _privateConstructorUsedError;
   int get currentDownloadAmount => throw _privateConstructorUsedError;
@@ -2193,15 +2194,15 @@ mixin _$CoffeeFeedState {
   bool get coffeesAreReady => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $CoffeeFeedStateCopyWith<CoffeeFeedState> get copyWith =>
+  $CoffeeBufferStateCopyWith<CoffeeBufferState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CoffeeFeedStateCopyWith<$Res> {
-  factory $CoffeeFeedStateCopyWith(
-          CoffeeFeedState value, $Res Function(CoffeeFeedState) then) =
-      _$CoffeeFeedStateCopyWithImpl<$Res, CoffeeFeedState>;
+abstract class $CoffeeBufferStateCopyWith<$Res> {
+  factory $CoffeeBufferStateCopyWith(
+          CoffeeBufferState value, $Res Function(CoffeeBufferState) then) =
+      _$CoffeeBufferStateCopyWithImpl<$Res, CoffeeBufferState>;
   @useResult
   $Res call(
       {List<Coffee> buffer,
@@ -2212,9 +2213,9 @@ abstract class $CoffeeFeedStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CoffeeFeedStateCopyWithImpl<$Res, $Val extends CoffeeFeedState>
-    implements $CoffeeFeedStateCopyWith<$Res> {
-  _$CoffeeFeedStateCopyWithImpl(this._value, this._then);
+class _$CoffeeBufferStateCopyWithImpl<$Res, $Val extends CoffeeBufferState>
+    implements $CoffeeBufferStateCopyWith<$Res> {
+  _$CoffeeBufferStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -2256,11 +2257,11 @@ class _$CoffeeFeedStateCopyWithImpl<$Res, $Val extends CoffeeFeedState>
 }
 
 /// @nodoc
-abstract class _$$CoffeeFeedStateImplCopyWith<$Res>
-    implements $CoffeeFeedStateCopyWith<$Res> {
-  factory _$$CoffeeFeedStateImplCopyWith(_$CoffeeFeedStateImpl value,
-          $Res Function(_$CoffeeFeedStateImpl) then) =
-      __$$CoffeeFeedStateImplCopyWithImpl<$Res>;
+abstract class _$$CoffeeBufferStateImplCopyWith<$Res>
+    implements $CoffeeBufferStateCopyWith<$Res> {
+  factory _$$CoffeeBufferStateImplCopyWith(_$CoffeeBufferStateImpl value,
+          $Res Function(_$CoffeeBufferStateImpl) then) =
+      __$$CoffeeBufferStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2272,11 +2273,11 @@ abstract class _$$CoffeeFeedStateImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CoffeeFeedStateImplCopyWithImpl<$Res>
-    extends _$CoffeeFeedStateCopyWithImpl<$Res, _$CoffeeFeedStateImpl>
-    implements _$$CoffeeFeedStateImplCopyWith<$Res> {
-  __$$CoffeeFeedStateImplCopyWithImpl(
-      _$CoffeeFeedStateImpl _value, $Res Function(_$CoffeeFeedStateImpl) _then)
+class __$$CoffeeBufferStateImplCopyWithImpl<$Res>
+    extends _$CoffeeBufferStateCopyWithImpl<$Res, _$CoffeeBufferStateImpl>
+    implements _$$CoffeeBufferStateImplCopyWith<$Res> {
+  __$$CoffeeBufferStateImplCopyWithImpl(_$CoffeeBufferStateImpl _value,
+      $Res Function(_$CoffeeBufferStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2288,7 +2289,7 @@ class __$$CoffeeFeedStateImplCopyWithImpl<$Res>
     Object? uiReadyCoffees = null,
     Object? coffeesAreReady = null,
   }) {
-    return _then(_$CoffeeFeedStateImpl(
+    return _then(_$CoffeeBufferStateImpl(
       buffer: null == buffer
           ? _value._buffer
           : buffer // ignore: cast_nullable_to_non_nullable
@@ -2315,8 +2316,8 @@ class __$$CoffeeFeedStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CoffeeFeedStateImpl implements _CoffeeFeedState {
-  const _$CoffeeFeedStateImpl(
+class _$CoffeeBufferStateImpl implements _CoffeeBufferState {
+  const _$CoffeeBufferStateImpl(
       {final List<Coffee> buffer = const [],
       final List<Coffee> blacklistedCoffees = const [],
       this.currentDownloadAmount = 0,
@@ -2363,14 +2364,14 @@ class _$CoffeeFeedStateImpl implements _CoffeeFeedState {
 
   @override
   String toString() {
-    return 'CoffeeFeedState(buffer: $buffer, blacklistedCoffees: $blacklistedCoffees, currentDownloadAmount: $currentDownloadAmount, uiReadyCoffees: $uiReadyCoffees, coffeesAreReady: $coffeesAreReady)';
+    return 'CoffeeBufferState(buffer: $buffer, blacklistedCoffees: $blacklistedCoffees, currentDownloadAmount: $currentDownloadAmount, uiReadyCoffees: $uiReadyCoffees, coffeesAreReady: $coffeesAreReady)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CoffeeFeedStateImpl &&
+            other is _$CoffeeBufferStateImpl &&
             const DeepCollectionEquality().equals(other._buffer, _buffer) &&
             const DeepCollectionEquality()
                 .equals(other._blacklistedCoffees, _blacklistedCoffees) &&
@@ -2394,18 +2395,18 @@ class _$CoffeeFeedStateImpl implements _CoffeeFeedState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CoffeeFeedStateImplCopyWith<_$CoffeeFeedStateImpl> get copyWith =>
-      __$$CoffeeFeedStateImplCopyWithImpl<_$CoffeeFeedStateImpl>(
+  _$$CoffeeBufferStateImplCopyWith<_$CoffeeBufferStateImpl> get copyWith =>
+      __$$CoffeeBufferStateImplCopyWithImpl<_$CoffeeBufferStateImpl>(
           this, _$identity);
 }
 
-abstract class _CoffeeFeedState implements CoffeeFeedState {
-  const factory _CoffeeFeedState(
+abstract class _CoffeeBufferState implements CoffeeBufferState {
+  const factory _CoffeeBufferState(
       {final List<Coffee> buffer,
       final List<Coffee> blacklistedCoffees,
       final int currentDownloadAmount,
       final List<Coffee> uiReadyCoffees,
-      final bool coffeesAreReady}) = _$CoffeeFeedStateImpl;
+      final bool coffeesAreReady}) = _$CoffeeBufferStateImpl;
 
   @override
   List<Coffee> get buffer;
@@ -2419,6 +2420,6 @@ abstract class _CoffeeFeedState implements CoffeeFeedState {
   bool get coffeesAreReady;
   @override
   @JsonKey(ignore: true)
-  _$$CoffeeFeedStateImplCopyWith<_$CoffeeFeedStateImpl> get copyWith =>
+  _$$CoffeeBufferStateImplCopyWith<_$CoffeeBufferStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,6 +1,6 @@
-import 'package:arabica/controller/coffee_feed_bloc/coffee_feed_bloc.dart';
+import 'package:arabica/controller/coffee_buffer_bloc/coffee_buffer_bloc.dart';
 import 'package:arabica/controller/favorites_bloc/favorites_bloc.dart';
-import 'package:arabica/data_sources/coffee_feed_ds.dart';
+import 'package:arabica/data_sources/coffee_ds.dart';
 import 'package:arabica/screens/home_screen.dart';
 import 'package:arabica/screens/coffee_feed_screen.dart';
 import 'package:arabica/screens/favorites_screen.dart';
@@ -28,9 +28,9 @@ final router = GoRouter(
         return MultiBlocProvider(
           providers: [
             BlocProvider(
-              create: (context) => CoffeeFeedBloc(
-                  coffeeFeedDs: CoffeeFeedDs(httpSingleton.client))
-                ..add(const CoffeeFeedEvent.started()),
+              create: (context) =>
+                  CoffeeBufferBloc(coffeeDs: CoffeeDs(httpSingleton.client))
+                    ..add(const CoffeeBufferEvent.started()),
             ),
             BlocProvider(
               create: (context) =>

@@ -4,8 +4,8 @@ import 'package:arabica/data/coffee.dart';
 import 'package:arabica/data_sources/base_ds.dart';
 import 'package:http/http.dart' as http;
 
-class CoffeeFeedDs extends BaseDs<http.Client> {
-  CoffeeFeedDs(super.client);
+class CoffeeDs extends BaseDs<http.Client> {
+  CoffeeDs(super.client);
 
   Future<Coffee?> fetchCoffee() async {
     try {
