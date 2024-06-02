@@ -30,8 +30,10 @@ class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
           add(const FavoritesEvent.loadFavorites());
         },
         loadFavorites: () async {
-          final favorites =
-              await isar!.favoriteCoffees.where().sortByCreatedAt().findAll();
+          final favorites = await isar!.favoriteCoffees
+              .where()
+              .sortByCreatedAtDesc()
+              .findAll();
 
           add(FavoritesEvent.favoritesLoaded(favorites));
         },

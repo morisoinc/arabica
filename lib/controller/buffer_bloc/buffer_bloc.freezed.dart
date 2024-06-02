@@ -29,7 +29,6 @@ mixin _$BufferEvent {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffees,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,7 +43,6 @@ mixin _$BufferEvent {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffees,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,7 +57,6 @@ mixin _$BufferEvent {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -77,7 +74,6 @@ mixin _$BufferEvent {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -93,7 +89,6 @@ mixin _$BufferEvent {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -109,7 +104,6 @@ mixin _$BufferEvent {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -182,7 +176,6 @@ class _$StartedImpl implements _Started {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffees,
   }) {
     return started();
   }
@@ -200,7 +193,6 @@ class _$StartedImpl implements _Started {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffees,
   }) {
     return started?.call();
   }
@@ -218,7 +210,6 @@ class _$StartedImpl implements _Started {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -242,7 +233,6 @@ class _$StartedImpl implements _Started {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return started(this);
   }
@@ -261,7 +251,6 @@ class _$StartedImpl implements _Started {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return started?.call(this);
   }
@@ -280,7 +269,6 @@ class _$StartedImpl implements _Started {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -370,7 +358,6 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffees,
   }) {
     return fetchRandomCoffee(amount);
   }
@@ -388,7 +375,6 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffees,
   }) {
     return fetchRandomCoffee?.call(amount);
   }
@@ -406,7 +392,6 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (fetchRandomCoffee != null) {
@@ -430,7 +415,6 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return fetchRandomCoffee(this);
   }
@@ -449,7 +433,6 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return fetchRandomCoffee?.call(this);
   }
@@ -468,7 +451,6 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (fetchRandomCoffee != null) {
@@ -572,7 +554,6 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffees,
   }) {
     return onRandomCoffeeFetched(coffee);
   }
@@ -590,7 +571,6 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffees,
   }) {
     return onRandomCoffeeFetched?.call(coffee);
   }
@@ -608,7 +588,6 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (onRandomCoffeeFetched != null) {
@@ -632,7 +611,6 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return onRandomCoffeeFetched(this);
   }
@@ -651,7 +629,6 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return onRandomCoffeeFetched?.call(this);
   }
@@ -670,7 +647,6 @@ class _$OnRandomCoffeeFetchedImpl implements _OnRandomCoffeeFetched {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (onRandomCoffeeFetched != null) {
@@ -775,7 +751,6 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffees,
   }) {
     return removeCoffee(coffee);
   }
@@ -793,7 +768,6 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffees,
   }) {
     return removeCoffee?.call(coffee);
   }
@@ -811,7 +785,6 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (removeCoffee != null) {
@@ -835,7 +808,6 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return removeCoffee(this);
   }
@@ -854,7 +826,6 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return removeCoffee?.call(this);
   }
@@ -873,7 +844,6 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (removeCoffee != null) {
@@ -977,7 +947,6 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffees,
   }) {
     return overrideBlacklist(blacklistedCoffees);
   }
@@ -995,7 +964,6 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffees,
   }) {
     return overrideBlacklist?.call(blacklistedCoffees);
   }
@@ -1013,7 +981,6 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (overrideBlacklist != null) {
@@ -1037,7 +1004,6 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return overrideBlacklist(this);
   }
@@ -1056,7 +1022,6 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return overrideBlacklist?.call(this);
   }
@@ -1075,7 +1040,6 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (overrideBlacklist != null) {
@@ -1182,7 +1146,6 @@ class _$AddCoffeeToBlacklistImpl implements _AddCoffeeToBlacklist {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffees,
   }) {
     return addCoffeeToBlacklist(coffee);
   }
@@ -1200,7 +1163,6 @@ class _$AddCoffeeToBlacklistImpl implements _AddCoffeeToBlacklist {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffees,
   }) {
     return addCoffeeToBlacklist?.call(coffee);
   }
@@ -1218,7 +1180,6 @@ class _$AddCoffeeToBlacklistImpl implements _AddCoffeeToBlacklist {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (addCoffeeToBlacklist != null) {
@@ -1242,7 +1203,6 @@ class _$AddCoffeeToBlacklistImpl implements _AddCoffeeToBlacklist {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return addCoffeeToBlacklist(this);
   }
@@ -1261,7 +1221,6 @@ class _$AddCoffeeToBlacklistImpl implements _AddCoffeeToBlacklist {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return addCoffeeToBlacklist?.call(this);
   }
@@ -1280,7 +1239,6 @@ class _$AddCoffeeToBlacklistImpl implements _AddCoffeeToBlacklist {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (addCoffeeToBlacklist != null) {
@@ -1388,7 +1346,6 @@ class _$RemoveCoffeeFromBlacklistImpl implements _RemoveCoffeeFromBlacklist {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffees,
   }) {
     return removeCoffeeFromBlacklist(coffee);
   }
@@ -1406,7 +1363,6 @@ class _$RemoveCoffeeFromBlacklistImpl implements _RemoveCoffeeFromBlacklist {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffees,
   }) {
     return removeCoffeeFromBlacklist?.call(coffee);
   }
@@ -1424,7 +1380,6 @@ class _$RemoveCoffeeFromBlacklistImpl implements _RemoveCoffeeFromBlacklist {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (removeCoffeeFromBlacklist != null) {
@@ -1448,7 +1403,6 @@ class _$RemoveCoffeeFromBlacklistImpl implements _RemoveCoffeeFromBlacklist {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return removeCoffeeFromBlacklist(this);
   }
@@ -1467,7 +1421,6 @@ class _$RemoveCoffeeFromBlacklistImpl implements _RemoveCoffeeFromBlacklist {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return removeCoffeeFromBlacklist?.call(this);
   }
@@ -1486,7 +1439,6 @@ class _$RemoveCoffeeFromBlacklistImpl implements _RemoveCoffeeFromBlacklist {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (removeCoffeeFromBlacklist != null) {
@@ -1555,7 +1507,6 @@ class _$FilterCoffeesImpl implements _FilterCoffees {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffees,
   }) {
     return filterCoffees();
   }
@@ -1573,7 +1524,6 @@ class _$FilterCoffeesImpl implements _FilterCoffees {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffees,
   }) {
     return filterCoffees?.call();
   }
@@ -1591,7 +1541,6 @@ class _$FilterCoffeesImpl implements _FilterCoffees {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (filterCoffees != null) {
@@ -1615,7 +1564,6 @@ class _$FilterCoffeesImpl implements _FilterCoffees {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return filterCoffees(this);
   }
@@ -1634,7 +1582,6 @@ class _$FilterCoffeesImpl implements _FilterCoffees {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return filterCoffees?.call(this);
   }
@@ -1653,7 +1600,6 @@ class _$FilterCoffeesImpl implements _FilterCoffees {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (filterCoffees != null) {
@@ -1716,7 +1662,6 @@ class _$FillBufferImpl implements _FillBuffer {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffees,
   }) {
     return fillBuffer();
   }
@@ -1734,7 +1679,6 @@ class _$FillBufferImpl implements _FillBuffer {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffees,
   }) {
     return fillBuffer?.call();
   }
@@ -1752,7 +1696,6 @@ class _$FillBufferImpl implements _FillBuffer {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (fillBuffer != null) {
@@ -1776,7 +1719,6 @@ class _$FillBufferImpl implements _FillBuffer {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return fillBuffer(this);
   }
@@ -1795,7 +1737,6 @@ class _$FillBufferImpl implements _FillBuffer {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return fillBuffer?.call(this);
   }
@@ -1814,7 +1755,6 @@ class _$FillBufferImpl implements _FillBuffer {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (fillBuffer != null) {
@@ -1905,7 +1845,6 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
     required TResult Function() filterCoffees,
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffees,
   }) {
     return updateDownloadAmount(amount);
   }
@@ -1923,7 +1862,6 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
     TResult? Function()? filterCoffees,
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffees,
   }) {
     return updateDownloadAmount?.call(amount);
   }
@@ -1941,7 +1879,6 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
     TResult Function()? filterCoffees,
     TResult Function()? fillBuffer,
     TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (updateDownloadAmount != null) {
@@ -1965,7 +1902,6 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
     required TResult Function(_FilterCoffees value) filterCoffees,
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
   }) {
     return updateDownloadAmount(this);
   }
@@ -1984,7 +1920,6 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
     TResult? Function(_FilterCoffees value)? filterCoffees,
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
   }) {
     return updateDownloadAmount?.call(this);
   }
@@ -2003,7 +1938,6 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
     TResult Function(_FilterCoffees value)? filterCoffees,
     TResult Function(_FillBuffer value)? fillBuffer,
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
     required TResult orElse(),
   }) {
     if (updateDownloadAmount != null) {
@@ -2024,172 +1958,10 @@ abstract class _UpdateDownloadAmount implements BufferEvent {
 }
 
 /// @nodoc
-abstract class _$$FillUiReadyCoffeesImplCopyWith<$Res> {
-  factory _$$FillUiReadyCoffeesImplCopyWith(_$FillUiReadyCoffeesImpl value,
-          $Res Function(_$FillUiReadyCoffeesImpl) then) =
-      __$$FillUiReadyCoffeesImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$FillUiReadyCoffeesImplCopyWithImpl<$Res>
-    extends _$BufferEventCopyWithImpl<$Res, _$FillUiReadyCoffeesImpl>
-    implements _$$FillUiReadyCoffeesImplCopyWith<$Res> {
-  __$$FillUiReadyCoffeesImplCopyWithImpl(_$FillUiReadyCoffeesImpl _value,
-      $Res Function(_$FillUiReadyCoffeesImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$FillUiReadyCoffeesImpl implements _FillUiReadyCoffees {
-  const _$FillUiReadyCoffeesImpl();
-
-  @override
-  String toString() {
-    return 'BufferEvent.fillUiReadyCoffees()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$FillUiReadyCoffeesImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function(int amount) fetchRandomCoffee,
-    required TResult Function(List<Coffee> coffee) onRandomCoffeeFetched,
-    required TResult Function(Coffee coffee) removeCoffee,
-    required TResult Function(List<Coffee> blacklistedCoffees)
-        overrideBlacklist,
-    required TResult Function(Coffee coffee) addCoffeeToBlacklist,
-    required TResult Function(Coffee coffee) removeCoffeeFromBlacklist,
-    required TResult Function() filterCoffees,
-    required TResult Function() fillBuffer,
-    required TResult Function(int amount) updateDownloadAmount,
-    required TResult Function() fillUiReadyCoffees,
-  }) {
-    return fillUiReadyCoffees();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function(int amount)? fetchRandomCoffee,
-    TResult? Function(List<Coffee> coffee)? onRandomCoffeeFetched,
-    TResult? Function(Coffee coffee)? removeCoffee,
-    TResult? Function(List<Coffee> blacklistedCoffees)? overrideBlacklist,
-    TResult? Function(Coffee coffee)? addCoffeeToBlacklist,
-    TResult? Function(Coffee coffee)? removeCoffeeFromBlacklist,
-    TResult? Function()? filterCoffees,
-    TResult? Function()? fillBuffer,
-    TResult? Function(int amount)? updateDownloadAmount,
-    TResult? Function()? fillUiReadyCoffees,
-  }) {
-    return fillUiReadyCoffees?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function(int amount)? fetchRandomCoffee,
-    TResult Function(List<Coffee> coffee)? onRandomCoffeeFetched,
-    TResult Function(Coffee coffee)? removeCoffee,
-    TResult Function(List<Coffee> blacklistedCoffees)? overrideBlacklist,
-    TResult Function(Coffee coffee)? addCoffeeToBlacklist,
-    TResult Function(Coffee coffee)? removeCoffeeFromBlacklist,
-    TResult Function()? filterCoffees,
-    TResult Function()? fillBuffer,
-    TResult Function(int amount)? updateDownloadAmount,
-    TResult Function()? fillUiReadyCoffees,
-    required TResult orElse(),
-  }) {
-    if (fillUiReadyCoffees != null) {
-      return fillUiReadyCoffees();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_FetchRandomCoffee value) fetchRandomCoffee,
-    required TResult Function(_OnRandomCoffeeFetched value)
-        onRandomCoffeeFetched,
-    required TResult Function(_ClearCoffee value) removeCoffee,
-    required TResult Function(_OverrideBlacklist value) overrideBlacklist,
-    required TResult Function(_AddCoffeeToBlacklist value) addCoffeeToBlacklist,
-    required TResult Function(_RemoveCoffeeFromBlacklist value)
-        removeCoffeeFromBlacklist,
-    required TResult Function(_FilterCoffees value) filterCoffees,
-    required TResult Function(_FillBuffer value) fillBuffer,
-    required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
-    required TResult Function(_FillUiReadyCoffees value) fillUiReadyCoffees,
-  }) {
-    return fillUiReadyCoffees(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_FetchRandomCoffee value)? fetchRandomCoffee,
-    TResult? Function(_OnRandomCoffeeFetched value)? onRandomCoffeeFetched,
-    TResult? Function(_ClearCoffee value)? removeCoffee,
-    TResult? Function(_OverrideBlacklist value)? overrideBlacklist,
-    TResult? Function(_AddCoffeeToBlacklist value)? addCoffeeToBlacklist,
-    TResult? Function(_RemoveCoffeeFromBlacklist value)?
-        removeCoffeeFromBlacklist,
-    TResult? Function(_FilterCoffees value)? filterCoffees,
-    TResult? Function(_FillBuffer value)? fillBuffer,
-    TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult? Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
-  }) {
-    return fillUiReadyCoffees?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_FetchRandomCoffee value)? fetchRandomCoffee,
-    TResult Function(_OnRandomCoffeeFetched value)? onRandomCoffeeFetched,
-    TResult Function(_ClearCoffee value)? removeCoffee,
-    TResult Function(_OverrideBlacklist value)? overrideBlacklist,
-    TResult Function(_AddCoffeeToBlacklist value)? addCoffeeToBlacklist,
-    TResult Function(_RemoveCoffeeFromBlacklist value)?
-        removeCoffeeFromBlacklist,
-    TResult Function(_FilterCoffees value)? filterCoffees,
-    TResult Function(_FillBuffer value)? fillBuffer,
-    TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
-    TResult Function(_FillUiReadyCoffees value)? fillUiReadyCoffees,
-    required TResult orElse(),
-  }) {
-    if (fillUiReadyCoffees != null) {
-      return fillUiReadyCoffees(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _FillUiReadyCoffees implements BufferEvent {
-  const factory _FillUiReadyCoffees() = _$FillUiReadyCoffeesImpl;
-}
-
-/// @nodoc
 mixin _$BufferState {
   List<Coffee> get buffer => throw _privateConstructorUsedError;
   List<Coffee> get blacklistedCoffees => throw _privateConstructorUsedError;
   int get currentDownloadAmount => throw _privateConstructorUsedError;
-  List<Coffee> get uiReadyCoffees => throw _privateConstructorUsedError;
   bool get coffeesAreReady => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -2207,7 +1979,6 @@ abstract class $BufferStateCopyWith<$Res> {
       {List<Coffee> buffer,
       List<Coffee> blacklistedCoffees,
       int currentDownloadAmount,
-      List<Coffee> uiReadyCoffees,
       bool coffeesAreReady});
 }
 
@@ -2227,7 +1998,6 @@ class _$BufferStateCopyWithImpl<$Res, $Val extends BufferState>
     Object? buffer = null,
     Object? blacklistedCoffees = null,
     Object? currentDownloadAmount = null,
-    Object? uiReadyCoffees = null,
     Object? coffeesAreReady = null,
   }) {
     return _then(_value.copyWith(
@@ -2243,10 +2013,6 @@ class _$BufferStateCopyWithImpl<$Res, $Val extends BufferState>
           ? _value.currentDownloadAmount
           : currentDownloadAmount // ignore: cast_nullable_to_non_nullable
               as int,
-      uiReadyCoffees: null == uiReadyCoffees
-          ? _value.uiReadyCoffees
-          : uiReadyCoffees // ignore: cast_nullable_to_non_nullable
-              as List<Coffee>,
       coffeesAreReady: null == coffeesAreReady
           ? _value.coffeesAreReady
           : coffeesAreReady // ignore: cast_nullable_to_non_nullable
@@ -2267,7 +2033,6 @@ abstract class _$$BufferStateImplCopyWith<$Res>
       {List<Coffee> buffer,
       List<Coffee> blacklistedCoffees,
       int currentDownloadAmount,
-      List<Coffee> uiReadyCoffees,
       bool coffeesAreReady});
 }
 
@@ -2285,7 +2050,6 @@ class __$$BufferStateImplCopyWithImpl<$Res>
     Object? buffer = null,
     Object? blacklistedCoffees = null,
     Object? currentDownloadAmount = null,
-    Object? uiReadyCoffees = null,
     Object? coffeesAreReady = null,
   }) {
     return _then(_$BufferStateImpl(
@@ -2301,10 +2065,6 @@ class __$$BufferStateImplCopyWithImpl<$Res>
           ? _value.currentDownloadAmount
           : currentDownloadAmount // ignore: cast_nullable_to_non_nullable
               as int,
-      uiReadyCoffees: null == uiReadyCoffees
-          ? _value._uiReadyCoffees
-          : uiReadyCoffees // ignore: cast_nullable_to_non_nullable
-              as List<Coffee>,
       coffeesAreReady: null == coffeesAreReady
           ? _value.coffeesAreReady
           : coffeesAreReady // ignore: cast_nullable_to_non_nullable
@@ -2320,11 +2080,9 @@ class _$BufferStateImpl implements _BufferState {
       {final List<Coffee> buffer = const [],
       final List<Coffee> blacklistedCoffees = const [],
       this.currentDownloadAmount = 0,
-      final List<Coffee> uiReadyCoffees = const [],
       this.coffeesAreReady = false})
       : _buffer = buffer,
-        _blacklistedCoffees = blacklistedCoffees,
-        _uiReadyCoffees = uiReadyCoffees;
+        _blacklistedCoffees = blacklistedCoffees;
 
   final List<Coffee> _buffer;
   @override
@@ -2348,22 +2106,13 @@ class _$BufferStateImpl implements _BufferState {
   @override
   @JsonKey()
   final int currentDownloadAmount;
-  final List<Coffee> _uiReadyCoffees;
-  @override
-  @JsonKey()
-  List<Coffee> get uiReadyCoffees {
-    if (_uiReadyCoffees is EqualUnmodifiableListView) return _uiReadyCoffees;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_uiReadyCoffees);
-  }
-
   @override
   @JsonKey()
   final bool coffeesAreReady;
 
   @override
   String toString() {
-    return 'BufferState(buffer: $buffer, blacklistedCoffees: $blacklistedCoffees, currentDownloadAmount: $currentDownloadAmount, uiReadyCoffees: $uiReadyCoffees, coffeesAreReady: $coffeesAreReady)';
+    return 'BufferState(buffer: $buffer, blacklistedCoffees: $blacklistedCoffees, currentDownloadAmount: $currentDownloadAmount, coffeesAreReady: $coffeesAreReady)';
   }
 
   @override
@@ -2376,8 +2125,6 @@ class _$BufferStateImpl implements _BufferState {
                 .equals(other._blacklistedCoffees, _blacklistedCoffees) &&
             (identical(other.currentDownloadAmount, currentDownloadAmount) ||
                 other.currentDownloadAmount == currentDownloadAmount) &&
-            const DeepCollectionEquality()
-                .equals(other._uiReadyCoffees, _uiReadyCoffees) &&
             (identical(other.coffeesAreReady, coffeesAreReady) ||
                 other.coffeesAreReady == coffeesAreReady));
   }
@@ -2388,7 +2135,6 @@ class _$BufferStateImpl implements _BufferState {
       const DeepCollectionEquality().hash(_buffer),
       const DeepCollectionEquality().hash(_blacklistedCoffees),
       currentDownloadAmount,
-      const DeepCollectionEquality().hash(_uiReadyCoffees),
       coffeesAreReady);
 
   @JsonKey(ignore: true)
@@ -2403,7 +2149,6 @@ abstract class _BufferState implements BufferState {
       {final List<Coffee> buffer,
       final List<Coffee> blacklistedCoffees,
       final int currentDownloadAmount,
-      final List<Coffee> uiReadyCoffees,
       final bool coffeesAreReady}) = _$BufferStateImpl;
 
   @override
@@ -2412,8 +2157,6 @@ abstract class _BufferState implements BufferState {
   List<Coffee> get blacklistedCoffees;
   @override
   int get currentDownloadAmount;
-  @override
-  List<Coffee> get uiReadyCoffees;
   @override
   bool get coffeesAreReady;
   @override

@@ -6,7 +6,6 @@ class BufferState with _$BufferState {
     @Default([]) List<Coffee> buffer,
     @Default([]) List<Coffee> blacklistedCoffees,
     @Default(0) int currentDownloadAmount,
-    @Default([]) List<Coffee> uiReadyCoffees,
     @Default(false) bool coffeesAreReady,
   }) = _BufferState;
 }

@@ -24,7 +24,6 @@ class BufferBloc extends Bloc<BufferEvent, BufferState> {
               coffeesAreReady: state.buffer.length == bufferSize,
             ),
           );
-
           add(
             BufferEvent.fetchRandomCoffee(
               amount: bufferSize -
@@ -33,11 +32,6 @@ class BufferBloc extends Bloc<BufferEvent, BufferState> {
             ),
           );
         },
-        fillUiReadyCoffees: () => emit(
-          state.copyWith(
-            uiReadyCoffees: state.buffer,
-          ),
-        ),
         updateDownloadAmount: (amount) {
           emit(state.copyWith(
               currentDownloadAmount: state.currentDownloadAmount + amount));
@@ -75,6 +69,7 @@ class BufferBloc extends Bloc<BufferEvent, BufferState> {
         addCoffeeToBlacklist: (coffee) {
           emit(state.copyWith(
               blacklistedCoffees: [...state.blacklistedCoffees, coffee]));
+          add(const BufferEvent.filterCoffees());
         },
         removeCoffeeFromBlacklist: (coffee) {
           emit(state.copyWith(

@@ -18,5 +18,4 @@ class BufferEvent with _$BufferEvent {
   const factory BufferEvent.fillBuffer() = _FillBuffer;
   const factory BufferEvent.updateDownloadAmount(int amount) =
       _UpdateDownloadAmount;
-  const factory BufferEvent.fillUiReadyCoffees() = _FillUiReadyCoffees;
 }

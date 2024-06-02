@@ -1,8 +1,9 @@
 import 'package:arabica/controller/buffer_bloc/buffer_bloc.dart';
 import 'package:arabica/controller/favorites_bloc/favorites_bloc.dart';
+import 'package:arabica/controller/feed_bloc/feed_bloc.dart';
 import 'package:arabica/data_sources/coffee_ds.dart';
 import 'package:arabica/screens/home_screen.dart';
-import 'package:arabica/screens/coffee_feed_screen.dart';
+import 'package:arabica/screens/feed_screen/feed_screen.dart';
 import 'package:arabica/screens/favorites_screen.dart';
 import 'package:arabica/screens/initial_screen.dart';
 import 'package:arabica/services/http_singleton.dart';
@@ -12,7 +13,7 @@ import 'package:go_router/go_router.dart';
 final router = GoRouter(
   redirect: (context, state) {
     if (state.fullPath == InitialScreen.route) {
-      return CoffeeFeedScreen.route;
+      return FeedScreen.route;
     }
     return null;
   },
@@ -36,6 +37,9 @@ final router = GoRouter(
               create: (context) =>
                   FavoritesBloc()..add(const FavoritesEvent.start()),
             ),
+            BlocProvider(
+              create: (context) => FeedBloc()..add(const FeedEvent.started()),
+            ),
           ],
           child: HomeScreen(navigationShell: navigationShell),
         );
@@ -44,8 +48,8 @@ final router = GoRouter(
         StatefulShellBranch(
           routes: [
             GoRoute(
-              path: CoffeeFeedScreen.route,
-              builder: (context, state) => CoffeeFeedScreen(),
+              path: FeedScreen.route,
+              builder: (context, state) => const FeedScreen(),
             ),
           ],
         ),
