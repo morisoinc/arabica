@@ -50,7 +50,7 @@ class _FeedScreenState extends State<FeedScreen> {
                         FavoritesEvent.addFavorite(coffee),
                       );
                   context.read<BufferBloc>().add(
-                        BufferEvent.addCoffeeToBlacklist(
+                        BufferEvent.addToBlacklist(
                           coffee,
                         ),
                       );

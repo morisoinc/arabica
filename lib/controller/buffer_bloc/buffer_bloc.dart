@@ -2,14 +2,13 @@ import 'package:arabica/data/coffee.dart';
 import 'package:arabica/data_sources/coffee_ds.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hydrated_bloc/hydrated_bloc.dart';
 
 part 'buffer_bloc.freezed.dart';
 part 'buffer_bloc.g.dart';
 part 'buffer_event.dart';
 part 'buffer_state.dart';
 
-class BufferBloc extends HydratedBloc<BufferEvent, BufferState> {
+class BufferBloc extends Bloc<BufferEvent, BufferState> {
   final CoffeeDs coffeeDs;
 
   final bufferSize = 10;
@@ -46,19 +45,16 @@ class BufferBloc extends HydratedBloc<BufferEvent, BufferState> {
             add(BufferEvent.updateDownloadAmount(-amount));
 
             final nonNullCoffees = coffees.whereType<Coffee>().toList();
-            add(BufferEvent.onRandomCoffeeFetched(nonNullCoffees));
+            final nonDuplicatedCoffees = nonNullCoffees.toSet().toList();
+
+            if (nonDuplicatedCoffees.isNotEmpty) {
+              add(BufferEvent.appendCoffees(nonDuplicatedCoffees));
+            }
           });
         },
-        onRandomCoffeeFetched: (coffees) {
-          emit(
-            state.copyWith(
-              buffer: [
-                ...state.buffer,
-                ...coffees,
-              ],
-            ),
-          );
-          add(const BufferEvent.filterCoffees());
+        appendCoffees: (coffees) {
+          emit(state.copyWith(buffer: [...state.buffer, ...coffees]));
+          add(const BufferEvent.filterBlacklisted());
         },
         removeCoffee: (coffee) {
           emit(state.copyWith(
@@ -68,17 +64,20 @@ class BufferBloc extends HydratedBloc<BufferEvent, BufferState> {
         overrideBlacklist: (blacklistedCoffees) {
           emit(state.copyWith(blacklistedCoffees: blacklistedCoffees));
         },
-        addCoffeeToBlacklist: (coffee) {
+        addToBlacklist: (coffee) {
           emit(state.copyWith(
               blacklistedCoffees: [...state.blacklistedCoffees, coffee]));
-          add(const BufferEvent.filterCoffees());
+          add(const BufferEvent.filterBlacklisted());
         },
-        removeCoffeeFromBlacklist: (coffee) {
-          emit(state.copyWith(
-              blacklistedCoffees:
-                  state.blacklistedCoffees.where((c) => c != coffee).toList()));
+        removeFromBlacklist: (coffee) {
+          emit(
+            state.copyWith(
+                blacklistedCoffees: state.blacklistedCoffees
+                    .where((c) => c != coffee)
+                    .toList()),
+          );
         },
-        filterCoffees: () {
+        filterBlacklisted: () {
           final filteredCoffees = state.buffer
               .where((coffee) => !state.blacklistedCoffees.contains(coffee))
               .toList();
@@ -87,15 +86,5 @@ class BufferBloc extends HydratedBloc<BufferEvent, BufferState> {
         },
       );
     });
-  }
-
-  @override
-  BufferState? fromJson(Map<String, dynamic> json) {
-    return BufferState.fromJson(json);
-  }
-
-  @override
-  Map<String, dynamic>? toJson(BufferState state) {
-    return state.toJson();
   }
 }

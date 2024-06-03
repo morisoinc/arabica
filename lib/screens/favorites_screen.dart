@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
+import 'package:arabica/controller/buffer_bloc/buffer_bloc.dart';
 import 'package:arabica/controller/favorites_bloc/favorites_bloc.dart';
 import 'package:arabica/data/favorite.dart';
 import 'package:arabica/styles/text_styles.dart';
@@ -120,6 +121,9 @@ class FavoritesScreen extends StatelessWidget {
     originalContext
         .read<FavoritesBloc>()
         .add(FavoritesEvent.removeFavorite(favorite));
+    originalContext
+        .read<BufferBloc>()
+        .add(BufferEvent.removeFromBlacklist(favorite.coffee));
     Navigator.of(dialogueContext).pop();
     ScaffoldMessenger.of(originalContext).showSnackBar(
       const SnackBar(

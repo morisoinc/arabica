@@ -13,6 +13,10 @@ class CoffeeDs extends BaseDs<http.Client> {
         Uri.parse('https://coffee.alexflipnote.dev/random.json'),
       );
 
+      if (baseResponse.statusCode != 200) {
+        return null;
+      }
+
       final json = jsonDecode(baseResponse.body);
       final imageUrl = json['file'];
 
@@ -23,9 +27,7 @@ class CoffeeDs extends BaseDs<http.Client> {
         encodedImage: base64Encode(imageResponse.bodyBytes),
         imageBytes: imageResponse.bodyBytes,
       );
-    } catch (e) {
-      // print(e);
-    }
+    } catch (_) {}
 
     return null;
   }
