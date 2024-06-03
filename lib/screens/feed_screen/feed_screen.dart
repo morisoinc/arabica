@@ -23,20 +23,32 @@ class _FeedScreenState extends State<FeedScreen> {
   CoffeeError? error;
 
   @override
+  void initState() {
+    super.initState();
+
+    tryNewRound();
+  }
+
+  tryNewRound() {
+    final bufferState = context.read<BufferBloc>().state;
+    if (firstBuild && bufferState.coffeesAreReady) {
+      setState(() {
+        firstBuild = false;
+      });
+      context.read<FeedBloc>().add(FeedEvent.onNewRound(bufferState.buffer));
+    }
+    if (bufferState.error != error) {
+      setState(() {
+        error = bufferState.error;
+      });
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return BlocListener<BufferBloc, BufferState>(
       listener: (context, state) {
-        if (firstBuild && state.coffeesAreReady) {
-          setState(() {
-            firstBuild = false;
-          });
-          context.read<FeedBloc>().add(FeedEvent.onNewRound(state.buffer));
-        }
-        if (state.error != error) {
-          setState(() {
-            error = state.error;
-          });
-        }
+        tryNewRound();
       },
       child: error != null
           ? ErrorScreen(

@@ -1,22 +1,10 @@
-import 'package:arabica/controller/buffer_bloc/buffer_bloc.dart';
-import 'package:arabica/controller/favorites_bloc/favorites_bloc.dart';
-import 'package:arabica/controller/feed_bloc/feed_bloc.dart';
-import 'package:arabica/data_sources/coffee_ds.dart';
 import 'package:arabica/screens/home_screen.dart';
 import 'package:arabica/screens/feed_screen/feed_screen.dart';
 import 'package:arabica/screens/favorites_screen.dart';
 import 'package:arabica/screens/initial_screen.dart';
-import 'package:arabica/services/http_singleton.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 final router = GoRouter(
-  redirect: (context, state) {
-    if (state.fullPath == InitialScreen.route) {
-      return FeedScreen.route;
-    }
-    return null;
-  },
   routes: [
     GoRoute(
       path: InitialScreen.route,
@@ -25,32 +13,8 @@ final router = GoRouter(
       },
     ),
     StatefulShellRoute.indexedStack(
-      builder: (_, __, navigationShell) {
-        return MultiBlocProvider(
-          providers: [
-            BlocProvider(
-              create: (context) =>
-                  BufferBloc(coffeeDs: CoffeeDs(httpSingleton.client))
-                    ..add(const BufferEvent.start()),
-              lazy: false,
-            ),
-            BlocProvider(
-              create: (context) => FavoritesBloc(onFavoritesLoaded: (coffees) {
-                context
-                    .read<BufferBloc>()
-                    .add(BufferEvent.overrideBlacklist(coffees));
-              })
-                ..add(const FavoritesEvent.start()),
-              lazy: false,
-            ),
-            BlocProvider(
-              create: (context) => FeedBloc()..add(const FeedEvent.start()),
-              lazy: false,
-            ),
-          ],
-          child: HomeScreen(navigationShell: navigationShell),
-        );
-      },
+      builder: (_, __, navigationShell) =>
+          HomeScreen(navigationShell: navigationShell),
       branches: [
         StatefulShellBranch(
           routes: [
