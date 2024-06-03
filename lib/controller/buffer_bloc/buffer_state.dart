@@ -7,6 +7,7 @@ class BufferState with _$BufferState {
     @Default([]) List<Coffee> blacklistedCoffees,
     @Default(0) int currentDownloadAmount,
     @Default(false) bool coffeesAreReady,
+    CoffeeError? error,
   }) = _BufferState;
 
   factory BufferState.fromJson(Map<String, dynamic> json) =>

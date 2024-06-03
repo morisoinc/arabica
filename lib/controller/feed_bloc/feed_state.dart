@@ -12,7 +12,7 @@ class FeedState with _$FeedState {
   const factory FeedState({
     @Default(FeedStage.loading) FeedStage stage,
     @Default([]) List<Coffee> coffees,
-    @Default(0) int rounds,
+    @Default(-1) int rounds,
     @Default("") String mainMessage,
     @Default("") String cancelMessage,
     @Default("") String confirmMessage,

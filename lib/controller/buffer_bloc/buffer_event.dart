@@ -17,4 +17,6 @@ class BufferEvent with _$BufferEvent {
   const factory BufferEvent.fillBuffer() = _FillBuffer;
   const factory BufferEvent.updateDownloadAmount(int amount) =
       _UpdateDownloadAmount;
+
+  const factory BufferEvent.onError(CoffeeError error) = _OnError;
 }

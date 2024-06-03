@@ -1,4 +1,5 @@
 import 'package:arabica/data/coffee.dart';
+import 'package:arabica/data/coffee_error.dart';
 import 'package:arabica/data_sources/coffee_ds.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -17,6 +18,7 @@ class BufferBloc extends Bloc<BufferEvent, BufferState> {
     on<BufferEvent>((event, emit) {
       event.when(
         start: () {
+          emit(state.copyWith(error: null));
           add(const BufferEvent.fillBuffer());
         },
         fillBuffer: () {
@@ -41,16 +43,37 @@ class BufferBloc extends Bloc<BufferEvent, BufferState> {
           if (amount <= 0) return;
           add(BufferEvent.updateDownloadAmount(amount));
           Future.wait(List.generate(amount, (_) => coffeeDs.fetchCoffee()))
-              .then((coffees) {
+              .then((result) {
             add(BufferEvent.updateDownloadAmount(-amount));
 
-            final nonNullCoffees = coffees.whereType<Coffee>().toList();
-            final nonDuplicatedCoffees = nonNullCoffees.toSet().toList();
+            var coffees = <Coffee>[];
+            var errors = <CoffeeError>[];
+
+            for (final result in result) {
+              result.fold(
+                (coffee) {
+                  coffees.add(coffee);
+                },
+                (error) {
+                  errors.add(error);
+                },
+              );
+            }
+
+            if (coffees.isEmpty && errors.isNotEmpty) {
+              add(BufferEvent.onError(errors.first));
+              return;
+            }
+
+            final nonDuplicatedCoffees = coffees.toSet().toList();
 
             if (nonDuplicatedCoffees.isNotEmpty) {
-              add(BufferEvent.appendCoffees(nonDuplicatedCoffees));
+              add(BufferEvent.appendCoffees(coffees));
             }
           });
+        },
+        onError: (error) {
+          emit(state.copyWith(error: error));
         },
         appendCoffees: (coffees) {
           emit(state.copyWith(buffer: [...state.buffer, ...coffees]));

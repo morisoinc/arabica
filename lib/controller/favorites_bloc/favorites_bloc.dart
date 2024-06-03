@@ -58,7 +58,7 @@ class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
               ],
             ),
           );
-          onFavoritesLoaded(parsedFavorites
+          onFavoritesLoaded(state.favorites
               .map((f) => f.coffee)
               .whereType<Coffee>()
               .toList());
