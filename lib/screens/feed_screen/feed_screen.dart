@@ -8,7 +8,6 @@ import 'package:arabica/screens/feed_screen/intermission_screen.dart';
 import 'package:arabica/screens/feed_screen/swipe_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 
 class FeedScreen extends StatefulWidget {
   const FeedScreen({super.key});
@@ -20,7 +19,6 @@ class FeedScreen extends StatefulWidget {
 }
 
 class _FeedScreenState extends State<FeedScreen> {
-  final cardController = CardSwiperController();
   var firstBuild = true;
   CoffeeError? error;
 
@@ -34,14 +32,19 @@ class _FeedScreenState extends State<FeedScreen> {
           });
           context.read<FeedBloc>().add(FeedEvent.onNewRound(state.buffer));
         }
-        setState(() {
-          error = state.error;
-        });
+        if (state.error != error) {
+          setState(() {
+            error = state.error;
+          });
+        }
       },
       child: error != null
           ? ErrorScreen(
               error: error!,
               onRefresh: () {
+                setState(() {
+                  firstBuild = true;
+                });
                 context.read<BufferBloc>().add(const BufferEvent.start());
                 context.read<FeedBloc>().add(const FeedEvent.start());
               },

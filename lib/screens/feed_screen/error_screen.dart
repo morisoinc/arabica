@@ -15,7 +15,9 @@ class ErrorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RefreshIndicator(
-      onRefresh: () async => onRefresh.call(),
+      onRefresh: () async {
+        return Future.delayed(const Duration(seconds: 1), onRefresh);
+      },
       color: Colors.brown,
       child: ListView.builder(
           itemCount: 1,
