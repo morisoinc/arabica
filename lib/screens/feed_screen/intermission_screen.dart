@@ -1,3 +1,4 @@
+import 'package:arabica/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class IntermissionScreen extends StatelessWidget {
@@ -26,11 +27,7 @@ class IntermissionScreen extends StatelessWidget {
           child: Text(
             mainMessage,
             textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.w600,
-              color: Colors.brown[400],
-            ),
+            style: mainMessageStyle,
           ),
         ),
         const SizedBox(height: 20),

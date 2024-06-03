@@ -1,3 +1,4 @@
+import 'package:arabica/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class EndScreen extends StatelessWidget {
@@ -16,11 +17,7 @@ class EndScreen extends StatelessWidget {
             child: Text(
               message,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.w600,
-                color: Colors.brown[400],
-              ),
+              style: mainMessageStyle,
             ),
           ),
         ],

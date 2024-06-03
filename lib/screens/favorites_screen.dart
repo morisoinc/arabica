@@ -3,6 +3,7 @@ import 'dart:typed_data';
 
 import 'package:arabica/controller/favorites_bloc/favorites_bloc.dart';
 import 'package:arabica/data/favorite.dart';
+import 'package:arabica/styles/text_styles.dart';
 import 'package:arabica/widgets/coffee_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,6 +17,18 @@ class FavoritesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<FavoritesBloc, FavoritesState>(
       builder: (favoriteScreenContext, state) {
+        if (state.favorites.isEmpty) {
+          return Center(
+            child: Padding(
+              padding: const EdgeInsets.all(32.0),
+              child: Text(
+                'No favorites yet!\nGo to the Coffee Selection to add some.',
+                style: mainMessageStyle,
+                textAlign: TextAlign.center,
+              ),
+            ),
+          );
+        }
         return ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 840),
           child: GridView.builder(
