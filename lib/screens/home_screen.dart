@@ -24,6 +24,10 @@ class HomeScreen extends StatelessWidget {
           );
         },
         currentIndex: navigationShell.currentIndex,
+        showUnselectedLabels: false,
+        backgroundColor: Colors.brown[100],
+        unselectedItemColor: Colors.brown[300],
+        enableFeedback: true,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.coffee),

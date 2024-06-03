@@ -22,50 +22,54 @@ class SwipeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Flexible(
-          child: CardSwiper(
-            cardsCount: coffees.length,
-            controller: cardController,
-            allowedSwipeDirection: const AllowedSwipeDirection.only(
-              left: true,
-              right: true,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 64),
+      child: Column(
+        children: [
+          Flexible(
+            child: CardSwiper(
+              cardsCount: coffees.length,
+              controller: cardController,
+              allowedSwipeDirection: const AllowedSwipeDirection.only(
+                left: true,
+                right: true,
+              ),
+              isLoop: false,
+              backCardOffset: Offset.zero,
+              numberOfCardsDisplayed: coffees.length,
+              onEnd: () => onEnd(),
+              onSwipe: (previousIndex, currentIndex, direction) {
+                final coffee = coffees[previousIndex];
+                switch (direction) {
+                  case CardSwiperDirection.right:
+                    onSwipeRight(coffee);
+                    return true;
+                  case CardSwiperDirection.left:
+                    onSwipeLeft(coffee);
+                    return true;
+                  case CardSwiperDirection.none:
+                  case CardSwiperDirection.top:
+                  case CardSwiperDirection.bottom:
+                    return false;
+                }
+              },
+              cardBuilder:
+                  (context, index, percentThresholdX, percentThresholdY) {
+                return Center(
+                  child: CoffeeCard(
+                    coffee: coffees[index],
+                  ),
+                );
+              },
             ),
-            isLoop: false,
-            backCardOffset: Offset.zero,
-            numberOfCardsDisplayed: coffees.length,
-            onEnd: () => onEnd(),
-            onSwipe: (previousIndex, currentIndex, direction) {
-              final coffee = coffees[previousIndex];
-              switch (direction) {
-                case CardSwiperDirection.right:
-                  onSwipeRight(coffee);
-                  return true;
-                case CardSwiperDirection.left:
-                  onSwipeLeft(coffee);
-                  return true;
-                case CardSwiperDirection.none:
-                case CardSwiperDirection.top:
-                case CardSwiperDirection.bottom:
-                  return false;
-              }
-            },
-            cardBuilder:
-                (context, index, percentThresholdX, percentThresholdY) {
-              return Center(
-                child: CoffeeCard(
-                  coffee: coffees[index],
-                ),
-              );
-            },
           ),
-        ),
-        LeftRightButtons(
-          onLeftPressed: () => cardController.swipe(CardSwiperDirection.left),
-          onRightPressed: () => cardController.swipe(CardSwiperDirection.right),
-        ),
-      ],
+          LeftRightButtons(
+            onLeftPressed: () => cardController.swipe(CardSwiperDirection.left),
+            onRightPressed: () =>
+                cardController.swipe(CardSwiperDirection.right),
+          ),
+        ],
+      ),
     );
   }
 }
