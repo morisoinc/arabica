@@ -2,7 +2,7 @@ part of 'buffer_bloc.dart';
 
 @freezed
 class BufferEvent with _$BufferEvent {
-  const factory BufferEvent.started() = _Started;
+  const factory BufferEvent.start() = _Start;
   const factory BufferEvent.fetchRandomCoffee({required int amount}) =
       _FetchRandomCoffee;
   const factory BufferEvent.appendCoffees(List<Coffee> coffees) =

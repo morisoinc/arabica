@@ -18,7 +18,10 @@ class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
   Directory? dir;
   Isar? isar;
 
-  FavoritesBloc() : super(const _FavoritesState()) {
+  final Function(List<Coffee>) onFavoritesLoaded;
+
+  FavoritesBloc({required this.onFavoritesLoaded})
+      : super(const _FavoritesState()) {
     on<FavoritesEvent>((event, emit) {
       event.when(
         start: () async {
@@ -38,22 +41,27 @@ class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
           add(FavoritesEvent.favoritesLoaded(favorites));
         },
         favoritesLoaded: (favorites) {
+          var parsedFavorites = [];
           for (var favorite in favorites) {
             if (favorite.coffee.imageBytes == null) {
               favorite = favorite.copyWith(
                   coffee: favorite.coffee.copyWith(
                       imageBytes: base64Decode(favorite.coffee.encodedImage)));
             }
-
-            emit(
-              state.copyWith(
-                favorites: [
-                  ...state.favorites,
-                  favorite,
-                ],
-              ),
-            );
+            parsedFavorites.add(favorite);
           }
+          emit(
+            state.copyWith(
+              favorites: [
+                ...state.favorites,
+                ...parsedFavorites,
+              ],
+            ),
+          );
+          onFavoritesLoaded(parsedFavorites
+              .map((f) => f.coffee)
+              .whereType<Coffee>()
+              .toList());
         },
         addFavorite: (coffee) {
           final favorite = FavoriteCoffee(

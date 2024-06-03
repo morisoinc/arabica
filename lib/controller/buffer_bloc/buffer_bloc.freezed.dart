@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$BufferEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() start,
     required TResult Function(int amount) fetchRandomCoffee,
     required TResult Function(List<Coffee> coffees) appendCoffees,
     required TResult Function() filterBlacklisted,
@@ -33,7 +33,7 @@ mixin _$BufferEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? start,
     TResult? Function(int amount)? fetchRandomCoffee,
     TResult? Function(List<Coffee> coffees)? appendCoffees,
     TResult? Function()? filterBlacklisted,
@@ -47,7 +47,7 @@ mixin _$BufferEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? start,
     TResult Function(int amount)? fetchRandomCoffee,
     TResult Function(List<Coffee> coffees)? appendCoffees,
     TResult Function()? filterBlacklisted,
@@ -62,7 +62,7 @@ mixin _$BufferEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Start value) start,
     required TResult Function(_FetchRandomCoffee value) fetchRandomCoffee,
     required TResult Function(_AppendCoffees value) appendCoffees,
     required TResult Function(_FilterBlacklisted value) filterBlacklisted,
@@ -76,7 +76,7 @@ mixin _$BufferEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Start value)? start,
     TResult? Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult? Function(_AppendCoffees value)? appendCoffees,
     TResult? Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -90,7 +90,7 @@ mixin _$BufferEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Start value)? start,
     TResult Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult Function(_AppendCoffees value)? appendCoffees,
     TResult Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -124,35 +124,35 @@ class _$BufferEventCopyWithImpl<$Res, $Val extends BufferEvent>
 }
 
 /// @nodoc
-abstract class _$$StartedImplCopyWith<$Res> {
-  factory _$$StartedImplCopyWith(
-          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
-      __$$StartedImplCopyWithImpl<$Res>;
+abstract class _$$StartImplCopyWith<$Res> {
+  factory _$$StartImplCopyWith(
+          _$StartImpl value, $Res Function(_$StartImpl) then) =
+      __$$StartImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$StartedImplCopyWithImpl<$Res>
-    extends _$BufferEventCopyWithImpl<$Res, _$StartedImpl>
-    implements _$$StartedImplCopyWith<$Res> {
-  __$$StartedImplCopyWithImpl(
-      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
+class __$$StartImplCopyWithImpl<$Res>
+    extends _$BufferEventCopyWithImpl<$Res, _$StartImpl>
+    implements _$$StartImplCopyWith<$Res> {
+  __$$StartImplCopyWithImpl(
+      _$StartImpl _value, $Res Function(_$StartImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$StartedImpl implements _Started {
-  const _$StartedImpl();
+class _$StartImpl implements _Start {
+  const _$StartImpl();
 
   @override
   String toString() {
-    return 'BufferEvent.started()';
+    return 'BufferEvent.start()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$StartedImpl);
+        (other.runtimeType == runtimeType && other is _$StartImpl);
   }
 
   @override
@@ -161,7 +161,7 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() start,
     required TResult Function(int amount) fetchRandomCoffee,
     required TResult Function(List<Coffee> coffees) appendCoffees,
     required TResult Function() filterBlacklisted,
@@ -173,13 +173,13 @@ class _$StartedImpl implements _Started {
     required TResult Function() fillBuffer,
     required TResult Function(int amount) updateDownloadAmount,
   }) {
-    return started();
+    return start();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? start,
     TResult? Function(int amount)? fetchRandomCoffee,
     TResult? Function(List<Coffee> coffees)? appendCoffees,
     TResult? Function()? filterBlacklisted,
@@ -190,13 +190,13 @@ class _$StartedImpl implements _Started {
     TResult? Function()? fillBuffer,
     TResult? Function(int amount)? updateDownloadAmount,
   }) {
-    return started?.call();
+    return start?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? start,
     TResult Function(int amount)? fetchRandomCoffee,
     TResult Function(List<Coffee> coffees)? appendCoffees,
     TResult Function()? filterBlacklisted,
@@ -208,8 +208,8 @@ class _$StartedImpl implements _Started {
     TResult Function(int amount)? updateDownloadAmount,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (start != null) {
+      return start();
     }
     return orElse();
   }
@@ -217,7 +217,7 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Start value) start,
     required TResult Function(_FetchRandomCoffee value) fetchRandomCoffee,
     required TResult Function(_AppendCoffees value) appendCoffees,
     required TResult Function(_FilterBlacklisted value) filterBlacklisted,
@@ -228,13 +228,13 @@ class _$StartedImpl implements _Started {
     required TResult Function(_FillBuffer value) fillBuffer,
     required TResult Function(_UpdateDownloadAmount value) updateDownloadAmount,
   }) {
-    return started(this);
+    return start(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Start value)? start,
     TResult? Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult? Function(_AppendCoffees value)? appendCoffees,
     TResult? Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -245,13 +245,13 @@ class _$StartedImpl implements _Started {
     TResult? Function(_FillBuffer value)? fillBuffer,
     TResult? Function(_UpdateDownloadAmount value)? updateDownloadAmount,
   }) {
-    return started?.call(this);
+    return start?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Start value)? start,
     TResult Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult Function(_AppendCoffees value)? appendCoffees,
     TResult Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -263,15 +263,15 @@ class _$StartedImpl implements _Started {
     TResult Function(_UpdateDownloadAmount value)? updateDownloadAmount,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (start != null) {
+      return start(this);
     }
     return orElse();
   }
 }
 
-abstract class _Started implements BufferEvent {
-  const factory _Started() = _$StartedImpl;
+abstract class _Start implements BufferEvent {
+  const factory _Start() = _$StartImpl;
 }
 
 /// @nodoc
@@ -339,7 +339,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() start,
     required TResult Function(int amount) fetchRandomCoffee,
     required TResult Function(List<Coffee> coffees) appendCoffees,
     required TResult Function() filterBlacklisted,
@@ -357,7 +357,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? start,
     TResult? Function(int amount)? fetchRandomCoffee,
     TResult? Function(List<Coffee> coffees)? appendCoffees,
     TResult? Function()? filterBlacklisted,
@@ -374,7 +374,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? start,
     TResult Function(int amount)? fetchRandomCoffee,
     TResult Function(List<Coffee> coffees)? appendCoffees,
     TResult Function()? filterBlacklisted,
@@ -395,7 +395,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Start value) start,
     required TResult Function(_FetchRandomCoffee value) fetchRandomCoffee,
     required TResult Function(_AppendCoffees value) appendCoffees,
     required TResult Function(_FilterBlacklisted value) filterBlacklisted,
@@ -412,7 +412,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Start value)? start,
     TResult? Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult? Function(_AppendCoffees value)? appendCoffees,
     TResult? Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -429,7 +429,7 @@ class _$FetchRandomCoffeeImpl implements _FetchRandomCoffee {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Start value)? start,
     TResult Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult Function(_AppendCoffees value)? appendCoffees,
     TResult Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -528,7 +528,7 @@ class _$AppendCoffeesImpl implements _AppendCoffees {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() start,
     required TResult Function(int amount) fetchRandomCoffee,
     required TResult Function(List<Coffee> coffees) appendCoffees,
     required TResult Function() filterBlacklisted,
@@ -546,7 +546,7 @@ class _$AppendCoffeesImpl implements _AppendCoffees {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? start,
     TResult? Function(int amount)? fetchRandomCoffee,
     TResult? Function(List<Coffee> coffees)? appendCoffees,
     TResult? Function()? filterBlacklisted,
@@ -563,7 +563,7 @@ class _$AppendCoffeesImpl implements _AppendCoffees {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? start,
     TResult Function(int amount)? fetchRandomCoffee,
     TResult Function(List<Coffee> coffees)? appendCoffees,
     TResult Function()? filterBlacklisted,
@@ -584,7 +584,7 @@ class _$AppendCoffeesImpl implements _AppendCoffees {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Start value) start,
     required TResult Function(_FetchRandomCoffee value) fetchRandomCoffee,
     required TResult Function(_AppendCoffees value) appendCoffees,
     required TResult Function(_FilterBlacklisted value) filterBlacklisted,
@@ -601,7 +601,7 @@ class _$AppendCoffeesImpl implements _AppendCoffees {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Start value)? start,
     TResult? Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult? Function(_AppendCoffees value)? appendCoffees,
     TResult? Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -618,7 +618,7 @@ class _$AppendCoffeesImpl implements _AppendCoffees {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Start value)? start,
     TResult Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult Function(_AppendCoffees value)? appendCoffees,
     TResult Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -685,7 +685,7 @@ class _$FilterBlacklistedImpl implements _FilterBlacklisted {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() start,
     required TResult Function(int amount) fetchRandomCoffee,
     required TResult Function(List<Coffee> coffees) appendCoffees,
     required TResult Function() filterBlacklisted,
@@ -703,7 +703,7 @@ class _$FilterBlacklistedImpl implements _FilterBlacklisted {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? start,
     TResult? Function(int amount)? fetchRandomCoffee,
     TResult? Function(List<Coffee> coffees)? appendCoffees,
     TResult? Function()? filterBlacklisted,
@@ -720,7 +720,7 @@ class _$FilterBlacklistedImpl implements _FilterBlacklisted {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? start,
     TResult Function(int amount)? fetchRandomCoffee,
     TResult Function(List<Coffee> coffees)? appendCoffees,
     TResult Function()? filterBlacklisted,
@@ -741,7 +741,7 @@ class _$FilterBlacklistedImpl implements _FilterBlacklisted {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Start value) start,
     required TResult Function(_FetchRandomCoffee value) fetchRandomCoffee,
     required TResult Function(_AppendCoffees value) appendCoffees,
     required TResult Function(_FilterBlacklisted value) filterBlacklisted,
@@ -758,7 +758,7 @@ class _$FilterBlacklistedImpl implements _FilterBlacklisted {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Start value)? start,
     TResult? Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult? Function(_AppendCoffees value)? appendCoffees,
     TResult? Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -775,7 +775,7 @@ class _$FilterBlacklistedImpl implements _FilterBlacklisted {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Start value)? start,
     TResult Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult Function(_AppendCoffees value)? appendCoffees,
     TResult Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -872,7 +872,7 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() start,
     required TResult Function(int amount) fetchRandomCoffee,
     required TResult Function(List<Coffee> coffees) appendCoffees,
     required TResult Function() filterBlacklisted,
@@ -890,7 +890,7 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? start,
     TResult? Function(int amount)? fetchRandomCoffee,
     TResult? Function(List<Coffee> coffees)? appendCoffees,
     TResult? Function()? filterBlacklisted,
@@ -907,7 +907,7 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? start,
     TResult Function(int amount)? fetchRandomCoffee,
     TResult Function(List<Coffee> coffees)? appendCoffees,
     TResult Function()? filterBlacklisted,
@@ -928,7 +928,7 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Start value) start,
     required TResult Function(_FetchRandomCoffee value) fetchRandomCoffee,
     required TResult Function(_AppendCoffees value) appendCoffees,
     required TResult Function(_FilterBlacklisted value) filterBlacklisted,
@@ -945,7 +945,7 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Start value)? start,
     TResult? Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult? Function(_AppendCoffees value)? appendCoffees,
     TResult? Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -962,7 +962,7 @@ class _$ClearCoffeeImpl implements _ClearCoffee {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Start value)? start,
     TResult Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult Function(_AppendCoffees value)? appendCoffees,
     TResult Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -1064,7 +1064,7 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() start,
     required TResult Function(int amount) fetchRandomCoffee,
     required TResult Function(List<Coffee> coffees) appendCoffees,
     required TResult Function() filterBlacklisted,
@@ -1082,7 +1082,7 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? start,
     TResult? Function(int amount)? fetchRandomCoffee,
     TResult? Function(List<Coffee> coffees)? appendCoffees,
     TResult? Function()? filterBlacklisted,
@@ -1099,7 +1099,7 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? start,
     TResult Function(int amount)? fetchRandomCoffee,
     TResult Function(List<Coffee> coffees)? appendCoffees,
     TResult Function()? filterBlacklisted,
@@ -1120,7 +1120,7 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Start value) start,
     required TResult Function(_FetchRandomCoffee value) fetchRandomCoffee,
     required TResult Function(_AppendCoffees value) appendCoffees,
     required TResult Function(_FilterBlacklisted value) filterBlacklisted,
@@ -1137,7 +1137,7 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Start value)? start,
     TResult? Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult? Function(_AppendCoffees value)? appendCoffees,
     TResult? Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -1154,7 +1154,7 @@ class _$OverrideBlacklistImpl implements _OverrideBlacklist {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Start value)? start,
     TResult Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult Function(_AppendCoffees value)? appendCoffees,
     TResult Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -1258,7 +1258,7 @@ class _$AddToBlacklistImpl implements _AddToBlacklist {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() start,
     required TResult Function(int amount) fetchRandomCoffee,
     required TResult Function(List<Coffee> coffees) appendCoffees,
     required TResult Function() filterBlacklisted,
@@ -1276,7 +1276,7 @@ class _$AddToBlacklistImpl implements _AddToBlacklist {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? start,
     TResult? Function(int amount)? fetchRandomCoffee,
     TResult? Function(List<Coffee> coffees)? appendCoffees,
     TResult? Function()? filterBlacklisted,
@@ -1293,7 +1293,7 @@ class _$AddToBlacklistImpl implements _AddToBlacklist {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? start,
     TResult Function(int amount)? fetchRandomCoffee,
     TResult Function(List<Coffee> coffees)? appendCoffees,
     TResult Function()? filterBlacklisted,
@@ -1314,7 +1314,7 @@ class _$AddToBlacklistImpl implements _AddToBlacklist {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Start value) start,
     required TResult Function(_FetchRandomCoffee value) fetchRandomCoffee,
     required TResult Function(_AppendCoffees value) appendCoffees,
     required TResult Function(_FilterBlacklisted value) filterBlacklisted,
@@ -1331,7 +1331,7 @@ class _$AddToBlacklistImpl implements _AddToBlacklist {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Start value)? start,
     TResult? Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult? Function(_AppendCoffees value)? appendCoffees,
     TResult? Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -1348,7 +1348,7 @@ class _$AddToBlacklistImpl implements _AddToBlacklist {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Start value)? start,
     TResult Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult Function(_AppendCoffees value)? appendCoffees,
     TResult Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -1451,7 +1451,7 @@ class _$RemoveFromBlacklistImpl implements _RemoveFromBlacklist {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() start,
     required TResult Function(int amount) fetchRandomCoffee,
     required TResult Function(List<Coffee> coffees) appendCoffees,
     required TResult Function() filterBlacklisted,
@@ -1469,7 +1469,7 @@ class _$RemoveFromBlacklistImpl implements _RemoveFromBlacklist {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? start,
     TResult? Function(int amount)? fetchRandomCoffee,
     TResult? Function(List<Coffee> coffees)? appendCoffees,
     TResult? Function()? filterBlacklisted,
@@ -1486,7 +1486,7 @@ class _$RemoveFromBlacklistImpl implements _RemoveFromBlacklist {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? start,
     TResult Function(int amount)? fetchRandomCoffee,
     TResult Function(List<Coffee> coffees)? appendCoffees,
     TResult Function()? filterBlacklisted,
@@ -1507,7 +1507,7 @@ class _$RemoveFromBlacklistImpl implements _RemoveFromBlacklist {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Start value) start,
     required TResult Function(_FetchRandomCoffee value) fetchRandomCoffee,
     required TResult Function(_AppendCoffees value) appendCoffees,
     required TResult Function(_FilterBlacklisted value) filterBlacklisted,
@@ -1524,7 +1524,7 @@ class _$RemoveFromBlacklistImpl implements _RemoveFromBlacklist {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Start value)? start,
     TResult? Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult? Function(_AppendCoffees value)? appendCoffees,
     TResult? Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -1541,7 +1541,7 @@ class _$RemoveFromBlacklistImpl implements _RemoveFromBlacklist {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Start value)? start,
     TResult Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult Function(_AppendCoffees value)? appendCoffees,
     TResult Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -1608,7 +1608,7 @@ class _$FillBufferImpl implements _FillBuffer {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() start,
     required TResult Function(int amount) fetchRandomCoffee,
     required TResult Function(List<Coffee> coffees) appendCoffees,
     required TResult Function() filterBlacklisted,
@@ -1626,7 +1626,7 @@ class _$FillBufferImpl implements _FillBuffer {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? start,
     TResult? Function(int amount)? fetchRandomCoffee,
     TResult? Function(List<Coffee> coffees)? appendCoffees,
     TResult? Function()? filterBlacklisted,
@@ -1643,7 +1643,7 @@ class _$FillBufferImpl implements _FillBuffer {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? start,
     TResult Function(int amount)? fetchRandomCoffee,
     TResult Function(List<Coffee> coffees)? appendCoffees,
     TResult Function()? filterBlacklisted,
@@ -1664,7 +1664,7 @@ class _$FillBufferImpl implements _FillBuffer {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Start value) start,
     required TResult Function(_FetchRandomCoffee value) fetchRandomCoffee,
     required TResult Function(_AppendCoffees value) appendCoffees,
     required TResult Function(_FilterBlacklisted value) filterBlacklisted,
@@ -1681,7 +1681,7 @@ class _$FillBufferImpl implements _FillBuffer {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Start value)? start,
     TResult? Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult? Function(_AppendCoffees value)? appendCoffees,
     TResult? Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -1698,7 +1698,7 @@ class _$FillBufferImpl implements _FillBuffer {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Start value)? start,
     TResult Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult Function(_AppendCoffees value)? appendCoffees,
     TResult Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -1787,7 +1787,7 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() start,
     required TResult Function(int amount) fetchRandomCoffee,
     required TResult Function(List<Coffee> coffees) appendCoffees,
     required TResult Function() filterBlacklisted,
@@ -1805,7 +1805,7 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? start,
     TResult? Function(int amount)? fetchRandomCoffee,
     TResult? Function(List<Coffee> coffees)? appendCoffees,
     TResult? Function()? filterBlacklisted,
@@ -1822,7 +1822,7 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? start,
     TResult Function(int amount)? fetchRandomCoffee,
     TResult Function(List<Coffee> coffees)? appendCoffees,
     TResult Function()? filterBlacklisted,
@@ -1843,7 +1843,7 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Start value) start,
     required TResult Function(_FetchRandomCoffee value) fetchRandomCoffee,
     required TResult Function(_AppendCoffees value) appendCoffees,
     required TResult Function(_FilterBlacklisted value) filterBlacklisted,
@@ -1860,7 +1860,7 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Start value)? start,
     TResult? Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult? Function(_AppendCoffees value)? appendCoffees,
     TResult? Function(_FilterBlacklisted value)? filterBlacklisted,
@@ -1877,7 +1877,7 @@ class _$UpdateDownloadAmountImpl implements _UpdateDownloadAmount {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Start value)? start,
     TResult Function(_FetchRandomCoffee value)? fetchRandomCoffee,
     TResult Function(_AppendCoffees value)? appendCoffees,
     TResult Function(_FilterBlacklisted value)? filterBlacklisted,

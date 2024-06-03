@@ -31,14 +31,21 @@ final router = GoRouter(
             BlocProvider(
               create: (context) =>
                   BufferBloc(coffeeDs: CoffeeDs(httpSingleton.client))
-                    ..add(const BufferEvent.started()),
+                    ..add(const BufferEvent.start()),
+              lazy: false,
             ),
             BlocProvider(
-              create: (context) =>
-                  FavoritesBloc()..add(const FavoritesEvent.start()),
+              create: (context) => FavoritesBloc(onFavoritesLoaded: (coffees) {
+                context
+                    .read<BufferBloc>()
+                    .add(BufferEvent.overrideBlacklist(coffees));
+              })
+                ..add(const FavoritesEvent.start()),
+              lazy: false,
             ),
             BlocProvider(
-              create: (context) => FeedBloc()..add(const FeedEvent.started()),
+              create: (context) => FeedBloc()..add(const FeedEvent.start()),
+              lazy: false,
             ),
           ],
           child: HomeScreen(navigationShell: navigationShell),

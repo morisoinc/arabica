@@ -16,7 +16,7 @@ class BufferBloc extends Bloc<BufferEvent, BufferState> {
   BufferBloc({required this.coffeeDs}) : super((const _BufferState())) {
     on<BufferEvent>((event, emit) {
       event.when(
-        started: () {
+        start: () {
           add(const BufferEvent.fillBuffer());
         },
         fillBuffer: () {

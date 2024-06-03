@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$FeedEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() start,
     required TResult Function() loadMessages,
     required TResult Function() onRoundEnd,
     required TResult Function(List<Coffee> coffees) onNewRound,
@@ -27,7 +27,7 @@ mixin _$FeedEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? start,
     TResult? Function()? loadMessages,
     TResult? Function()? onRoundEnd,
     TResult? Function(List<Coffee> coffees)? onNewRound,
@@ -36,7 +36,7 @@ mixin _$FeedEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? start,
     TResult Function()? loadMessages,
     TResult Function()? onRoundEnd,
     TResult Function(List<Coffee> coffees)? onNewRound,
@@ -46,7 +46,7 @@ mixin _$FeedEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Start value) start,
     required TResult Function(_LoadMessages value) loadMessages,
     required TResult Function(_OnRoundEnd value) onRoundEnd,
     required TResult Function(_OnNewRound value) onNewRound,
@@ -55,7 +55,7 @@ mixin _$FeedEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Start value)? start,
     TResult? Function(_LoadMessages value)? loadMessages,
     TResult? Function(_OnRoundEnd value)? onRoundEnd,
     TResult? Function(_OnNewRound value)? onNewRound,
@@ -64,7 +64,7 @@ mixin _$FeedEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Start value)? start,
     TResult Function(_LoadMessages value)? loadMessages,
     TResult Function(_OnRoundEnd value)? onRoundEnd,
     TResult Function(_OnNewRound value)? onNewRound,
@@ -92,35 +92,35 @@ class _$FeedEventCopyWithImpl<$Res, $Val extends FeedEvent>
 }
 
 /// @nodoc
-abstract class _$$StartedImplCopyWith<$Res> {
-  factory _$$StartedImplCopyWith(
-          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
-      __$$StartedImplCopyWithImpl<$Res>;
+abstract class _$$StartImplCopyWith<$Res> {
+  factory _$$StartImplCopyWith(
+          _$StartImpl value, $Res Function(_$StartImpl) then) =
+      __$$StartImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$StartedImplCopyWithImpl<$Res>
-    extends _$FeedEventCopyWithImpl<$Res, _$StartedImpl>
-    implements _$$StartedImplCopyWith<$Res> {
-  __$$StartedImplCopyWithImpl(
-      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
+class __$$StartImplCopyWithImpl<$Res>
+    extends _$FeedEventCopyWithImpl<$Res, _$StartImpl>
+    implements _$$StartImplCopyWith<$Res> {
+  __$$StartImplCopyWithImpl(
+      _$StartImpl _value, $Res Function(_$StartImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$StartedImpl implements _Started {
-  const _$StartedImpl();
+class _$StartImpl implements _Start {
+  const _$StartImpl();
 
   @override
   String toString() {
-    return 'FeedEvent.started()';
+    return 'FeedEvent.start()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$StartedImpl);
+        (other.runtimeType == runtimeType && other is _$StartImpl);
   }
 
   @override
@@ -129,39 +129,39 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() start,
     required TResult Function() loadMessages,
     required TResult Function() onRoundEnd,
     required TResult Function(List<Coffee> coffees) onNewRound,
     required TResult Function() onFinish,
   }) {
-    return started();
+    return start();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? start,
     TResult? Function()? loadMessages,
     TResult? Function()? onRoundEnd,
     TResult? Function(List<Coffee> coffees)? onNewRound,
     TResult? Function()? onFinish,
   }) {
-    return started?.call();
+    return start?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? start,
     TResult Function()? loadMessages,
     TResult Function()? onRoundEnd,
     TResult Function(List<Coffee> coffees)? onNewRound,
     TResult Function()? onFinish,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (start != null) {
+      return start();
     }
     return orElse();
   }
@@ -169,46 +169,46 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Start value) start,
     required TResult Function(_LoadMessages value) loadMessages,
     required TResult Function(_OnRoundEnd value) onRoundEnd,
     required TResult Function(_OnNewRound value) onNewRound,
     required TResult Function(_OnFinish value) onFinish,
   }) {
-    return started(this);
+    return start(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Start value)? start,
     TResult? Function(_LoadMessages value)? loadMessages,
     TResult? Function(_OnRoundEnd value)? onRoundEnd,
     TResult? Function(_OnNewRound value)? onNewRound,
     TResult? Function(_OnFinish value)? onFinish,
   }) {
-    return started?.call(this);
+    return start?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Start value)? start,
     TResult Function(_LoadMessages value)? loadMessages,
     TResult Function(_OnRoundEnd value)? onRoundEnd,
     TResult Function(_OnNewRound value)? onNewRound,
     TResult Function(_OnFinish value)? onFinish,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (start != null) {
+      return start(this);
     }
     return orElse();
   }
 }
 
-abstract class _Started implements FeedEvent {
-  const factory _Started() = _$StartedImpl;
+abstract class _Start implements FeedEvent {
+  const factory _Start() = _$StartImpl;
 }
 
 /// @nodoc
@@ -249,7 +249,7 @@ class _$LoadMessagesImpl implements _LoadMessages {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() start,
     required TResult Function() loadMessages,
     required TResult Function() onRoundEnd,
     required TResult Function(List<Coffee> coffees) onNewRound,
@@ -261,7 +261,7 @@ class _$LoadMessagesImpl implements _LoadMessages {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? start,
     TResult? Function()? loadMessages,
     TResult? Function()? onRoundEnd,
     TResult? Function(List<Coffee> coffees)? onNewRound,
@@ -273,7 +273,7 @@ class _$LoadMessagesImpl implements _LoadMessages {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? start,
     TResult Function()? loadMessages,
     TResult Function()? onRoundEnd,
     TResult Function(List<Coffee> coffees)? onNewRound,
@@ -289,7 +289,7 @@ class _$LoadMessagesImpl implements _LoadMessages {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Start value) start,
     required TResult Function(_LoadMessages value) loadMessages,
     required TResult Function(_OnRoundEnd value) onRoundEnd,
     required TResult Function(_OnNewRound value) onNewRound,
@@ -301,7 +301,7 @@ class _$LoadMessagesImpl implements _LoadMessages {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Start value)? start,
     TResult? Function(_LoadMessages value)? loadMessages,
     TResult? Function(_OnRoundEnd value)? onRoundEnd,
     TResult? Function(_OnNewRound value)? onNewRound,
@@ -313,7 +313,7 @@ class _$LoadMessagesImpl implements _LoadMessages {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Start value)? start,
     TResult Function(_LoadMessages value)? loadMessages,
     TResult Function(_OnRoundEnd value)? onRoundEnd,
     TResult Function(_OnNewRound value)? onNewRound,
@@ -369,7 +369,7 @@ class _$OnRoundEndImpl implements _OnRoundEnd {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() start,
     required TResult Function() loadMessages,
     required TResult Function() onRoundEnd,
     required TResult Function(List<Coffee> coffees) onNewRound,
@@ -381,7 +381,7 @@ class _$OnRoundEndImpl implements _OnRoundEnd {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? start,
     TResult? Function()? loadMessages,
     TResult? Function()? onRoundEnd,
     TResult? Function(List<Coffee> coffees)? onNewRound,
@@ -393,7 +393,7 @@ class _$OnRoundEndImpl implements _OnRoundEnd {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? start,
     TResult Function()? loadMessages,
     TResult Function()? onRoundEnd,
     TResult Function(List<Coffee> coffees)? onNewRound,
@@ -409,7 +409,7 @@ class _$OnRoundEndImpl implements _OnRoundEnd {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Start value) start,
     required TResult Function(_LoadMessages value) loadMessages,
     required TResult Function(_OnRoundEnd value) onRoundEnd,
     required TResult Function(_OnNewRound value) onNewRound,
@@ -421,7 +421,7 @@ class _$OnRoundEndImpl implements _OnRoundEnd {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Start value)? start,
     TResult? Function(_LoadMessages value)? loadMessages,
     TResult? Function(_OnRoundEnd value)? onRoundEnd,
     TResult? Function(_OnNewRound value)? onNewRound,
@@ -433,7 +433,7 @@ class _$OnRoundEndImpl implements _OnRoundEnd {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Start value)? start,
     TResult Function(_LoadMessages value)? loadMessages,
     TResult Function(_OnRoundEnd value)? onRoundEnd,
     TResult Function(_OnNewRound value)? onNewRound,
@@ -521,7 +521,7 @@ class _$OnNewRoundImpl implements _OnNewRound {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() start,
     required TResult Function() loadMessages,
     required TResult Function() onRoundEnd,
     required TResult Function(List<Coffee> coffees) onNewRound,
@@ -533,7 +533,7 @@ class _$OnNewRoundImpl implements _OnNewRound {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? start,
     TResult? Function()? loadMessages,
     TResult? Function()? onRoundEnd,
     TResult? Function(List<Coffee> coffees)? onNewRound,
@@ -545,7 +545,7 @@ class _$OnNewRoundImpl implements _OnNewRound {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? start,
     TResult Function()? loadMessages,
     TResult Function()? onRoundEnd,
     TResult Function(List<Coffee> coffees)? onNewRound,
@@ -561,7 +561,7 @@ class _$OnNewRoundImpl implements _OnNewRound {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Start value) start,
     required TResult Function(_LoadMessages value) loadMessages,
     required TResult Function(_OnRoundEnd value) onRoundEnd,
     required TResult Function(_OnNewRound value) onNewRound,
@@ -573,7 +573,7 @@ class _$OnNewRoundImpl implements _OnNewRound {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Start value)? start,
     TResult? Function(_LoadMessages value)? loadMessages,
     TResult? Function(_OnRoundEnd value)? onRoundEnd,
     TResult? Function(_OnNewRound value)? onNewRound,
@@ -585,7 +585,7 @@ class _$OnNewRoundImpl implements _OnNewRound {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Start value)? start,
     TResult Function(_LoadMessages value)? loadMessages,
     TResult Function(_OnRoundEnd value)? onRoundEnd,
     TResult Function(_OnNewRound value)? onNewRound,
@@ -646,7 +646,7 @@ class _$OnFinishImpl implements _OnFinish {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() start,
     required TResult Function() loadMessages,
     required TResult Function() onRoundEnd,
     required TResult Function(List<Coffee> coffees) onNewRound,
@@ -658,7 +658,7 @@ class _$OnFinishImpl implements _OnFinish {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? start,
     TResult? Function()? loadMessages,
     TResult? Function()? onRoundEnd,
     TResult? Function(List<Coffee> coffees)? onNewRound,
@@ -670,7 +670,7 @@ class _$OnFinishImpl implements _OnFinish {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? start,
     TResult Function()? loadMessages,
     TResult Function()? onRoundEnd,
     TResult Function(List<Coffee> coffees)? onNewRound,
@@ -686,7 +686,7 @@ class _$OnFinishImpl implements _OnFinish {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Start value) start,
     required TResult Function(_LoadMessages value) loadMessages,
     required TResult Function(_OnRoundEnd value) onRoundEnd,
     required TResult Function(_OnNewRound value) onNewRound,
@@ -698,7 +698,7 @@ class _$OnFinishImpl implements _OnFinish {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Start value)? start,
     TResult? Function(_LoadMessages value)? loadMessages,
     TResult? Function(_OnRoundEnd value)? onRoundEnd,
     TResult? Function(_OnNewRound value)? onNewRound,
@@ -710,7 +710,7 @@ class _$OnFinishImpl implements _OnFinish {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Start value)? start,
     TResult Function(_LoadMessages value)? loadMessages,
     TResult Function(_OnRoundEnd value)? onRoundEnd,
     TResult Function(_OnNewRound value)? onNewRound,

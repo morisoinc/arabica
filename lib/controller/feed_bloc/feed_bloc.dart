@@ -10,7 +10,7 @@ class FeedBloc extends Bloc<FeedEvent, FeedState> {
   FeedBloc() : super(const _FeedState()) {
     on<FeedEvent>((event, emit) {
       event.when(
-        started: () {
+        start: () {
           emit(
             state.copyWith(
               stage: FeedStage.loading,
