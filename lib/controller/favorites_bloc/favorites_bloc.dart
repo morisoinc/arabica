@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:arabica/data/coffee.dart';
-import 'package:arabica/data/favorite.dart';
+import 'package:arabica/packages/coffee_repository/lib/models/coffee.dart';
+import 'package:arabica/packages/coffee_repository/lib/models/favorite.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:isar/isar.dart';

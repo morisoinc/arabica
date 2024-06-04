@@ -1,4 +1,4 @@
-import 'package:arabica/data/coffee_error.dart';
+import 'package:arabica/packages/coffee_repository/lib/models/coffee_error.dart';
 import 'package:arabica/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 

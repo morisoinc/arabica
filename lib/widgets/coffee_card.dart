@@ -1,4 +1,4 @@
-import 'package:arabica/data/coffee.dart';
+import 'package:arabica/packages/coffee_repository/lib/models/coffee.dart';
 import 'package:flutter/material.dart';
 
 class CoffeeCard extends StatelessWidget {

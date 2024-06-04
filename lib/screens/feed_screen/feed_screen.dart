@@ -1,7 +1,7 @@
 import 'package:arabica/controller/buffer_bloc/buffer_bloc.dart';
 import 'package:arabica/controller/favorites_bloc/favorites_bloc.dart';
 import 'package:arabica/controller/feed_bloc/feed_bloc.dart';
-import 'package:arabica/data/coffee_error.dart';
+import 'package:arabica/packages/coffee_repository/lib/models/coffee_error.dart';
 import 'package:arabica/screens/feed_screen/end_screen.dart';
 import 'package:arabica/screens/feed_screen/error_screen.dart';
 import 'package:arabica/screens/feed_screen/intermission_screen.dart';

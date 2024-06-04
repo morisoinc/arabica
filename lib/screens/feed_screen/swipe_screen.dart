@@ -1,4 +1,4 @@
-import 'package:arabica/data/coffee.dart';
+import 'package:arabica/packages/coffee_repository/lib/models/coffee.dart';
 import 'package:arabica/widgets/coffee_card.dart';
 import 'package:arabica/widgets/left_right_buttons.dart';
 import 'package:flutter/widgets.dart';

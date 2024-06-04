@@ -1,6 +1,6 @@
-import 'package:arabica/data/coffee.dart';
-import 'package:arabica/data/coffee_error.dart';
-import 'package:arabica/data_sources/coffee_ds.dart';
+import 'package:arabica/packages/coffee_repository/lib/coffee_repository.dart';
+import 'package:arabica/packages/coffee_repository/lib/models/coffee.dart';
+import 'package:arabica/packages/coffee_repository/lib/models/coffee_error.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -10,11 +10,11 @@ part 'buffer_event.dart';
 part 'buffer_state.dart';
 
 class BufferBloc extends Bloc<BufferEvent, BufferState> {
-  final CoffeeDs coffeeDs;
+  final CoffeeRepository coffeeRepository;
 
   final bufferSize = 10;
 
-  BufferBloc({required this.coffeeDs}) : super((const _BufferState())) {
+  BufferBloc({required this.coffeeRepository}) : super((const _BufferState())) {
     on<BufferEvent>((event, emit) {
       event.when(
         start: () {
@@ -42,7 +42,8 @@ class BufferBloc extends Bloc<BufferEvent, BufferState> {
         fetchRandomCoffee: (amount) async {
           if (amount <= 0) return;
           add(BufferEvent.updateDownloadAmount(amount));
-          Future.wait(List.generate(amount, (_) => coffeeDs.fetchCoffee()))
+          Future.wait(
+                  List.generate(amount, (_) => coffeeRepository.fetchCoffee()))
               .then((result) {
             add(BufferEvent.updateDownloadAmount(-amount));
 

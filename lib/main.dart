@@ -1,7 +1,7 @@
 import 'package:arabica/controller/buffer_bloc/buffer_bloc.dart';
 import 'package:arabica/controller/favorites_bloc/favorites_bloc.dart';
 import 'package:arabica/controller/feed_bloc/feed_bloc.dart';
-import 'package:arabica/data_sources/coffee_ds.dart';
+import 'package:arabica/packages/coffee_repository/lib/coffee_repository.dart';
 import 'package:arabica/services/http_singleton.dart';
 import 'package:arabica/services/router.dart';
 import 'package:flutter/foundation.dart';
@@ -28,9 +28,9 @@ class ArabicaApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) =>
-              BufferBloc(coffeeDs: CoffeeDs(httpSingleton.client))
-                ..add(const BufferEvent.start()),
+          create: (context) => BufferBloc(
+              coffeeRepository: CoffeeRepository(client: httpSingleton.client))
+            ..add(const BufferEvent.start()),
           lazy: false,
         ),
         BlocProvider(
