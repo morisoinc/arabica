@@ -2,7 +2,7 @@
 
 import 'dart:typed_data';
 
-import 'package:arabica/services/converters.dart';
+import 'package:coffee_repository/src/services/converters.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:isar/isar.dart';
 

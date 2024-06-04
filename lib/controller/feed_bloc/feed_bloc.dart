@@ -1,4 +1,4 @@
-import 'package:arabica/packages/coffee_repository/lib/models/coffee.dart';
+import 'package:coffee_repository/coffee_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 

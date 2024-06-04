@@ -1,4 +1,4 @@
-import 'package:arabica/packages/coffee_repository/lib/models/coffee.dart';
+import 'coffee.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:isar/isar.dart';
 

@@ -1,5 +1,5 @@
-import 'package:arabica/packages/coffee_repository/lib/models/coffee_error.dart';
 import 'package:arabica/styles/text_styles.dart';
+import 'package:coffee_repository/coffee_repository.dart';
 import 'package:flutter/material.dart';
 
 class ErrorScreen extends StatelessWidget {

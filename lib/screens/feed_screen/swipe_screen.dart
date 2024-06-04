@@ -1,6 +1,6 @@
-import 'package:arabica/packages/coffee_repository/lib/models/coffee.dart';
 import 'package:arabica/widgets/coffee_card.dart';
 import 'package:arabica/widgets/left_right_buttons.dart';
+import 'package:coffee_repository/coffee_repository.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 

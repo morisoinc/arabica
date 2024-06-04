@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:arabica/packages/coffee_repository/lib/models/coffee.dart';
-import 'package:arabica/packages/coffee_repository/lib/models/coffee_error.dart';
+import 'models/coffee.dart';
+import 'models/coffee_error.dart';
 import 'package:dartz/dartz.dart';
 import 'package:http/http.dart' as http;
 

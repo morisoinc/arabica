@@ -3,9 +3,9 @@ import 'dart:typed_data';
 
 import 'package:arabica/controller/buffer_bloc/buffer_bloc.dart';
 import 'package:arabica/controller/favorites_bloc/favorites_bloc.dart';
-import 'package:arabica/packages/coffee_repository/lib/models/favorite.dart';
 import 'package:arabica/styles/text_styles.dart';
 import 'package:arabica/widgets/coffee_card.dart';
+import 'package:coffee_repository/coffee_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
