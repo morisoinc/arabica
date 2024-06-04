@@ -1,16 +1,18 @@
 # arabica
 
-A new Flutter project.
+welcome to arabica! an app where you go through a selection of coffee images and pick your favorite ones. don't forget to consume caffeine in moderate amounts!
 
-## Getting Started
+## getting started
 
-This project is a starting point for a Flutter application.
+1. open an Android or iOS emulator of your choice
+2. in the `root` of the project, run the following commands via terminal:
+- `flutter pub get`
+- `flutter run`
 
-A few resources to get you started if this is your first Flutter project:
+## how the app works
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+the app shows a swippable list of coffees for you. you can either swipe them left or right or use the buttons below the cards to trash/favorite the coffee images. 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+you can check your favorites in the favorites tab. tapping a thumbnail will open the image, long pressing it will show an alert asking if you'd like to remove the image from your favorites.
+
+this app consumes random coffee images from the `https://coffee.alexflipnote.dev/` API. it keeps a buffer of 10 coffees for each round of swipes. it also makes sure there are no repeated coffees in the buffer, and that no favorites show up on it.
